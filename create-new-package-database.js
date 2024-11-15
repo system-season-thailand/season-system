@@ -2,7 +2,7 @@ let existingDataStatus = 'newData'; // Variable to identify if the data will be 
 let websiteUserUniqueNumber = 'newUniqueNumber'; // Variable to identify if the website user code number will be increased or no
 
 
-let allGoogleSheetScriptURL = 'https://script.google.com/macros/s/AKfycbyRAqaTdo-wbSjUz-Frp16H2hAOowpnWkhweuLPUuMctjdczioftAca3UtcIcDnsNaASQ/exec';
+let allGoogleSheetScriptURL = 'https://script.google.com/macros/s/AKfycbxovpeVJcSn0CIkvq2S1N9SPWBVhQTiXm3jL_EJ2Y0dqiTQYkVtVN6iczJYPQf-bpZI4A/exec';
 
 
 let form = document.forms['save-package'];
@@ -96,7 +96,7 @@ function cleanHTML(html) {
 
 
 
-let allPackagesGoogleSheetURL = 'https://script.google.com/macros/s/AKfycbyRAqaTdo-wbSjUz-Frp16H2hAOowpnWkhweuLPUuMctjdczioftAca3UtcIcDnsNaASQ/exec';
+let allPackagesGoogleSheetURL = 'https://script.google.com/macros/s/AKfycbxovpeVJcSn0CIkvq2S1N9SPWBVhQTiXm3jL_EJ2Y0dqiTQYkVtVN6iczJYPQf-bpZI4A/exec';
 
 /* Create object to store all the google sheet data for later use (when importing) */
 let sheetData = [];
@@ -868,7 +868,7 @@ async function submitForm() {
 async function fetchData() {
     try {
         // Send a GET request to the Google Apps Script URL
-        let response = await fetch("https://script.google.com/macros/s/AKfycbzzOPqv4b5wrZ3tVrk26fr3OeofPi1Y0CRi4TYu8YQwNm52du6P6xMnBt9azLPqu2vY/exec");
+        let response = await fetch("https://script.google.com/macros/s/AKfycbycRPhZgVKO-0nz3F6LlVHBM3EWWdcr9I-rQmbX0TmlEt-C_VT0mlIWwrBj4WEhBuEcKw/exec");
         // Parse the response as JSON
         let data = await response.json();
         // Process the fetched data
