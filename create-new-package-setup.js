@@ -1,21 +1,21 @@
 /* Function to prevent the page refresh by mistake */
-/* window.addEventListener('beforeunload', function (event) {
+window.addEventListener('beforeunload', function (event) {
     event.preventDefault(); // Prevent the default action
     event.returnValue = ''; // Set the return value to trigger the default browser confirmation dialog
-}); */
+});
 
 
 
 
 
 // Correct password value - update this whenever you want to change the password
-const correctPassword = "00fanadiq00";
+const correctPassword = "00season00";
 
 // Array of messages for empty password input attempts
 const randomMessages_1 = [
     "تعجبني لمن تتحمس",
     "السيطرة تحت الأمور",
-    "يالحبيب اقل شيء حاول تكتب شيء",
+    "حبة حبة الأمور تمشي",
     "لا بس بس كذا كثير",
     "الوضع بدأ يصير خطير",
     "كيف اقدر اخدمك اليوم",
@@ -25,9 +25,10 @@ const randomMessages_1 = [
 // Array of messages for empty password input attempts
 const randomMessages_2 = [
     "حاول مره ثانية",
-    "يعني مافي فايدة؟",
+    "شكلو مافي فايدة",
     "انا واثق فيك تقدر",
-    "اليوم مو يومك"
+    "اليوم مو يومك",
+    "لسى في أمل"
 ];
 
 function monitorPasswordPrompt() {
@@ -65,23 +66,29 @@ window.addEventListener('load', () => {
 });
 
 function checkPassword() {
-    const passwordInput = document.getElementById("passwordInput").value;
+    const passwordInput = document.getElementById("passwordInput").value.toLowerCase();
     if (passwordInput === correctPassword) {
+
+        // Play a sound effect
+        playSoundEffect('success');
+
         localStorage.setItem("websitePass", passwordInput);
         document.getElementById("passwordPrompt").style.display = "none";
-    } else {
-        if (passwordInput !== '') {
-            localStorage.removeItem("websitePass");
-            alert("وضعك مشبوه فيه يامدير.. حاول مره ثانية");
-        } else {
-            // Select a random message from the array
-            const randomMessage_1 = randomMessages_1[Math.floor(Math.random() * randomMessages_1.length)];
-            document.getElementById("i_see_you_pass_box_p_id").innerText = randomMessage_1;
 
-            // Select a random message from the array
-            const randomMessage_2 = randomMessages_2[Math.floor(Math.random() * randomMessages_2.length)];
-            document.getElementById("who_are_you_pass_box_p_id").innerText = randomMessage_2;
-        }
+    } else {
+
+        // Play a sound effect
+        playSoundEffect('error');
+        
+        localStorage.removeItem("websitePass");
+
+        // Select a random message from the array
+        const randomMessage_1 = randomMessages_1[Math.floor(Math.random() * randomMessages_1.length)];
+        document.getElementById("i_see_you_pass_box_p_id").innerText = randomMessage_1;
+
+        // Select a random message from the array
+        const randomMessage_2 = randomMessages_2[Math.floor(Math.random() * randomMessages_2.length)];
+        document.getElementById("who_are_you_pass_box_p_id").innerText = randomMessage_2;
     }
 }
 
