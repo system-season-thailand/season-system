@@ -48,7 +48,7 @@ body {
 
 /* Password prompt full screen styling */
 .password-prompt {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
