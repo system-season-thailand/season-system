@@ -636,6 +636,13 @@
 
 
 
+                <!-- Hidden input for hotel inserting writing system -->
+                <input type="text" id="hotel_stars_rate_input_id" class="dynamic_direction_input_class"
+                    placeholder="النجوم" readonly autocomplete="off"
+                    onclick="showOverlay('hotel_stars_rate_dropdown')" style="display: none; cursor: pointer;">
+
+
+
                 <input type="text" id="hotel_check_in_input_id" placeholder="تاريخ الدخول" readonly autocomplete="off"
                     onclick="createH3ElementsForAvailableDates(); showOverlay('hotel_available_dates_dropdown')"
                     style="cursor: pointer;" disabled>
@@ -791,7 +798,7 @@
                     <div class="submit_package_pdf_div">
                         <ion-icon name="color-wand-outline" id="change_insert_hotel_data_system_icon_2"
                             onclick="playSoundEffect('success'); changeInsertHotelDataSystem()"
-                            style="display: none;"></ion-icon>
+                            style="display: none; transform: scaleX(-1);"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -826,6 +833,19 @@
                 <h3>جيمباران</h3>
                 <h3>اولواتو</h3>
                 <h3>ليجين</h3>
+            </div>
+        </div>
+
+
+
+
+        <!-- Dropdown div for room amount -->
+        <div id="hotel_stars_rate_dropdown" class="searchable_names_dropdown_class">
+            <div class="company_names_options_dropdown_class">
+                <h3 style="color: red;">حذف</h3>
+                <h3>5 نجوم</h3>
+                <h3>4 نجوم</h3>
+                <h3>3 نجوم</h3>
             </div>
         </div>
 
