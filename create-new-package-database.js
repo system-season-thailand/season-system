@@ -595,41 +595,27 @@ function importContentForSelectedName(name) {
 
 
 
-    /* in 25 Aug 2026 delete the following if "store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing" exist or no (I used it to avoid error in the old packages) */
-    /* in 25 Aug 2026 also delete the else code from the following code because it will be no needed (I used it to avoid error in the old packages) */
-    if (document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing')) {
+    // New functionality to count matching name values
 
-        // New functionality to count matching name values
+    // Get the innerText from 'package_user_code_name_for_later_import_reference_p_id' and process it
+    let packageUserCode = document.getElementById('package_user_code_name_for_later_import_reference_p_id').innerText;
 
-        // Get the innerText from 'package_user_code_name_for_later_import_reference_p_id' and process it
-        let packageUserCode = document.getElementById('package_user_code_name_for_later_import_reference_p_id').innerText;
+    // Split the string to remove the '_riv_' and everything to the right
+    let basePackageUserCode = packageUserCode.split('_riv_')[0];
 
-        // Split the string to remove the '_riv_' and everything to the right
-        let basePackageUserCode = packageUserCode.split('_riv_')[0];
-
-        // Search through the first column of the Google Sheet data and count matches
-        totalRivPackageNumberForUpdatingNewRivPackage = sheetData.filter(row => {
-            let rowBaseName = row[0].split('_riv_')[0]; // Ignore everything after '_riv_' in the row's first column
-            return rowBaseName === basePackageUserCode;
-        }).length;
+    // Search through the first column of the Google Sheet data and count matches
+    totalRivPackageNumberForUpdatingNewRivPackage = sheetData.filter(row => {
+        let rowBaseName = row[0].split('_riv_')[0]; // Ignore everything after '_riv_' in the row's first column
+        return rowBaseName === basePackageUserCode;
+    }).length;
 
 
-        document.getElementById('package_user_code_name_for_later_import_reference_p_id').innerText = `${document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText}_riv_${totalRivPackageNumberForUpdatingNewRivPackage}`
+    document.getElementById('package_user_code_name_for_later_import_reference_p_id').innerText = `${document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText}_riv_${totalRivPackageNumberForUpdatingNewRivPackage}`
 
 
-        /* When importing make sure to save the new _riv_ data as a new data in the google sheet */
-        existingDataStatus = 'newData';
-        websiteUserUniqueNumber = 'existingUniqueNumber';
-
-
-    } else {
-
-        /* if there is no "" then just replcae the old package data with the new one without adding _riv_ */
-        // Change the value of 'existingDataStatus' for updating old data mode
-        existingDataStatus = 'existingData';
-        websiteUserUniqueNumber = 'existingUniqueNumber';
-
-    }
+    /* When importing make sure to save the new _riv_ data as a new data in the google sheet */
+    existingDataStatus = 'newData';
+    websiteUserUniqueNumber = 'existingUniqueNumber';
 
 
 
@@ -1044,10 +1030,8 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
 
 
 
-        /* in 25 Aug 2026 delete the folloing if condition if 'store_google_sheet_package_clint_code_number_value' exist or no (I used it to avoid issues in old packages) */
-        if (document.getElementById('store_google_sheet_package_clint_code_number_value')) {
-            document.getElementById('package_clint_code_number_input_id').value = document.getElementById('store_google_sheet_package_clint_code_number_value').innerText;
-        }
+        /* Set the value of the 'package_clint_code_number_input_id' input based on the 'store_google_sheet_package_clint_code_number_value' innerText */
+        document.getElementById('package_clint_code_number_input_id').value = document.getElementById('store_google_sheet_package_clint_code_number_value').innerText;
 
 
 
@@ -1056,13 +1040,8 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
 
 
 
-        /* in 25 Aug also delete the following code because the down if code line will be enough (I used it to avoid issues in old packages) */
-        document.getElementById('infant_package_person_amount_input_id').value = '';
-
-        /* in 24 Aug 2026 Delete the upper code line and the following if condition for checking if the 'store_google_sheet_package_infant_amount_value' exist or no (I used it to avoid issues in old packages) */
-        if (document.getElementById('store_google_sheet_package_infant_amount_value')) {
-            document.getElementById('infant_package_person_amount_input_id').value = document.getElementById('store_google_sheet_package_infant_amount_value').innerText;
-        }
+        /* Set the value of the 'infant_package_person_amount_input_id' input based on the 'store_google_sheet_package_infant_amount_value' innerText */
+        document.getElementById('infant_package_person_amount_input_id').value = document.getElementById('store_google_sheet_package_infant_amount_value').innerText;
 
 
 
@@ -1195,24 +1174,21 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
 
 
 
-        /* in 3 Sept 2026 delete the following code if '' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_all_package_dates_hidden_or_no')) {
 
-            /* Based on the 'store_google_sheet_all_package_dates_hidden_or_no' innerText set the background color of hide all package dates icon */
-            if (document.getElementById('store_google_sheet_all_package_dates_hidden_or_no').innerText === 'hide all package dates') {
-                /* Change the icon background color */
-                document.getElementById('hide_all_package_dates_icon').style.backgroundColor = 'rgb(0, 255, 0)';
-                document.getElementById('hide_all_package_dates_icon').style.color = 'black';
+        /* Based on the 'store_google_sheet_all_package_dates_hidden_or_no' innerText set the background color of hide all package dates icon */
+        if (document.getElementById('store_google_sheet_all_package_dates_hidden_or_no').innerText === 'hide all package dates') {
+            /* Change the icon background color */
+            document.getElementById('hide_all_package_dates_icon').style.backgroundColor = 'rgb(0, 255, 0)';
+            document.getElementById('hide_all_package_dates_icon').style.color = 'black';
 
 
-            } else {
-                /* Change the icon background color */
-                document.getElementById('hide_all_package_dates_icon').style.backgroundColor = 'rgb(0, 87, 116)';
-                document.getElementById('hide_all_package_dates_icon').style.color = 'white';
-
-            }
+        } else {
+            /* Change the icon background color */
+            document.getElementById('hide_all_package_dates_icon').style.backgroundColor = 'rgb(0, 87, 116)';
+            document.getElementById('hide_all_package_dates_icon').style.color = 'white';
 
         }
+
 
 
 
@@ -1344,77 +1320,68 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
         document.getElementById('package_totla_price_input_id').value = document.getElementById('store_google_sheet_package_total_price_value').innerText;
 
 
-        /* in 2026 delete the condition if the 'store_google_sheet_show_price_in_pdf_checked_or_no' is exist or no (I just used it now to avoid error in the website becaues it's still new) */
-        if (document.getElementById('store_google_sheet_show_price_in_pdf_checked_or_no')) {
 
-            /* Check or uncheck the show total package price in the pdf file checkbox input */
-            if (document.getElementById('store_google_sheet_show_price_in_pdf_checked_or_no').innerHTML == 'showPrice') {
-                document.getElementById('show_package_total_price_checkbox').checked = true;
+        /* Check or uncheck the show total package price in the pdf file checkbox input */
+        if (document.getElementById('store_google_sheet_show_price_in_pdf_checked_or_no').innerHTML == 'showPrice') {
+            document.getElementById('show_package_total_price_checkbox').checked = true;
 
-            } else if (document.getElementById('store_google_sheet_show_price_in_pdf_checked_or_no').innerHTML == 'hidePrice') {
-                document.getElementById('show_package_total_price_checkbox').checked = false;
+        } else if (document.getElementById('store_google_sheet_show_price_in_pdf_checked_or_no').innerHTML == 'hidePrice') {
+            document.getElementById('show_package_total_price_checkbox').checked = false;
 
+        }
+
+
+
+        /* Set the value of the 'specific_car_type_input_id' input based on the 'store_google_sheet_package_specific_car_type_value' innerText */
+        document.getElementById('specific_car_type_input_id').value = document.getElementById('store_google_sheet_package_specific_car_type_value').innerText;
+
+
+
+
+        // Array of checkbox IDs
+        let checkboxIds = [
+            'privet_car_with_driver_to_welcome_and_etc_checkbox',
+            'extra_car_for_carring_bags_checkbox',
+            'hotel_booking_with_breakfast_for_2_people_checkbox',
+            'welcome_goodbye_hotel_delivery_checkbox',
+            'customer_service_24_hour_checkbox',
+            'sms_card_with_internet_checkbox',
+            'inner_flight_tickets_checkbox',
+            'outer_flight_tickets_checkbox',
+            'placese_visiting_cost_checkbox',
+            'bali_taxes_not_covered_checkbox'
+        ];
+
+        // Uncheck all inputs and reset their color
+        checkboxIds.forEach(id => {
+            let checkbox = document.getElementById(id);
+            if (checkbox) {
+                checkbox.checked = false; // Uncheck the checkbox
+                let label = checkbox.nextElementSibling; // Get the label element
+                label.style.setProperty('--checkbox-color', 'rgb(255, 255, 255)'); // Reset to white
             }
+        });
 
-        }
-
-
-
-        /* in 31 Aug 2026 delete the following if 'store_google_sheet_package_specific_car_type_value' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_package_specific_car_type_value')) {
-            document.getElementById('specific_car_type_input_id').value = document.getElementById('store_google_sheet_package_specific_car_type_value').innerText;
-        }
-
-
-
-
-        /* in 11 Sept 2026 delete the following if 'store_google_sheet_white_package_including_and_not_including_input_div' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div')) {
-            // Array of checkbox IDs
-            let checkboxIds = [
-                'privet_car_with_driver_to_welcome_and_etc_checkbox',
-                'extra_car_for_carring_bags_checkbox',
-                'hotel_booking_with_breakfast_for_2_people_checkbox',
-                'welcome_goodbye_hotel_delivery_checkbox',
-                'customer_service_24_hour_checkbox',
-                'sms_card_with_internet_checkbox',
-                'inner_flight_tickets_checkbox',
-                'outer_flight_tickets_checkbox',
-                'placese_visiting_cost_checkbox',
-                'bali_taxes_not_covered_checkbox'
-            ];
-
-            // Uncheck all inputs and reset their color
-            checkboxIds.forEach(id => {
-                let checkbox = document.getElementById(id);
-                if (checkbox) {
-                    checkbox.checked = false; // Uncheck the checkbox
-                    let label = checkbox.nextElementSibling; // Get the label element
-                    label.style.setProperty('--checkbox-color', 'rgb(255, 255, 255)'); // Reset to white
-                }
-            });
-
-            // Helper function to set checkbox color based on the div
-            function setColorFromDiv(divId, color) {
-                let div = document.getElementById(divId);
-                if (div) {
-                    let pElements = div.getElementsByTagName('p'); // Get all p elements inside the div
-                    Array.from(pElements).forEach(p => {
-                        let checkboxId = p.innerText; // Get the checkbox ID from the p element
-                        let checkbox = document.getElementById(checkboxId); // Find the checkbox by its ID
-                        if (checkbox) {
-                            let label = checkbox.nextElementSibling; // Get the label element
-                            label.style.setProperty('--checkbox-color', color); // Set the new color
-                        }
-                    });
-                }
+        // Helper function to set checkbox color based on the div
+        function setColorFromDiv(divId, color) {
+            let div = document.getElementById(divId);
+            if (div) {
+                let pElements = div.getElementsByTagName('p'); // Get all p elements inside the div
+                Array.from(pElements).forEach(p => {
+                    let checkboxId = p.innerText; // Get the checkbox ID from the p element
+                    let checkbox = document.getElementById(checkboxId); // Find the checkbox by its ID
+                    if (checkbox) {
+                        let label = checkbox.nextElementSibling; // Get the label element
+                        label.style.setProperty('--checkbox-color', color); // Set the new color
+                    }
+                });
             }
-
-            // Apply colors to checkboxes based on p elements in each div
-            setColorFromDiv('store_google_sheet_green_checked_package_including_and_not_including_input_div', 'rgb(0, 255, 0)'); // Green
-            setColorFromDiv('store_google_sheet_red_checked_package_including_and_not_including_input_div', 'rgb(255, 0, 0)'); // Red
-            setColorFromDiv('store_google_sheet_white_package_including_and_not_including_input_div', 'rgb(255, 255, 255)'); // White
         }
+
+        // Apply colors to checkboxes based on p elements in each div
+        setColorFromDiv('store_google_sheet_green_checked_package_including_and_not_including_input_div', 'rgb(0, 255, 0)'); // Green
+        setColorFromDiv('store_google_sheet_red_checked_package_including_and_not_including_input_div', 'rgb(255, 0, 0)'); // Red
+        setColorFromDiv('store_google_sheet_white_package_including_and_not_including_input_div', 'rgb(255, 255, 255)'); // White
 
 
     }
