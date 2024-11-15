@@ -581,11 +581,8 @@ hideAllPackageDates = function () {
     /* in case if hide all package dates */
     if (document.getElementById('hide_all_package_dates_icon').style.backgroundColor === 'rgb(0, 87, 116)') {
 
-        /* in 3 Sept 2026 delete the following code if '' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_all_package_dates_hidden_or_no')) {
-            /* Store the value in the google sheet for later use (when importing) */
-            document.getElementById('store_google_sheet_all_package_dates_hidden_or_no').innerText = 'hide all package dates';
-        }
+        /* Store the value in the google sheet for later use (when importing) */
+        document.getElementById('store_google_sheet_all_package_dates_hidden_or_no').innerText = 'hide all package dates';
 
 
         /* Change the icon background color */
@@ -710,11 +707,8 @@ hideAllPackageDates = function () {
         /* in case if show all package dates */
     } else {
 
-        /* in 3 Sept 2026 delete the following code if '' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_all_package_dates_hidden_or_no')) {
-            /* Store the value in the google sheet for later use (when importing) */
-            document.getElementById('store_google_sheet_all_package_dates_hidden_or_no').innerText = 'show all package dates';
-        }
+        /* Store the value in the google sheet for later use (when importing) */
+        document.getElementById('store_google_sheet_all_package_dates_hidden_or_no').innerText = 'show all package dates';
 
 
         /* Change the icon background color */
