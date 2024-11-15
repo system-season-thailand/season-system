@@ -453,11 +453,8 @@ createWholePackageAndClintDataFunction = function () {
 
 
 
-                /* in 25 Aug 2026 delete the following if dondition if "store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing" exist or no (I used it to avoid error in old packages) */
-                if (document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing')) {
-                    /* Store the package user name code with no year for later use when importing data */
-                    document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText = `${websiteUsersNameInput}_${lastTwoNumbersOfTheCurrentYear}_${mostTopEmptyCellRowNumberValue}`;
-                }
+                /* Store the package user name code with no year for later use when importing data */
+                document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText = `${websiteUsersNameInput}_${lastTwoNumbersOfTheCurrentYear}_${mostTopEmptyCellRowNumberValue}`;
 
 
                 /* Store the last clicked website user name for later refrence if it got changed */
@@ -469,16 +466,13 @@ createWholePackageAndClintDataFunction = function () {
 
 
 
-        /* in 25 Aug 2026 delete the following if condition if 'package_clint_code_number_p_id' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('package_clint_code_number_p_id')) {
 
-            /* Set the inserted clint code number inside the 'package_clint_code_number_p_id' */
-            document.getElementById('package_clint_code_number_p_id').innerText = packageClintCodeNumberInput;
+        /* Set the inserted clint code number inside the 'package_clint_code_number_p_id' */
+        document.getElementById('package_clint_code_number_p_id').innerText = packageClintCodeNumberInput;
 
 
-            /* Also store the clint code number in the google sheet for later use (when importing data) */
-            document.getElementById('store_google_sheet_package_clint_code_number_value').innerText = document.getElementById('package_clint_code_number_p_id').innerText;
-        }
+        /* Also store the clint code number in the google sheet for later use (when importing data) */
+        document.getElementById('store_google_sheet_package_clint_code_number_value').innerText = document.getElementById('package_clint_code_number_p_id').innerText;
 
 
         /* Show up the 'downloaded_pdf_clint_data_page' section */
@@ -617,22 +611,16 @@ createAllPackageIncludingAndNotIncludingData = function () {
             labelText = [specificCarTypeInputValue];
 
 
-            /* in 31 Aug 2026 delete the following if 'store_google_sheet_package_specific_car_type_value' exist or no (I used it to avoid error in old packages) */
-            if (document.getElementById('store_google_sheet_package_specific_car_type_value')) {
-                /* Store the 'specific_car_type_input_id' value in the google sheet for later use (when importing) */
-                document.getElementById('store_google_sheet_package_specific_car_type_value').innerText = document.getElementById('specific_car_type_input_id').value;
-            }
+            /* Store the 'specific_car_type_input_id' value in the google sheet for later use (when importing) */
+            document.getElementById('store_google_sheet_package_specific_car_type_value').innerText = document.getElementById('specific_car_type_input_id').value;
         }
 
 
         /* in case the 'specific_car_type_input_id' input is empty then delete the stored value from the google sheet */
         if (document.getElementById('specific_car_type_input_id').value === '') {
 
-            /* in 31 Aug 2026 delete the following if 'store_google_sheet_package_specific_car_type_value' exist or no (I used it to avoid error in old packages) */
-            if (document.getElementById('store_google_sheet_package_specific_car_type_value')) {
-                /* Store the 'specific_car_type_input_id' value in the google sheet for later use (when importing) */
-                document.getElementById('store_google_sheet_package_specific_car_type_value').innerText = '';
-            }
+            /* Store the 'specific_car_type_input_id' value in the google sheet for later use (when importing) */
+            document.getElementById('store_google_sheet_package_specific_car_type_value').innerText = '';
         }
 
 
@@ -748,44 +736,41 @@ createAllPackageIncludingAndNotIncludingData = function () {
 
 
 
-    /* in 11 Sept 2026 delete the following if '' exist or no (I used it to avoid error in old packages) */
-    if (document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div')) {
 
-        /* Delete any old p elements inside the divs */
-        document.getElementById('store_google_sheet_green_checked_package_including_and_not_including_input_div').innerHTML = '';
-        document.getElementById('store_google_sheet_red_checked_package_including_and_not_including_input_div').innerHTML = '';
-        document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div').innerHTML = '';
+    /* Delete any old p elements inside the divs */
+    document.getElementById('store_google_sheet_green_checked_package_including_and_not_including_input_div').innerHTML = '';
+    document.getElementById('store_google_sheet_red_checked_package_including_and_not_including_input_div').innerHTML = '';
+    document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div').innerHTML = '';
 
 
-        // Loop through each checkbox ID
-        checkboxIds.forEach(id => {
-            // Get the checkbox and its corresponding label
-            let checkbox = document.getElementById(id);
-            if (!checkbox) return; // Skip if the checkbox is not found
+    // Loop through each checkbox ID
+    checkboxIds.forEach(id => {
+        // Get the checkbox and its corresponding label
+        let checkbox = document.getElementById(id);
+        if (!checkbox) return; // Skip if the checkbox is not found
 
-            let label = checkbox.nextElementSibling; // Get the label element
-            // Get the current background color of the pseudo-element
-            let currentColor = window.getComputedStyle(label, '::before').backgroundColor;
+        let label = checkbox.nextElementSibling; // Get the label element
+        // Get the current background color of the pseudo-element
+        let currentColor = window.getComputedStyle(label, '::before').backgroundColor;
 
-            // Create a new p element and set its text to the checkbox ID
-            let pElement = document.createElement('p');
-            pElement.innerText = id;
+        // Create a new p element and set its text to the checkbox ID
+        let pElement = document.createElement('p');
+        pElement.innerText = id;
 
 
 
-            // Append the p element to the corresponding div based on the color
-            if (currentColor === 'rgb(0, 255, 0)') { // Green
-                document.getElementById('store_google_sheet_green_checked_package_including_and_not_including_input_div').appendChild(pElement);
+        // Append the p element to the corresponding div based on the color
+        if (currentColor === 'rgb(0, 255, 0)') { // Green
+            document.getElementById('store_google_sheet_green_checked_package_including_and_not_including_input_div').appendChild(pElement);
 
-            } else if (currentColor === 'rgb(255, 0, 0)') { // Red
-                document.getElementById('store_google_sheet_red_checked_package_including_and_not_including_input_div').appendChild(pElement);
+        } else if (currentColor === 'rgb(255, 0, 0)') { // Red
+            document.getElementById('store_google_sheet_red_checked_package_including_and_not_including_input_div').appendChild(pElement);
 
-            } else { // White or any other color
-                document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div').appendChild(pElement);
+        } else { // White or any other color
+            document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div').appendChild(pElement);
 
-            }
-        });
-    }
+        }
+    });
 
 
 
@@ -1427,18 +1412,8 @@ addMoreFlightRowTableDivFunction = function (position) {
 
 
 
-    /* in 30 Aug 2026 delete the following if with the else condition and only use the following code line
-     insertedFlightDataDivUniqueId = document.getElementById('store_google_sheet_flight_uniuqe_id_name_value').innerText; 
-    (I used the following if condition to avoid error in old packages that have no value in the 'store_google_sheet_flight_uniuqe_id_name_value') */
-
-    /* Set the 'insertedHotelDataDivUniqueId' value based on the following condition */
-    if (document.getElementById('store_google_sheet_flight_uniuqe_id_name_value').innerText !== '') {
-        insertedFlightDataDivUniqueId = document.getElementById('store_google_sheet_flight_uniuqe_id_name_value').innerText;
-
-    } else {
-        /* I used a random number just to be in safe there will not be duplicated flights id names */
-        insertedFlightDataDivUniqueId = 20;
-    }
+    /* Set the 'insertedFlightDataDivUniqueId' value based on the 'store_google_sheet_flight_uniuqe_id_name_value' innerText */
+    insertedFlightDataDivUniqueId = document.getElementById('store_google_sheet_flight_uniuqe_id_name_value').innerText;
 
 
 
@@ -5411,27 +5386,17 @@ runDownloadOnlyClintMovementsDataFunction = async function () {
         document.getElementById('downloaded_pdf_clint_movements_data_page').querySelector('img').src = `خلفية-الشركات/${companyNameWithoutSpaces}.jpg`;
 
 
-        /* in 20 Sept 2026 delete the followinng if 'store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing')) {
-            pdfName = `جدول تحركات ${document.getElementById('clint_company_name_input_id').value} ${document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText}`;
-
-        } else {
-            pdfName = `جدول تحركات ${document.getElementById('clint_company_name_input_id').value}`;
-        }
+        /* Name the clint movements data pdf file */
+        pdfName = `جدول تحركات ${document.getElementById('clint_company_name_input_id').value} ${document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText}`;
 
     } else {
 
         // in case there is no campany name then set the default first pdf image to the first image inside the 'downloaded_pdf_clint_movements_data_page'
         document.getElementById('downloaded_pdf_clint_movements_data_page').querySelector('img').src = 'first-pdf-image.jpg';
 
-
-        /* in 20 Sept 2026 delete the followinng if 'store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing' exist or no (I used it to avoid error in old packages) */
-        if (document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing')) {
-            pdfName = `جدول تحركات بكج ${document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText}`;
-
-        } else {
-            pdfName = `جدول تحركات بكج`;
-        }
+        
+        /* Name the clint movements data pdf file */
+        pdfName = `جدول تحركات بكج ${document.getElementById('store_google_sheet_package_raw_user_with_no_riv_for_later_reference_when_importing').innerText}`;
     }
 
 
