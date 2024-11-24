@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
 
 /* Change the background color and text color of highlighted text */
 ::selection {
@@ -8,7 +7,6 @@
     color: white;
     /* Text color */
 }
-
 
 /* All */
 * {
@@ -20,7 +18,6 @@
     direction: rtl;
 }
 
-
 /* Body */
 body {
     opacity: 0;
@@ -30,21 +27,6 @@ body {
     transition: all 0.5s ease-in-out;
     color: black !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Password prompt full screen styling */
 .password-prompt {
@@ -58,10 +40,10 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-  }
-  
-  /* Centered prompt box styling */
-  .prompt-box {
+}
+
+/* Centered prompt box styling */
+.prompt-box {
     background-color: #fff;
     padding: 20px;
     max-width: 90%;
@@ -69,17 +51,17 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     text-align: center;
-  }
-  
-  /* Heading styling */
-  .prompt-box p {
+}
+
+/* Heading styling */
+.prompt-box p {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 15px;
-  }
-  
-  /* Input field styling */
-  .prompt-box input[type="text"] {
+}
+
+/* Input field styling */
+.prompt-box input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -87,10 +69,10 @@ body {
     border-radius: 4px;
     font-size: 1em;
     text-align: center;
-  }
-  
-  /* Button styling */
-  .prompt-box button {
+}
+
+/* Button styling */
+.prompt-box button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -99,29 +81,11 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .prompt-box button:hover {
+}
+
+.prompt-box button:hover {
     background-color: #0056b3;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /* Special Effects */
 .black_overlay {
@@ -138,7 +102,6 @@ body {
     left: 0;
     transition: opacity 0.1s ease-in-out;
 }
-
 
 /* TextArea for full screen mood */
 .package_details_input_class {
@@ -161,7 +124,6 @@ body {
 #clint_movements_whole_day_actions_details_textarea_id {
     height: 10vw;
 }
-
 
 /* Enter textArea full screen mood button */
 .textarea_open_fullscreen_icon_class {
@@ -199,8 +161,6 @@ body {
 .exit_full_screen_icon:hover {
     background: rgb(195, 0, 0);
 }
-
-
 
 /* Clint movements tutorial */
 .clint_movements_full_page_div {
@@ -247,11 +207,6 @@ body {
     cursor: pointer;
 }
 
-
-
-
-
-
 /* Exported pdf file element */
 .inserted_package_data_section_page_image_class {
     display: none;
@@ -264,32 +219,6 @@ body {
     width: 100%;
     padding: 100px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Header */
 #header {
@@ -345,25 +274,6 @@ body {
     /* Allows items to grow and shrink as needed */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #google_sheet_data_controller_div {
     width: 100%;
     margin-top: 7.5vw;
@@ -401,19 +311,6 @@ body {
 #google_sheet_data_controller_div p:hover {
     background: rgb(213, 213, 213);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Importing and deleting data from localStorage */
 .two_icons_in_searchable_dropdown_div {
@@ -464,13 +361,6 @@ body {
     margin-left: 5px;
 }
 
-
-
-
-
-
-
-
 #filter_google_sheet_packages_names_div {
     width: 100%;
     display: flex;
@@ -500,24 +390,6 @@ body {
     border-right: 0.5px solid black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Create New hotel Package Section */
 #create_new_hotel_package_section {
     display: flex;
@@ -527,29 +399,29 @@ body {
 }
 
 .section_title_text_div {
+    background: rgb(131, 0, 148);
     width: 100%;
     margin-top: 4px;
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section_title_text_div img {
+    width: 10vw;
 }
 
 .section_title_text {
-    background: rgb(131, 0, 148);
     color: white;
-    width: 100%;
     font-size: 3vw;
     padding: 10px 0;
     text-align: center;
-    border: 0.5px solid black;
     line-height: 1.5;
 }
 
 .dropdown_content_div_class {
     width: 100%;
 }
-
-
-
-
-
 
 #hotel_two_room_data_input_divs_container {
     width: 100%;
@@ -579,18 +451,11 @@ body {
     width: 86.7%;
 }
 
-
-
 /* Styling for setting the second hotel room data inputs width value */
 .second_room_data_inputs_full_width_class input,
 .second_room_data_inputs_full_width_class textarea {
     width: 100%;
 }
-
-
-
-
-
 
 /* Package inputs styling */
 .package_info_input_div {
@@ -622,18 +487,11 @@ body {
     text-align: center;
 }
 
-
-
-
 #all_editing_flight_row_data_inputs_div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-
-
-
 
 #clint_package_type_div {
     display: flex;
@@ -671,7 +529,7 @@ body {
 
 .custom_checkbox label::before {
     background-color: white;
-    content: '';
+    content: "";
     width: 3vw;
     height: 3vw;
     margin-left: 2px;
@@ -680,17 +538,9 @@ body {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.custom_checkbox input[type="checkbox"]:checked+label::before {
+.custom_checkbox input[type="checkbox"]:checked + label::before {
     background-color: rgb(0, 255, 0);
 }
-
-
-
-
-
-
-
-
 
 /* Package including data checkbox */
 .package_including_details_div_class {
@@ -733,7 +583,7 @@ body {
 
 .package_including_data_custom_checkbox label::before {
     background-color: var(--checkbox-color, white);
-    content: '';
+    content: "";
     width: 3vw;
     height: 3vw;
     display: inline-block;
@@ -743,7 +593,7 @@ body {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.package_including_data_custom_checkbox input[type="checkbox"]:checked+label::before {
+.package_including_data_custom_checkbox input[type="checkbox"]:checked + label::before {
     background-color: var(--checkbox-color, rgb(0, 255, 0));
 }
 
@@ -752,11 +602,6 @@ body {
     line-height: 1.2;
     /* Adjust line height if necessary */
 }
-
-
-
-
-
 
 /* Show package total price check box */
 .show_package_total_price_checkbox_div {
@@ -796,7 +641,7 @@ body {
 .show_package_total_price_checkbox_div label::before {
     background-color: var(--checkbox-color, white);
     /* Default to white if not set */
-    content: '';
+    content: "";
     width: 3vw;
     height: 3vw;
     margin-left: 2px;
@@ -805,22 +650,10 @@ body {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.show_package_total_price_checkbox_div input[type="checkbox"]:checked+label::before {
+.show_package_total_price_checkbox_div input[type="checkbox"]:checked + label::before {
     background-color: var(--checkbox-color, rgb(0, 255, 0));
     /* Default to green if checked */
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Submit data icon */
 .submit_package_pdf_div {
@@ -853,10 +686,6 @@ body {
     transition: all 0.1s ease-in-out;
 }
 
-
-
-
-
 /* Styling for separating two insert package data to pdf icons */
 .two_icons_insert_data_package_pdf_div {
     width: 100%;
@@ -864,14 +693,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-
-
-
-
-
-
-
 
 .edit_data_controll_icons_div {
     display: flex;
@@ -882,13 +703,6 @@ body {
 .edit_data_controll_icons_div div {
     margin: 10px 5px 0;
 }
-
-
-
-
-
-
-
 
 /* Filter company names div */
 .searchable_names_dropdown_class {
@@ -942,7 +756,6 @@ body {
     /* Ensure placeholder text is also aligned correctly */
 }
 
-
 /* Company name options */
 .company_names_options_dropdown_class {
     background: rgb(0, 93, 163);
@@ -969,26 +782,6 @@ body {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Create new flight package section */
 #create_new_flight_package_section {
     display: flex;
@@ -996,25 +789,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Create new clint movements plane section */
 #create_new_clint_movements_paln_section {
@@ -1053,13 +827,6 @@ body {
     opacity: 0.8;
 }
 
-
-
-
-
-
-
-
 /* Clint movements places names */
 .clint_movements_places_full_page_div {
     z-index: 999;
@@ -1094,19 +861,6 @@ body {
     transition: all 0.1s ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Searchable dropdown input filter h3 */
 .clear_searchable_dropdown_input_filter_h3_value_div {
     width: 99%;
@@ -1123,18 +877,7 @@ body {
     cursor: pointer;
 }
 
-
-
-
 /*  */
-
-
-
-
-
-
-
-
 
 /* Increase the size of the day cells and add more padding */
 .pika-single .pika-table td {
@@ -1204,37 +947,25 @@ body {
     background-color: rgb(85, 127, 137);
 }
 
-
-
 .pika-select-year,
 .pika-label-year {
     display: none !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* Media Queries */
 /* 1250px */
-@media(max-width:1250px) {
+@media (max-width: 1250px) {
     .package_details_input_class {
         height: 6vw;
     }
 }
 
 /* 1040px */
-@media(max-width:1040px) {}
+@media (max-width: 1040px) {
+}
 
 /* 950px */
-@media(max-width:950px) {
+@media (max-width: 950px) {
     #header_div img {
         width: 20vw;
     }
@@ -1263,29 +994,10 @@ body {
         font-size: 3.5vw;
     }
 
-
-
-
-
-
-
-
-
-
     .section_title_text {
         font-size: 4vw;
         padding: 8px 14px;
     }
-
-
-
-
-
-
-
-
-
-
 
     /* LocalStorage Elements */
     #google_sheet_data_controller_div {
@@ -1296,11 +1008,6 @@ body {
     #google_sheet_data_controller_div p {
         font-size: 3vw;
     }
-
-
-
-
-
 
     .google_sheet_dropdown_div_class h6 {
         font-size: 3vw;
@@ -1314,13 +1021,6 @@ body {
         font-size: 6vw;
     }
 
-
-
-
-
-
-
-
     /* Inserted images in exported pdf */
     .inserted_package_data_section_page_image_class {
         padding: 50px 0;
@@ -1330,26 +1030,10 @@ body {
         padding: 50px 0;
     }
 
-
-
-
-
-
-
-
-
-
-
-
     #hotel_two_room_data_input_divs_container input,
     #hotel_two_room_data_input_divs_container textarea {
         width: 90.9%;
     }
-
-
-
-
-
 
     .package_info_input_div {
         padding: 5px;
@@ -1386,10 +1070,6 @@ body {
         font-size: 3vw;
     }
 
-
-
-
-
     .custom_checkbox label {
         font-size: 3.5vw;
     }
@@ -1416,9 +1096,6 @@ body {
         width: 5vw;
         height: 5vw;
     }
-
-
-
 
     .textarea_open_fullscreen_icon_class {
         font-size: 5vw;
@@ -1458,25 +1135,9 @@ body {
         font-size: 2.5vw;
     }
 
-
-
-
-
-
-
-
-
-
-
     .clear_searchable_dropdown_input_filter_h3_value_div ion-icon {
         font-size: 7vw;
     }
-
-
-
-
-
-
 
     /* Increase the clickable area for the header cells */
     .pika-single .pika-table th {
@@ -1493,17 +1154,18 @@ body {
 }
 
 /* 850px */
-@media(max-width:850px) {}
+@media (max-width: 850px) {
+}
 
 /* 760px */
-@media(max-width:760px) {
+@media (max-width: 760px) {
     #package_details_input_id {
         font-size: 14px;
     }
 }
 
 /* 650px */
-@media(max-width:650px) {
+@media (max-width: 650px) {
     #header_div {
         padding: 5px 15px;
     }
@@ -1524,10 +1186,6 @@ body {
         font-size: 4vw;
     }
 
-
-
-
-
     .header_navbar_links {
         padding: 5px 0;
     }
@@ -1535,19 +1193,6 @@ body {
     .header_navbar_links a {
         font-size: 4.5vw;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* LocalStorage Element */
     #google_sheet_data_controller_div {
@@ -1559,11 +1204,6 @@ body {
         font-size: 3.5vw;
         padding: 1px 2px;
     }
-
-
-
-
-
 
     .google_sheet_dropdown_div_class h6 {
         font-size: 4vw;
@@ -1577,18 +1217,6 @@ body {
         font-size: 9vw;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
     /* Inserted images in exported pdf */
     .inserted_package_data_section_page_image_class {
         padding: 30px 0;
@@ -1598,19 +1226,13 @@ body {
         padding: 30px 0;
     }
 
-
-
-
-
-
-
-
-
-
-
-
     .section_title_text_div {
         margin: 2px 0;
+    }
+
+    /* Title indonesia images */
+    .section_title_text_div img {
+        width: 15vw;
     }
 
     .section_title_text {
@@ -1618,19 +1240,10 @@ body {
         padding: 8px;
     }
 
-
-
-
-
     #hotel_two_room_data_input_divs_container input,
     #hotel_two_room_data_input_divs_container textarea {
         width: 95.9%;
     }
-
-
-
-
-
 
     .package_info_input_div {
         padding: 3px;
@@ -1671,11 +1284,6 @@ body {
         font-size: 5vw;
     }
 
-
-
-
-
-
     .custom_checkbox label {
         font-size: 4.5vw;
     }
@@ -1702,12 +1310,6 @@ body {
         width: 6vw;
         height: 6vw;
     }
-
-
-
-
-
-
 
     .textarea_open_fullscreen_icon_class {
         font-size: 7vw;
@@ -1748,21 +1350,9 @@ body {
         font-size: 3vw;
     }
 
-
-
-
-
-
-
-
     .clear_searchable_dropdown_input_filter_h3_value_div ion-icon {
         font-size: 9vw;
     }
-
-
-
-
-
 
     /* Increase the clickable area for the header cells */
     .pika-single .pika-table th {
@@ -1778,15 +1368,16 @@ body {
     }
 }
 
-
 /* 580px */
-@media(max-width:580px) {}
+@media (max-width: 580px) {
+}
 
 /* 500px */
-@media(max-width:500px) {}
+@media (max-width: 500px) {
+}
 
 /* 400px */
-@media(max-width:400px) {
+@media (max-width: 400px) {
     #header_div {
         padding: 5px 10px;
     }
@@ -1815,20 +1406,6 @@ body {
         font-size: 5.5vw;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     #google_sheet_data_controller_div {
         margin-top: 11.5vw;
     }
@@ -1839,14 +1416,6 @@ body {
         padding: 0;
     }
 
-
-
-
-
-
-
-
-
     .google_sheet_dropdown_div_class p {
         font-size: 5vw;
     }
@@ -1855,40 +1424,10 @@ body {
         font-size: 10vw;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* Inserted images in exported pdf */
     .inserted_package_data_section_page_image_class_2 {
         padding: 20px 0;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .section_title_text {
         font-size: 6vw;
@@ -1925,10 +1464,6 @@ body {
         font-size: 7w;
     }
 
-
-
-
-
     .custom_checkbox {
         margin: 5px;
     }
@@ -1959,15 +1494,6 @@ body {
         width: 9vw;
         height: 9vw;
     }
-
-
-
-
-
-
-
-
-
 
     .textarea_open_fullscreen_icon_class {
         font-size: 9vw;
@@ -2009,24 +1535,9 @@ body {
         font-size: 5vw;
     }
 
-
-
-
-
-
-
-
-
     .clear_searchable_dropdown_input_filter_h3_value_div ion-icon {
         font-size: 11vw;
     }
-
-
-
-
-
-
-
 
     /* Increase the size of day cells and add more space between them */
     .pika-single .pika-table td {
@@ -2063,7 +1574,7 @@ body {
 }
 
 /* 320px */
-@media(max-width:320px) {
+@media (max-width: 320px) {
     .package_info_input_div input {
         height: 35px;
     }
