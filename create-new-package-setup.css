@@ -3,9 +3,7 @@
 /* Change the background color and text color of highlighted text */
 ::selection {
     background-color: rgb(0, 180, 168);
-    /* Background color */
     color: white;
-    /* Text color */
 }
 
 /* All */
@@ -92,11 +90,8 @@ body {
     z-index: 999;
     opacity: 0;
     background: rgba(0, 0, 0, 0.6);
-    /* Black with 70% opacity */
     width: 100vw;
-    /* Full width of the viewport */
     height: 100vh;
-    /* Full height of the viewport */
     position: fixed;
     top: 0;
     left: 0;
@@ -493,7 +488,7 @@ body {
     justify-content: center;
 }
 
-#clint_package_type_div {
+.clint_package_type_div_class {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
