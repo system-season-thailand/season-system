@@ -12,14 +12,6 @@
     border-radius: 3px;
 }
 
-
-
-
-
-
-
-
-
 #package_user_code_name_for_later_import_reference_p_id,
 #package_clint_code_number_p_id {
     font-size: 2vw;
@@ -40,31 +32,12 @@
     padding-right: 3px;
 }
 
-
-
-
-
-
 #clint_full_name_p {
     width: 100%;
     font-size: 2vw;
     padding: 3px 0;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Inserted clint data position */
 .clint_data_row_class {
@@ -108,23 +81,6 @@
     border-left: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Inserted package including data position */
 .inserted_package_including_and_not_icluding_data_div_class {
     background: white;
@@ -142,30 +98,10 @@
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .special_package_including_data_background_color_text {
     background: rgb(85, 127, 137);
     color: white;
 }
-
-
-
-
-
-
-
-
-
 
 /* Pdf section title */
 .pdf_section_title_div_class {
@@ -198,36 +134,10 @@
     /* Adjust vertical alignment */
 }
 
-
-
-
-
 /* Usuful notes section title element */
 #pdf_section_title_div_usuful_notes_id {
     margin-top: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Inserted hotel data position */
 .hotel_row_class,
@@ -325,23 +235,6 @@
     padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Inserted package important note position */
 .inserted_package_important_note_position_div_class {
     background: white;
@@ -361,15 +254,6 @@
 .inserted_package_including_data_text {
     margin: 2px 0;
 }
-
-
-
-
-
-
-
-
-
 
 /* Inserted package total price section */
 #package_total_price_div {
@@ -394,18 +278,6 @@
     border-radius: 3px;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Inserted flight data position */
 .flight_row_class {
@@ -468,20 +340,6 @@
     border-left: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Inserted transportation_plan data position */
 .clint_movements_row_class {
     background: white;
@@ -526,7 +384,6 @@
     border-left: none;
 }
 
-
 .clint_movements_all_p_elements_div_class {
     display: flex;
     flex-direction: column;
@@ -536,45 +393,6 @@
     margin: 0;
     padding: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Delete box message */
 .ensure_your_delete_action {
@@ -609,39 +427,6 @@
 .ensure_your_delete_action button:hover {
     box-shadow: 0 0.5px 3px black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Name pdf file box */
 #name_pdf_file_div {
@@ -699,33 +484,6 @@
     transition: all 0.05s ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* inserted main row data coloring */
 .inserted_main_row_color_class {
     background: rgb(207, 83, 21);
@@ -733,29 +491,16 @@
     border-top: 0.5px solid black;
 }
 
-
-
-
-
-
-
-
 /* Media Queries */
 /* 1250px */
-@media(max-width:1250px) {}
+@media (max-width: 1250px) {
+}
 
 /* 950px */
-@media(max-width:950px) {
+@media (max-width: 950px) {
     .inserted_company_name_logo {
         width: 25vw;
     }
-
-
-
-
-
-
-
 
     #package_user_code_name_for_later_import_reference_p_id {
         font-size: 2.5vw;
@@ -765,21 +510,9 @@
         font-size: 2.5vw;
     }
 
-
-
-
     #clint_full_name_p {
         font-size: 2.5vw;
     }
-
-
-
-
-
-
-
-
-
 
     .pdf_section_title_div_class {
         padding: 6px;
@@ -794,58 +527,14 @@
         font-size: 5.5vw;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .inserted_package_including_and_not_icluding_data_div_class p {
         font-size: 2.5vw;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     .inserted_package_important_note_position_div_class p {
         font-size: 2.5vw;
         padding: 3px 0;
     }
-
-
-
-
-
-
-
-
-
-
 
     .ensure_your_delete_action button {
         font-size: 4vw;
@@ -866,8 +555,7 @@
 }
 
 /* 650px */
-@media(max-width:650px) {
-
+@media (max-width: 650px) {
     #package_user_code_name_for_later_import_reference_p_id {
         font-size: 3vw;
     }
@@ -886,41 +574,20 @@
     }
 }
 
-
 /* 580px */
-@media(max-width:580px) {
+@media (max-width: 580px) {
     .inserted_company_name_logo {
         width: 30vw;
         margin-bottom: 5px;
     }
 
-
-
-
-
-
-
-
-
     #clint_full_name_p {
         font-size: 3.5vw;
     }
 
-
-
-
-
-
-
     .clint_data_row_class p {
         font-size: 3.5vw;
     }
-
-
-
-
-
-
 
     .pdf_section_title_div_class {
         padding: 4px;
@@ -934,17 +601,6 @@
     .pdf_section_title_div_class ion-icon {
         font-size: 6.5vw;
     }
-
-
-
-
-
-
-
-
-
-
-
 
     .hotel_row_class h1,
     .hotel_row_class h2,
@@ -968,18 +624,6 @@
         font-size: 2.4vw;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
     .flight_row_class h1,
     .flight_row_class h2,
     .flight_row_class h3,
@@ -991,16 +635,6 @@
         font-size: 2.4vw;
     }
 
-
-
-
-
-
-
-
-
-
-
     .clint_movements_row_class h1,
     .clint_movements_row_class h2,
     .clint_movements_row_class h3,
@@ -1009,41 +643,10 @@
         font-size: 2.5vw;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .inserted_package_important_note_position_div_class p {
         font-size: 3vw;
         padding: 2px 0;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     #name_pdf_file_div input {
         font-size: 5vw;
@@ -1056,16 +659,11 @@
 }
 
 /* 400px */
-@media(max-width:400px) {
+@media (max-width: 400px) {
     .inserted_company_name_logo {
         width: 35vw;
         margin-bottom: 0px;
     }
-
-
-
-
-
 
     #package_user_code_name_for_later_import_reference_p_id {
         font-size: 3.5vw;
@@ -1075,28 +673,14 @@
         font-size: 3.5vw;
     }
 
-
-
     #clint_full_name_p {
         font-size: 4.5vw;
     }
-
-
-
-
-
-
-
 
     .inserted_package_including_and_not_icluding_data_div_class p {
         font-size: 3.2vw;
         padding: 3px 3px 3px 0;
     }
-
-
-
-
-
 
     .hotel_row_class span {
         font-size: 2.4vw;
@@ -1106,43 +690,13 @@
         font-size: 1.7vw !important;
     }
 
-
-
-
-
-
-
-
-
-
-
-
     #pdf_section_title_div_usuful_notes_id {
         margin-top: 10px;
     }
 
-
-
-
-
-
-
-
-
-
     .inserted_package_important_note_position_div_class p {
         font-size: 3.2vw;
     }
-
-
-
-
-
-
-
-
-
-
 
     #package_total_price_div h6 {
         font-size: 7vw;
@@ -1154,17 +708,6 @@
         padding: 3px 10px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
     .ensure_your_delete_action {
         padding: 5px;
     }
@@ -1173,10 +716,6 @@
         font-size: 7vw;
         padding: 2px;
     }
-
-
-
-
 
     /* Name pdf file box */
     #name_pdf_file_div {
