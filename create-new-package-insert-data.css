@@ -410,7 +410,7 @@
     border-radius: 3px;
     text-align: center;
     box-shadow: 0 0 5px black;
-    transform: translate(-50%, -100vh);
+    transform: translate(-50%, -130vh);
     transition: transform 0.5s ease;
 }
 
@@ -440,7 +440,7 @@
     left: 50%;
     box-shadow: 0 0 5px black;
     border: 1px solid black;
-    transform: translate(-50%, -100vh);
+    transform: translate(-50%, -130vh);
     background-color: #fefefe;
     padding: 20px;
     border: 1px solid #888;
