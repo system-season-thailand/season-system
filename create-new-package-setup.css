@@ -358,30 +358,27 @@ body {
 
 #filter_google_sheet_packages_names_div {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0;
+    text-align: center;
 }
 
 #filter_google_sheet_packages_names_div p {
     pointer-events: none;
     opacity: 0.5;
     background: rgb(255, 174, 0);
-    flex: 1;
-    /* Distribute the width equally among all <p> elements */
-    text-align: center;
-    /* Center the text inside each <p> */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
-    /* Remove any margins to ensure full width */
-    box-sizing: border-box;
-    /* Ensure padding doesn't affect width */
     border: 0;
     border-left: 0.5px solid black;
-    border-radius: 0;
     transition: all 0.2s ease-in-out;
+    height: 70px;
 }
 
-#filter_google_sheet_packages_names_div :first-child {
+#filter_google_sheet_packages_names_div p:first-child {
     border-right: 0.5px solid black;
 }
 
@@ -953,6 +950,10 @@ body {
     .package_details_input_class {
         height: 6vw;
     }
+
+    #filter_google_sheet_packages_names_div p {
+        height: 40px;
+    }
 }
 
 /* 1040px */
@@ -1363,12 +1364,18 @@ body {
     }
 }
 
-/* 580px */
-@media (max-width: 580px) {
-}
-
 /* 500px */
 @media (max-width: 500px) {
+    #filter_google_sheet_packages_names_div p {
+        border: 0.5px solid black;
+        transition: all 0.2s ease-in-out;
+        height: 9vw;
+    }
+
+    #filter_google_sheet_packages_names_div {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
 }
 
 /* 400px */
