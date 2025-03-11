@@ -308,18 +308,6 @@ body {
 }
 
 /* Importing and deleting data from localStorage */
-.two_icons_in_searchable_dropdown_div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3px;
-}
-
-.two_icons_in_searchable_dropdown_div ion-icon {
-    transition: all 0.2s ease-in-out;
-}
-
 .google_sheet_dropdown_div_class h6 {
     background: darkred;
     color: white;
@@ -359,12 +347,14 @@ body {
 #filter_google_sheet_packages_names_div {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 0;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+    gap: 0; /* No space between elements */
     text-align: center;
 }
 
 #filter_google_sheet_packages_names_div p {
+    font-size: 2rem;
     pointer-events: none;
     opacity: 0.5;
     background: rgb(255, 174, 0);
@@ -372,14 +362,9 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-    border: 0;
-    border-left: 0.5px solid black;
-    transition: all 0.2s ease-in-out;
-    height: 70px;
-}
-
-#filter_google_sheet_packages_names_div p:first-child {
-    border-right: 0.5px solid black;
+    border: 0.5px solid black; /* Add borders for better structure */
+    width: 100%; /* Ensures it takes full grid cell width */
+    box-sizing: border-box; /* Ensures border does not affect size */
 }
 
 /* Create New hotel Package Section */
@@ -950,10 +935,6 @@ body {
     .package_details_input_class {
         height: 6vw;
     }
-
-    #filter_google_sheet_packages_names_div p {
-        height: 40px;
-    }
 }
 
 /* 1040px */
@@ -988,6 +969,10 @@ body {
 
     .header_navbar_links a {
         font-size: 3.5vw;
+    }
+
+    #filter_google_sheet_packages_names_div p {
+        font-size: 3vw;
     }
 
     .section_title_text {
@@ -1364,20 +1349,6 @@ body {
     }
 }
 
-/* 500px */
-@media (max-width: 500px) {
-    #filter_google_sheet_packages_names_div p {
-        border: 0.5px solid black;
-        transition: all 0.2s ease-in-out;
-        height: 9vw;
-    }
-
-    #filter_google_sheet_packages_names_div {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, auto);
-    }
-}
-
 /* 400px */
 @media (max-width: 400px) {
     #header_div {
@@ -1406,6 +1377,10 @@ body {
 
     .header_navbar_links a {
         font-size: 5.5vw;
+    }
+
+    #filter_google_sheet_packages_names_div p {
+        font-size: 4.5vw;
     }
 
     #google_sheet_data_controller_div {
