@@ -85,6 +85,93 @@ body {
     background-color: #0056b3;
 }
 
+/* Close Sell Messga Styling */
+.modal-box {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #003049;
+    padding: 20px 3px;
+    opacity: 0;
+    /* Start invisible */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for fading */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInBox 0.4s ease;
+    /* Optional content animation */
+    width: 100vw;
+    display: flex;
+    /* Use Flexbox for centering */
+    flex-direction: column;
+    /* Arrange items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center-align text */
+    color: white;
+}
+
+.modal-box.show {
+    display: flex;
+    /* Show the box */
+    opacity: 1;
+    /* Fully visible */
+}
+
+.modal-box.hide {
+    opacity: 0;
+    /* Fading out */
+}
+
+@keyframes fadeInBox {
+    from {
+        transform: translate(-50%, -55%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.modal-box button {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Shaking effect animation (faster) */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake-border {
+    animation: shake 0.15s ease infinite;
+}
+
+input {
+    transition: border-color 0.15s ease;
+}
+
 /* Special Effects */
 .black_overlay {
     z-index: 999;
@@ -347,9 +434,12 @@ body {
 #filter_google_sheet_packages_names_div {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-    grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
-    gap: 0; /* No space between elements */
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 equal columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 equal rows */
+    gap: 0;
+    /* No space between elements */
     text-align: center;
 }
 
@@ -362,9 +452,12 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-    border: 0.5px solid black; /* Add borders for better structure */
-    width: 100%; /* Ensures it takes full grid cell width */
-    box-sizing: border-box; /* Ensures border does not affect size */
+    border: 0.5px solid black;
+    /* Add borders for better structure */
+    width: 100%;
+    /* Ensures it takes full grid cell width */
+    box-sizing: border-box;
+    /* Ensures border does not affect size */
 }
 
 /* Create New hotel Package Section */
