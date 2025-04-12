@@ -453,14 +453,6 @@
     transition: transform 0.5s ease;
 }
 
-#name_pdf_file_div input {
-    width: 80%;
-    font-size: 3vw;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
 #name_pdf_file_div p {
     background: rgb(85, 127, 137);
     width: fit-content;
@@ -472,16 +464,6 @@
     border: 0.5px solid black;
     border-radius: 3px;
     cursor: pointer;
-}
-
-#name_pdf_file_div button {
-    font-size: 2.5vw;
-    margin-top: 10px;
-    padding: 1px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid black;
-    transition: all 0.05s ease-in-out;
 }
 
 /* inserted main row data coloring */
@@ -543,14 +525,6 @@
 
     #name_pdf_file_div p {
         font-size: 3vw;
-    }
-
-    #name_pdf_file_div input {
-        font-size: 4vw;
-    }
-
-    #name_pdf_file_div button {
-        font-size: 3.5vw;
     }
 }
 
@@ -647,15 +621,6 @@
         font-size: 3vw;
         padding: 2px 0;
     }
-
-    #name_pdf_file_div input {
-        font-size: 5vw;
-    }
-
-    #name_pdf_file_div button {
-        font-size: 4.5vw;
-        padding: 1px 5px;
-    }
 }
 
 /* 400px */
@@ -723,20 +688,7 @@
         max-width: 100%;
     }
 
-    #name_pdf_file_div input {
-        width: 95%;
-    }
-
     #name_pdf_file_div p {
         font-size: 4.5vw;
-    }
-
-    #name_pdf_file_div input {
-        font-size: 6vw;
-    }
-
-    #name_pdf_file_div button {
-        font-size: 5.5vw;
-        padding: 1px 3px;
     }
 }
