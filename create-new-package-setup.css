@@ -756,6 +756,11 @@ input {
     transition: all 0.1s ease-in-out;
 }
 
+#clint_inputs_submit_icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Styling for separating two insert package data to pdf icons */
 .two_icons_insert_data_package_pdf_div {
     width: 100%;
