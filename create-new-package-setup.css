@@ -674,7 +674,7 @@ input {
 }
 
 /* Show package total price check box */
-.show_package_total_price_checkbox_div {
+/* .show_package_total_price_checkbox_div {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -710,8 +710,7 @@ input {
 
 .show_package_total_price_checkbox_div label::before {
     background-color: var(--checkbox-color, white);
-    /* Default to white if not set */
-    content: "";
+    content: '';
     width: 3vw;
     height: 3vw;
     margin-left: 2px;
@@ -720,10 +719,9 @@ input {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.show_package_total_price_checkbox_div input[type="checkbox"]:checked + label::before {
+.show_package_total_price_checkbox_div input[type="checkbox"]:checked+label::before {
     background-color: var(--checkbox-color, rgb(0, 255, 0));
-    /* Default to green if checked */
-}
+} */
 
 /* Submit data icon */
 .submit_package_pdf_div {
@@ -1149,14 +1147,14 @@ input {
         height: 4vw;
     }
 
-    .show_package_total_price_checkbox_div label {
+    /*     .show_package_total_price_checkbox_div label {
         font-size: 3vw;
     }
 
     .show_package_total_price_checkbox_div label::before {
         width: 5vw;
         height: 5vw;
-    }
+    } */
 
     .textarea_open_fullscreen_icon_class {
         font-size: 5vw;
@@ -1359,14 +1357,14 @@ input {
         height: 5vw;
     }
 
-    .show_package_total_price_checkbox_div label {
+    /*     .show_package_total_price_checkbox_div label {
         font-size: 5.5vw;
     }
 
     .show_package_total_price_checkbox_div label::before {
         width: 6vw;
         height: 6vw;
-    }
+    } */
 
     .textarea_open_fullscreen_icon_class {
         font-size: 7vw;
@@ -1539,10 +1537,10 @@ input {
         height: 7vw;
     }
 
-    .show_package_total_price_checkbox_div label::before {
+    /*     .show_package_total_price_checkbox_div label::before {
         width: 9vw;
         height: 9vw;
-    }
+    } */
 
     .textarea_open_fullscreen_icon_class {
         font-size: 9vw;
