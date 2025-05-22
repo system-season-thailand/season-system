@@ -1253,7 +1253,7 @@ input {
     /* Hotel info message box */
     #hotel_important_info_box_div {
         width: 95%;
-        padding: 5px;
+        padding: 30px 5px;
     }
 
     #hotel_important_info_box_div p {
