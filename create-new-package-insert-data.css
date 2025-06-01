@@ -103,6 +103,36 @@
     color: white;
 }
 
+/* Styling For Vide Styling */
+.no_right_padding_for_vid_design_h6_class {
+    padding-right: 0 !important;
+}
+
+.no_right_padding_for_vid_design_h6_class h6 {
+    background: rgb(230, 184, 183) !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    color: black !important;
+}
+
+.no_right_padding_for_vid_design_img_class {
+    padding-bottom: 0 !important;
+}
+
+.no_right_padding_for_vid_design_p_class {
+    background: rgb(230, 184, 183) !important;
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    color: white !important;
+    width: fit-content !important;
+    padding-right: 5px !important;
+    color: black !important;
+}
+
+.no_right_padding_for_vid_design_div_class {
+    background: rgb(99, 37, 35) !important;
+}
+
 /* Pdf section title */
 .pdf_section_title_div_class {
     background: white;
@@ -469,6 +499,16 @@
     border-top: 0.5px solid black;
 }
 
+#vid_clint_deposit_note_p_id {
+    font-size: 1.4vw;
+    width: 100%;
+    text-align: start;
+    font-weight: bold;
+    padding: 0 10px 2px;
+    background: rgb(0, 108, 133);
+    color: white;
+}
+
 /* Media Queries */
 /* 1250px */
 @media (max-width: 1250px) {
@@ -617,6 +657,10 @@
         font-size: 3vw;
         padding: 2px 0;
     }
+
+    #vid_clint_deposit_note_p_id {
+        font-size: 2.1vw;
+    }
 }
 
 /* 400px */
@@ -686,5 +730,9 @@
 
     #name_pdf_file_div p {
         font-size: 4.5vw;
+    }
+
+    #vid_clint_deposit_note_p_id {
+        font-size: 2.2vw;
     }
 }
