@@ -156,6 +156,10 @@
     border-radius: 3px;
 }
 
+.pdf_section_title_div_class ion-icon {
+    font-size: 4.5vw;
+}
+
 .pdf_section_title_div_class p {
     font-size: 4.5vw;
 }
@@ -546,6 +550,10 @@
         padding: 3px 10px;
     }
 
+    .pdf_section_title_div_class ion-icon {
+        font-size: 5.5vw;
+    }
+
     .pdf_section_title_div_class p {
         font-size: 5.5vw;
     }
@@ -612,6 +620,10 @@
     .pdf_section_title_div_class h6 {
         font-size: 3.5vw;
         padding: 2px 5px;
+    }
+
+    .pdf_section_title_div_class ion-icon {
+        font-size: 6.5vw;
     }
 
     .pdf_section_title_div_class p {
