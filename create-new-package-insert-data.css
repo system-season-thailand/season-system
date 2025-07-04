@@ -156,7 +156,7 @@
     border-radius: 3px;
 }
 
-.pdf_section_title_div_class ion-icon {
+.pdf_section_title_div_class p {
     font-size: 4.5vw;
 }
 
@@ -270,7 +270,8 @@
     justify-content: center;
 }
 
-.inserted_package_important_note_position_div_class p {
+.inserted_package_important_note_position_div_class p,
+#company_by_value_p_id {
     width: fit-content;
     font-size: 2vw;
     margin: 5px 0;
@@ -279,6 +280,14 @@
 
 .inserted_package_including_data_text {
     margin: 2px 0;
+}
+
+#company_by_value_p_id {
+    justify-self: left;
+    text-align: center;
+    padding: 1px 3px !important;
+    margin-left: 5px !important;
+    border-radius: 3px;
 }
 
 /* Inserted package total price section */
@@ -510,10 +519,6 @@
 }
 
 /* Media Queries */
-/* 1250px */
-@media (max-width: 1250px) {
-}
-
 /* 950px */
 @media (max-width: 950px) {
     .inserted_company_name_logo {
@@ -541,7 +546,7 @@
         padding: 3px 10px;
     }
 
-    .pdf_section_title_div_class ion-icon {
+    .pdf_section_title_div_class p {
         font-size: 5.5vw;
     }
 
@@ -549,7 +554,8 @@
         font-size: 2.5vw;
     }
 
-    .inserted_package_important_note_position_div_class p {
+    .inserted_package_important_note_position_div_class p,
+    #company_by_value_p_id {
         font-size: 2.5vw;
         padding: 3px 0;
     }
@@ -608,7 +614,7 @@
         padding: 2px 5px;
     }
 
-    .pdf_section_title_div_class ion-icon {
+    .pdf_section_title_div_class p {
         font-size: 6.5vw;
     }
 
@@ -657,6 +663,10 @@
         font-size: 3vw;
         padding: 2px 0;
     }
+    #company_by_value_p_id {
+        font-size: 2.5vw;
+        padding: 2px 0;
+    }
 
     #vid_clint_deposit_note_p_id {
         font-size: 2.1vw;
@@ -701,6 +711,10 @@
 
     .inserted_package_important_note_position_div_class p {
         font-size: 3.2vw;
+    }
+
+    #company_by_value_p_id {
+        font-size: 2.7vw;
     }
 
     #package_total_price_div h6 {
