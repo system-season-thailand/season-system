@@ -602,7 +602,7 @@
 /* 580px */
 @media (max-width: 580px) {
     .inserted_company_name_logo {
-        width: 30vw;
+        width: 40vw;
         margin-bottom: 5px;
     }
 
@@ -676,6 +676,7 @@
         font-size: 3vw;
         padding: 2px 0;
     }
+
     #company_by_value_p_id {
         font-size: 2.5vw;
         padding: 2px 0;
@@ -689,7 +690,7 @@
 /* 400px */
 @media (max-width: 400px) {
     .inserted_company_name_logo {
-        width: 35vw;
+        width: 45vw;
         margin-bottom: 0px;
     }
 
