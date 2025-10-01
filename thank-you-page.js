@@ -30,9 +30,48 @@
         titleEl.textContent = text || 'Thank You';
     }
 
+    function setHeaderGlowFor(company) {
+        var glow = document.querySelector('.thank_you_header_glow');
+        if (!glow) return;
+        var bg;
+        switch (company) {
+            case 'فيد':
+                // Dark pink family
+                bg = 'linear-gradient(to bottom, rgba(138, 44, 74, 0.88) 0%, rgba(179, 71, 107, 0.58) 40%, rgba(255, 255, 255, 0) 100%)';
+                break;
+            case 'مغادر':
+                // Dark blue family
+                bg = 'linear-gradient(to bottom, rgba(5, 52, 90, 0.9) 0%, rgba(10, 68, 120, 0.55) 40%, rgba(255, 255, 255, 0) 100%)';
+                break;
+            case 'سكاي جلوبال':
+                // Dark green family
+                bg = 'linear-gradient(to bottom, rgba(146, 205, 220, 0.9) 0%, rgba(124, 198, 242, 0.55) 40%, rgba(255, 255, 255, 0) 100%)';
+                break;
+            case 'ترافل جت':
+                // Light blue family
+                bg = 'linear-gradient(to bottom, rgba(58, 165, 217, 0.9) 0%, rgba(124, 198, 242, 0.55) 40%, rgba(255, 255, 255, 0) 100%)';
+                break;
+            default:
+                // Default matches current CSS palette
+                bg = 'linear-gradient(to bottom, rgba(164, 177, 151, 0.8) 0%, rgba(164, 177, 151, 0.4) 40%, rgba(255, 255, 255, 0) 100%)';
+        }
+        glow.style.background = bg;
+    }
+
     function getCompanyName() {
+        // Primary: value from the input field
         var input = byId('clint_company_name_input_id');
-        return input ? (input.value || '').trim() : '';
+        var name = input ? (input.value || '').trim() : '';
+
+        // Fallback: sometimes the app stores/reflects the company here
+        if (!name) {
+            var byValue = byId('company_by_value_p_id');
+            if (byValue && byValue.innerText) {
+                name = byValue.innerText.trim();
+            }
+        }
+
+        return name;
     }
 
     function buildLinesFor(company) {
@@ -95,6 +134,7 @@
         var company = getCompanyName();
         setThankYouLines(buildLinesFor(company));
         setThankYouTitle(buildTitleFor(company));
+        setHeaderGlowFor(company);
     }
 
     // Initialize on DOM ready
@@ -109,9 +149,16 @@
     if (companyInput) {
         companyInput.addEventListener('input', updateThankYou);
         companyInput.addEventListener('change', updateThankYou);
-        // In this app, company might be set programmatically from dropdown; observe mutations
-        var obs = new MutationObserver(updateThankYou);
-        obs.observe(companyInput, { attributes: true, attributeFilter: ['value'] });
+        // Note: programmatic changes to input.value do NOT mutate attributes.
+        // Add a lightweight watcher to keep the thank-you text in sync.
+        var lastCompany = getCompanyName();
+        setInterval(function () {
+            var current = getCompanyName();
+            if (current !== lastCompany) {
+                lastCompany = current;
+                updateThankYou();
+            }
+        }, 500);
     }
 })();
 
