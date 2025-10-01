@@ -325,13 +325,7 @@ input {
 .inserted_package_data_section_page_image_class {
     display: none;
     width: 100%;
-    padding: 100px 0;
-}
-
-.inserted_package_data_section_page_image_class_2 {
-    display: none;
-    width: 100%;
-    padding: 100px 0;
+    padding-top: 50px;
 }
 
 /* Header */
@@ -1112,15 +1106,6 @@ input {
         font-size: 6vw;
     }
 
-    /* Inserted images in exported pdf */
-    .inserted_package_data_section_page_image_class {
-        padding: 50px 0;
-    }
-
-    .inserted_package_data_section_page_image_class_2 {
-        padding: 50px 0;
-    }
-
     #hotel_two_room_data_input_divs_container input,
     #hotel_two_room_data_input_divs_container textarea {
         width: 90.9%;
@@ -1331,15 +1316,6 @@ input {
         right: 7px;
     }
 
-    /* Inserted images in exported pdf */
-    .inserted_package_data_section_page_image_class {
-        padding: 30px 0;
-    }
-
-    .inserted_package_data_section_page_image_class_2 {
-        padding: 30px 0;
-    }
-
     .section_title_text_div {
         margin: 2px 0;
     }
@@ -1528,11 +1504,6 @@ input {
 
     .google_sheet_dropdown_div_class ion-icon {
         font-size: 10vw;
-    }
-
-    /* Inserted images in exported pdf */
-    .inserted_package_data_section_page_image_class_2 {
-        padding: 20px 0;
     }
 
     .section_title_text {
