@@ -165,11 +165,6 @@
     margin-right: 5px;
 }
 
-/* Usuful notes section title element */
-#pdf_section_title_div_usuful_notes_id {
-    margin-top: 15px;
-}
-
 /* Inserted hotel data position */
 .hotel_row_class,
 .all_hotel_row_data_divs_container {
@@ -267,32 +262,36 @@
 }
 
 /* Inserted package important note position */
-.inserted_package_important_note_position_div_class {
-    background: white;
-    padding-right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.inserted_package_important_note_position_div_class p,
 #company_by_value_p_id {
     width: fit-content;
     font-size: 2vw;
     margin: 5px 0;
-    text-align: start;
+    justify-self: left;
+    text-align: center;
+    padding: 1px 3px !important;
+    margin-left: 5px !important;
+    border-radius: 3px;
 }
 
 .inserted_package_including_data_text {
     margin: 2px 0;
 }
 
-#company_by_value_p_id {
-    justify-self: left;
-    text-align: center;
-    padding: 1px 3px !important;
-    margin-left: 5px !important;
+/* Inline icons beside activity text */
+.activity_icon_img {
+    height: 14vw;
+    width: auto;
+    margin: 0 1px;
+    vertical-align: middle;
     border-radius: 3px;
+}
+
+.activity_icon_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
 }
 
 /* Inserted package total price section */
@@ -434,6 +433,16 @@
     padding: 0;
 }
 
+.Important_notes_for_each_pdf_section_div_class {
+    padding: 5px 5px 0 5px;
+    display: none;
+}
+
+.Important_notes_for_each_pdf_section_div_class h5,
+.Important_notes_for_each_pdf_section_div_class h6 {
+    font-size: 1.6vw;
+}
+
 /* Delete box message */
 .ensure_your_delete_action {
     z-index: 1000;
@@ -563,10 +572,18 @@
         font-size: 2.5vw;
     }
 
-    .inserted_package_important_note_position_div_class p,
-    #company_by_value_p_id {
-        font-size: 2.5vw;
-        padding: 3px 0;
+    .activity_icon_img {
+        height: 16vw;
+    }
+
+    .activity_icon_container {
+        gap: 3px;
+        margin-top: 2px;
+    }
+
+    .Important_notes_for_each_pdf_section_div_class h5,
+    .Important_notes_for_each_pdf_section_div_class h6 {
+        font-size: 2.1vw;
     }
 
     .ensure_your_delete_action button {
@@ -602,7 +619,7 @@
 /* 580px */
 @media (max-width: 580px) {
     .inserted_company_name_logo {
-        width: 40vw;
+        width: 30vw;
         margin-bottom: 5px;
     }
 
@@ -672,9 +689,9 @@
         font-size: 2.5vw;
     }
 
-    .inserted_package_important_note_position_div_class p {
-        font-size: 3vw;
-        padding: 2px 0;
+    .Important_notes_for_each_pdf_section_div_class h5,
+    .Important_notes_for_each_pdf_section_div_class h6 {
+        font-size: 2.6vw;
     }
 
     #company_by_value_p_id {
@@ -690,7 +707,7 @@
 /* 400px */
 @media (max-width: 400px) {
     .inserted_company_name_logo {
-        width: 45vw;
+        width: 35vw;
         margin-bottom: 0px;
     }
 
@@ -711,6 +728,15 @@
         padding: 3px 3px 3px 0;
     }
 
+    .activity_icon_img {
+        height: 17vw;
+    }
+
+    .activity_icon_container {
+        gap: 2px;
+        margin-top: 2px;
+    }
+
     .hotel_row_class span {
         font-size: 2.4vw;
     }
@@ -719,12 +745,9 @@
         font-size: 1.7vw !important;
     }
 
-    #pdf_section_title_div_usuful_notes_id {
-        margin-top: 10px;
-    }
-
-    .inserted_package_important_note_position_div_class p {
-        font-size: 3.2vw;
+    .Important_notes_for_each_pdf_section_div_class h5,
+    .Important_notes_for_each_pdf_section_div_class h6 {
+        font-size: 2.8vw;
     }
 
     #company_by_value_p_id {
