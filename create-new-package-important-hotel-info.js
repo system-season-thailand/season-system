@@ -5,7 +5,7 @@ const hotelMessageInfoArray = [
 
     {
         hotelName: "Mamaka By Ovolo",
-        messageInfo_p1: "حجز ثلاث ليالي او أكثر في فيلا سواجر سويت:",
+        messageInfo_p1: "حجز ثلاث ليالي او أكثر في سواجر سويت:",
         messageInfo_p2: "مساج مجاني لشخصين لمدة 30 دقيقة لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 31 ديسمبر 2025",
     },
@@ -107,3 +107,4 @@ const hotelMessageInfoArray = [
     },
 
 ];
+
