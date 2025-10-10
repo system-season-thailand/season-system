@@ -5,8 +5,8 @@ const hotelMessageInfoArray = [
 
     {
         hotelName: "Mamaka By Ovolo",
-        messageInfo_p1: "حجز ثلاث ليالي او أكثر في سواجر سويت:",
-        messageInfo_p2: "مساج مجاني لشخصين لمدة 30 دقيقة لمره واحدة",
+        messageInfo_p1: "حجز ليلتين او أكثر:",
+        messageInfo_p2: "مساج لشخصين لمدة 30 دقيقة لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 31 ديسمبر 2025",
     },
 
@@ -14,7 +14,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Indigo Bali",
         messageInfo_p1: "حجز ثلاث ليالي او اكثر:",
-        messageInfo_p2: "مساج مجاني لشخصين لمدة 60 دقيقة",
+        messageInfo_p2: "مساج لشخصين لمدة 60 دقيقة",
         messageInfo_p3: "صالح للإستخدام الى 31 أكتوبر 2025",
     },
 
@@ -22,7 +22,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Tanadewa Nusa Dua",
         messageInfo_p1: "حجز ليلين او اكثر:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
     },
 
@@ -30,7 +30,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Impiana Villa",
         messageInfo_p1: "حجز ليلين او اكثر في ديوكس فيلا من غرفة نوم واحدة:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
     },
 
@@ -38,7 +38,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Maharaja Villas Seminyak",
         messageInfo_p1: "حجز ليلين او اكثر:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 31 أكتوبر 2025",
     },
 
@@ -46,7 +46,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "E Sanctuary Resort",
         messageInfo_p1: "حجز ليلين او اكثر:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 03 يناير 2026",
     },
 
@@ -62,7 +62,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Komaneka Tanggayuda",
         messageInfo_p1: "حجز ليلين او اكثر",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 23 ديسمبر 2025",
     },
 
@@ -70,7 +70,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Komaneka Keramas",
         messageInfo_p1: "حجز ليلين او اكثر",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 23 ديسمبر 2025",
     },
 
@@ -78,7 +78,7 @@ const hotelMessageInfoArray = [
     {
         hotelName: "Tejaprana Resort & Spa",
         messageInfo_p1: "حجز ليلين او اكثر",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
+        messageInfo_p2: "إفطار عائم لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 31 مارس 2026",
     },
 
@@ -107,4 +107,5 @@ const hotelMessageInfoArray = [
     },
 
 ];
+
 
