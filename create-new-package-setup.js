@@ -161,7 +161,7 @@ window.addEventListener("load", () => {
 
     /* Get the user package unique number */
     if (document.getElementById("website_users_name_input_id").value !== "") {
-        handleUserPackageUniqueNumber("fetch");
+        handleUserPackageUniqueNumber(document.getElementById("website_users_name_input_id").value, "fetch");
     }
 
     updateDataBaseSavedDataNames();
@@ -497,15 +497,12 @@ companyNamesInputOptions.forEach((option) => {
             if (option.getAttribute("company_by_value") === "awa") {
                 document.getElementById("company_by_value_p_id").style.setProperty("background", "rgb(10, 83, 168)", "important");
                 document.getElementById("company_by_value_p_id").style.setProperty("color", "white", "important");
-                console.log("awa");
             } else if (option.getAttribute("company_by_value") === "mst") {
                 document.getElementById("company_by_value_p_id").style.setProperty("background", "rgb(255, 229, 160)", "important");
                 document.getElementById("company_by_value_p_id").style.setProperty("color", "black", "important");
-                console.log("mst");
             } else {
                 document.getElementById("company_by_value_p_id").style.setProperty("background", "rgb(232, 234, 237)", "important");
                 document.getElementById("company_by_value_p_id").style.setProperty("color", "black", "important");
-                console.log("ofs");
             }
 
             /* Store the inserted values in the stored p elements for later use (when importing) */
@@ -586,7 +583,7 @@ websiteUsersNameInputOptions.forEach((option) => {
             websiteUsersNameInput.value = newValue; // Update the input value
 
             /* Call two functions, one for getting the most top row number and one for show the owner package names */
-            handleUserPackageUniqueNumber("fetch");
+            handleUserPackageUniqueNumber(newValue, "fetch");
             showWebsiteUsernamePackageNames();
 
             // Make the icon unclickable and visually disabled
