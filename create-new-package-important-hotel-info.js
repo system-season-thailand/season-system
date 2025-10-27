@@ -18,23 +18,6 @@ const hotelMessageInfoArray = [
         messageInfo_p3: "صالح للإستخدام الى 31 أكتوبر 2025",
     },
 
-
-    {
-        hotelName: "Tanadewa Nusa Dua",
-        messageInfo_p1: "حجز ليلين او اكثر:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
-        messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
-    },
-
-
-    {
-        hotelName: "Impiana Villa",
-        messageInfo_p1: "حجز ليلين او اكثر في ديوكس فيلا من غرفة نوم واحدة:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
-        messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
-    },
-
-
     {
         hotelName: "Maharaja Villas Seminyak",
         messageInfo_p1: "حجز ليلين او اكثر:",
