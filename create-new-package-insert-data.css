@@ -70,7 +70,6 @@
 .clint_data_row_class {
     background: white;
     display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -82,12 +81,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 0.5px solid black;
+    border-left: 0.5px solid black;
 }
 
 .clint_data_row_class div * {
     text-align: center;
-    direction: ltr;
 }
 
 .clint_data_row_class div:first-child {
@@ -107,6 +105,7 @@
 /* Reduce the width of "مجموع الليالي" cells */
 .clint_data_row_class div:nth-child(4) {
     flex-grow: 0.4;
+    border-left: none;
 }
 
 
@@ -126,25 +125,21 @@
 
 
 
-/* Container */
+/* Inserted package including data position */
 .inserted_package_including_and_not_icluding_data_div_class {
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
 }
 
-/* Each line */
 .inserted_package_including_and_not_icluding_data_div_class p {
     width: 100%;
     font-size: 2vw;
-    margin: 0 0 0.7vmax 0;
-    padding: 0.3vmax 1vmax;
-    text-align: start; /* Make it look more natural */
-    direction: ltr; /* Keep icon and text aligned in left-to-right order */
+    margin: 0 0 0.5vmax 0;
+    padding: 0 0.5vmax 0 0;
+    text-align: start;
     cursor: pointer;
-    line-height: 1.4;
 }
 
 
@@ -206,7 +201,6 @@
     background: white;
     width: 100%;
     display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     align-items: center;
     justify-content: flex-start;
     margin: auto;
@@ -266,7 +260,6 @@
 .all_hotel_row_data_divs_container {
     background: white;
     display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -279,12 +272,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 0.5px solid black;
+    border-left: 0.5px solid black;
 }
 
 .hotel_row_class div * {
-    text-align: center !important;
-    direction: ltr;
+    text-align: center;
 }
 
 .hotel_row_class div:first-child {
@@ -315,7 +307,6 @@
 .hotel_row_class span {
     font-size: 1.5vw;
     font-weight: 600;
-    direction: ltr;
 }
 
 /* Reduce the width of "تاريخ الدخول وتاريخ الخروج" and cells */
@@ -343,7 +334,7 @@
 .hotel_row_class div:nth-child(7) {
     flex-grow: 0.65;
     font-size: 0.5vw;
-    border-right: none;
+    border-left: none;
 }
 
 .hotel_row_class_for_editing div * {
@@ -382,10 +373,10 @@
     width: fit-content;
     font-size: 2vw;
     margin: 5px 0;
-    justify-self: right;
+    justify-self: left;
     text-align: center;
     padding: 1px 3px !important;
-    margin-right: 5px !important;
+    margin-left: 5px !important;
     border-radius: 3px;
 }
 
@@ -404,7 +395,6 @@
 
 .activity_icon_container {
     display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     flex-wrap: wrap;
     align-items: center;
     gap: 4px;
@@ -420,7 +410,6 @@
 #package_total_price_div {
     width: 100%;
     display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: center;
     align-items: center;
 }
@@ -455,9 +444,8 @@
 
 /* Inserted flight data position */
 .flight_row_class {
-    display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     background: white;
+    display: flex;
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -469,11 +457,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 0.5px solid black;
+    border-left: 0.5px solid black;
 }
 
 .flight_row_class div * {
-    text-align: center !important;
+    text-align: center;
 }
 
 .flight_row_class div:first-child {
@@ -512,7 +500,7 @@
 
 /* Reduce the width of "وقت الوصول" cell */
 .flight_row_class div:nth-child(8) {
-    border-right: none;
+    border-left: none;
 }
 
 
@@ -534,7 +522,6 @@
     background: white;
     min-height: 9vw;
     display: flex;
-    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -546,12 +533,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 0.5px solid black;
+    border-left: 0.5px solid black;
     transition: all 0.1s ease-in-out;
 }
 
 .clint_movements_row_class div * {
-    text-align: center !important;
+    text-align: center;
 }
 
 .clint_movements_row_class h1,
@@ -571,7 +558,7 @@
 /* Reduce the width of "الى" cell */
 .clint_movements_row_class div:nth-child(3) {
     flex-grow: 0.3;
-    border-right: none;
+    border-left: none;
 }
 
 
@@ -604,7 +591,6 @@
 .Important_notes_for_each_pdf_section_div_class h5,
 .Important_notes_for_each_pdf_section_div_class h6 {
     font-size: 1.5vw;
-    direction: ltr;
 }
 
 
@@ -841,6 +827,9 @@
     .pdf_section_title_div_class p {
         font-size: 5.5vw;
     }
+
+
+
 
 
 

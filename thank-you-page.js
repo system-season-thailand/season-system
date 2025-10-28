@@ -77,38 +77,38 @@
     function buildLinesFor(company) {
         // Default placeholder lines
         var placeholder = [
-            'Happy To Welcome You',
-            `We're very happy to have you with us, and our goal from the beginning was for you to enjoy a comfortable journey and services that suit you. Your trust means a lot to us, and it is what makes us always strive to live up to your expectations.`,
-            'We hope your trip is full of sweet moments and unforgettable memories.',
-            `We're always waiting for you on more beautiful upcoming trips.`,
-            '✨️ Your journey with us is not just a service.. it is an experience in which we cherish you.'
+            'أهلاً وسهلاً بكم',
+            'سعدنا جداً بوجودكم معنا، وكان هدفنا من البداية إنكم تستمتعوا برحلة مريحة وخدمات تليق فيكم. ثقتكم تعني لنا الكثير، وهي الي تخلينا نحرص دايماً نكون عند حسن ظنكم.',
+            'نتمنى رحلتكم تكون مليانة لحظات حلوة وذكريات ماتُنسى.',
+            'وبإنتظاركم دايماً في رحلات قادمة أجمل.',
+            '✨️ رحلتكم معنا مو بس خدمة... هي تجربة نعتز فيها بكم.'
         ];
 
         switch (company) {
             case 'فيد':
                 return [
-                    'At Vid Travel, our true joy is your satisfaction and happiness during your journey with us.',
-                    'Our work always has one goal: to provide you with comfort and care that will make your experience different and unique.',
-                    '✨️ We look forward to future trips that will bring us together, to be more beautiful and closer to your hearts.'
+                    'في فيد، فرحتنا الحقيقية هي رضاكم وسعادتكم خلال رحلتكم معنا.',
+                    'عملنا دايماً يكون بهدف واحد: إننا نوفر لكم راحة وإهتمام يخلّي تجربتكم مختلفة ومميزة.',
+                    '✨️ ننتظر رحلات قادمة تجمعنا بكم، لتكون أجمل وأقرب إلى قلوبكم.'
                 ];
             case 'مغادر':
                 return [
-                    'Your journey with us is more than just travel.',
-                    'with Moghader, we make sure your experience is full of comfort and care.',
-                    'Thank you for your trust in us.',
-                    'Your happiness and satisfaction are our true success, and we hope that the memories of your beautiful trip will accompany you long after your return.'
+                    'رحلتكم معنا أكثر من مجرد سفر.',
+                    'مع مغادر حرصنا أن تكون تجربتكم مليئة بالراحة والاهتمام.',
+                    'نشكركم على ثقتكم بنا.',
+                    'فسعادتكم ورضاكم هم نجاحنا الحقيقي، ونتمنى أن ترافقكم ذكريات رحلتكم الجميلة طويلاً حتى بعد العودة.'
                 ];
             case 'سكاي جلوبال':
                 return [
-                    'We at Sky Global are delighted that you have chosen us to be part of your journey. We have made sure that everything is arranged and comfortable so that you can enjoy an experience that meets your expectations and exceeds them.',
-                    '✨️ We wish you beautiful memories, and we will be honored to serve you on future trips.'
+                    'يسعدنا في سكاي جلوبال أنكم اخترتمونا لنكون جزءا من رحلتكم. حرصنا أن يكون كل شيء مرتبا ومريحًا لكي تستمتعوا بتجربة على قدر توقعاتكم وأكثر.',
+                    '✨️ نتمنى لكم ذكريات جميلة، وإن شاء الله نتشرف بخدمتكم في رحلات قادمة.'
                 ];
             case 'ترافل جت':
                 return [
-                    'We believe that travel is not just about moving from one place to another, but rather an art of creating exceptional moments.',
-                    'Thank you for choosing Travel Jet as your travel companion.',
-                    'It was an honor for us to put your comfort and happiness at the forefront of our concerns.',
-                    'We hope we have given you a luxurious travel experience and long-lasting memories.'
+                    'نؤمن أن السفر ليس مجرد انتقال من مكان لآخر، بل فن لصناعة اللحظات الاستثنائية.',
+                    'شكراً لاختياركم ترافل جِت لتكون رفيقة رحلتكم.',
+                    'فقد كان شرفاً لنا أن نضع راحتكم وسعادتكم في مقدمة اهتماماتنا.',
+                    'ونأمل أن نكون قد منحناكم تجربة سفر راقية وذكريات تدوم طويلاً.'
                 ];
             default:
                 return placeholder;
@@ -118,15 +118,15 @@
     function buildTitleFor(company) {
         switch (company) {
             case 'فيد':
-                return '💎 Sincere Thanks From VID';
+                return '💎 مع خالص الشكر من فيد';
             case 'مغادر':
-                return '💫 MOGHADER is Proud of You';
+                return '💫 مغادر تفتخر بكم';
             case 'سكاي جلوبال':
-                return '✨️ Thanks And Appreciation From SKY GLOBAL';
+                return '✨️ شكر وتقدير من سكاي جلوبال';
             case 'ترافل جت':
-                return 'TRAVEL GET is Happy To Serve You.';
+                return 'ترافل جت سعيدة لخدمتكم';
             default:
-                return '💌 Thanks From Bottom of Heart';
+                return '💌 شكراً من القلب';
         }
     }
 

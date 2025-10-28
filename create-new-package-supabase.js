@@ -46,7 +46,7 @@ async function sendDataToSupabase() {
 
             if (existingDataStatus === "newData") {
                 const { data, error } = await supabase
-                    .from('en_all_package_indo')
+                    .from('best_all_package_indo')
                     .insert([rowData])
                     .select();
 
@@ -58,7 +58,7 @@ async function sendDataToSupabase() {
 
             } else if (existingDataStatus === "existingData") {
                 const { data, error } = await supabase
-                    .from('en_all_package_indo')
+                    .from('best_all_package_indo')
                     .update(rowData)
                     .eq('name', formattedName)
                     .select();
@@ -175,7 +175,7 @@ async function updateDataBaseSavedDataNames() {
 
         try {
             const { data, error } = await supabase
-                .from('en_all_package_indo')
+                .from('best_all_package_indo')
                 .select('name') // Only select the name column to reduce data transfer
                 .order('package_indo_user_current_date', { ascending: false }) // Order by timestamp descending (newest first)
                 .range(from, to);
@@ -556,7 +556,7 @@ async function importContentForSelectedName(name) {
     try {
         // Fetch the full row for the selected name from Supabase (latest by timestamp)
         const { data: selectedRow, error } = await supabase
-            .from('en_all_package_indo')
+            .from('best_all_package_indo')
             .select('*')
             .eq('name', name)
             .order('package_indo_user_current_date', { ascending: false })
@@ -644,7 +644,7 @@ async function importContentForSelectedName(name) {
             // Query names that start with base (server-side)
             let likePattern = `${basePackageUserCode}%`;
             const { data: rowsLikeBase, error: countError } = await supabase
-                .from('en_all_package_indo')
+                .from('best_all_package_indo')
                 .select('name')
                 .like('name', likePattern);
 
@@ -1155,8 +1155,17 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
 
 
 
-        /* The following code will be replaced with the folloiwng code line */
+        /* The following code will be replaced with the folloiwng code line
         document.getElementById('website_users_name_input_id').value = document.getElementById('store_google_sheet_package_user_name_value').innerText;
+ 
+        until 20 Sept 2024 Delete this following code and use the upper code line
+        */
+        if (document.getElementById('store_google_sheet_package_user_name_value')) {
+            document.getElementById('website_users_name_input_id').value = document.getElementById('store_google_sheet_package_user_name_value').innerText;
+
+        } else {
+            document.getElementById('website_users_name_input_id').value = 'عبد الرحمن';
+        }
 
 
 
@@ -1167,17 +1176,17 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
         /* on 10 Mar 2025 delete the following if "store_google_sheet_clint_package_price_type_checkbox_value" exist or no condition (I used it to avoid error in old saved packages) */
         if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value')) {
 
-            if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText === 'Economy Package') {
+            if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText === 'بكج إقتصادي') {
                 document.getElementById('economy_package_checkbox').checked = true;
                 document.getElementById('medium_package_checkbox').checked = false;
                 document.getElementById('vip_package_checkbox').checked = false;
 
-            } else if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText === 'Medium Package') {
+            } else if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText === 'بكج متوسط') {
                 document.getElementById('economy_package_checkbox').checked = false;
                 document.getElementById('medium_package_checkbox').checked = true;
                 document.getElementById('vip_package_checkbox').checked = false;
 
-            } else if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText === 'VIP Package') {
+            } else if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText === 'بكج VIP') {
                 document.getElementById('economy_package_checkbox').checked = false;
                 document.getElementById('medium_package_checkbox').checked = false;
                 document.getElementById('vip_package_checkbox').checked = true;
@@ -1203,28 +1212,28 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
 
 
         /* Check the package type checkbox based on the innerText of the 'store_google_sheet_clint_package_type_checkbox_value' */
-        if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'Honeymooners Package') {
+        if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'بكج شهل عسل') {
             document.getElementById('honeymoon_checkbox').checked = true;
             document.getElementById('guys_checkbox').checked = false;
             document.getElementById('family_checkbox').checked = false;
             document.getElementById('two_people_checkbox').checked = false;
             document.getElementById('group_of_people_checkbox').checked = false;
 
-        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'Guys Package') {
+        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'بكج شباب') {
             document.getElementById('honeymoon_checkbox').checked = false;
             document.getElementById('guys_checkbox').checked = true;
             document.getElementById('family_checkbox').checked = false;
             document.getElementById('two_people_checkbox').checked = false;
             document.getElementById('group_of_people_checkbox').checked = false;
 
-        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'Family Package') {
+        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'بكج عائلة') {
             document.getElementById('honeymoon_checkbox').checked = false;
             document.getElementById('guys_checkbox').checked = false;
             document.getElementById('family_checkbox').checked = true;
             document.getElementById('two_people_checkbox').checked = false;
             document.getElementById('group_of_people_checkbox').checked = false;
 
-        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'Two People Package') {
+        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'بكج شخصين') {
             document.getElementById('honeymoon_checkbox').checked = false;
             document.getElementById('guys_checkbox').checked = false;
             document.getElementById('family_checkbox').checked = false;
@@ -1232,7 +1241,7 @@ reActiveDragAndDropFunctionality = function (visiableDivIdName) {
             document.getElementById('group_of_people_checkbox').checked = false;
 
 
-        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'Group Package') {
+        } else if (document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText === 'بكج قروب') {
             document.getElementById('honeymoon_checkbox').checked = false;
             document.getElementById('guys_checkbox').checked = false;
             document.getElementById('family_checkbox').checked = false;

@@ -304,13 +304,13 @@ function checkPassword() {
 
 
 /* Code to reload the sounds to make sure there is no latency */
-let clickSoundEffect = new Audio('../click.ogg');
+let clickSoundEffect = new Audio('click.ogg');
 clickSoundEffect.preload = 'auto';
 
-let successSoundEffect = new Audio('../success.ogg');
+let successSoundEffect = new Audio('success.ogg');
 successSoundEffect.preload = 'auto';
 
-let errorSoundEffect = new Audio('../error.ogg');
+let errorSoundEffect = new Audio('error.ogg');
 errorSoundEffect.preload = 'auto';
 
 let isSoundEffectCooldown = false; // Flag to manage cooldown
@@ -356,6 +356,20 @@ setTimeout(function () {
 
 
 
+
+
+
+/* Function to store the status of the show or hide the total package price in the downloaded pdf file */
+/* function togglePriceDisplayInPDF() {
+    let showPackageTotalPriceCheckbox = document.getElementById('show_package_total_price_checkbox');
+    let storeGoogleSheetShowPriceInPdfCheckedOrNo = document.getElementById('store_google_sheet_show_price_in_pdf_checked_or_no');
+
+    if (showPackageTotalPriceCheckbox.checked) {
+        storeGoogleSheetShowPriceInPdfCheckedOrNo.innerText = "showPrice";
+    } else {
+        storeGoogleSheetShowPriceInPdfCheckedOrNo.innerText = "hidePrice";
+    }
+} */
 
 
 
@@ -480,6 +494,39 @@ function extractNumberFromText(text) {
     return parseInt(text.match(/\d+/)) || 0; // Extracts the first number or defaults to 0
 }
 
+// Helper function to map total people to Arabic text representation
+function getArabicTextForPeopleCount(totalPeople) {
+    const peopleMap = {
+        1: 'شخص واحد',
+        2: 'شخصين',
+        3: 'ثلاثة أشخاص',
+        4: 'اربعة أشخاص',
+        5: 'خمسة أشخاص',
+        6: 'ستة أشخاص',
+        7: 'سبعة أشخاص',
+        8: 'ثمانية أشخاص',
+        9: 'تسعة أشخاص',
+        10: 'عشرة أشخاص',
+        11: 'احد عشر شخص',
+        12: 'اثنا عشر شخص',
+        13: 'ثلاثة عشر شخص',
+        14: 'اربعة عشر شخص',
+        15: 'خمسة عشر شخص',
+        15: 'ستة عشر شخص',
+        15: 'سبعة عشر شخص',
+        15: 'ثمانية عشر شخص',
+        15: 'تسعة عشر شخص',
+        20: 'عشرين شخص',
+        25: 'خمسة وعشرين شخص',
+        30: 'ثلاثين شخص',
+        35: 'خمسة وثلاثين شخص',
+        40: 'اربعين شخص',
+        45: 'خمسة واربعين شخص',
+        50: 'خمسين شخص',
+    };
+    return peopleMap[totalPeople] || `${totalPeople} شخص`;
+}
+
 // Event listener for adult dropdown options
 adultPackagePersonAmountInputOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -498,18 +545,27 @@ adultPackagePersonAmountInputOptions.forEach(option => {
             const kidsCount = kidsInput ? extractNumberFromText(kidsInput.value) : 0;
 
             const totalPeople = adultCount + kidsCount;
+            const wholePackagePersonAmountValue = getArabicTextForPeopleCount(totalPeople);
 
             // Update SMS card value with adult count only
-            document.getElementById('sms_card_with_internet_amount_input_id').value = `Internet Cards For ${adultCount} Pax`;
+            document.getElementById('sms_card_with_internet_amount_input_id').value = `شرائح إنترنت ل${getArabicTextForPeopleCount(adultCount)}`;
 
             // Update flight tickets with total people count
-            document.getElementById('inner_flight_tickets_amount_input_id').value = `Domestic Tickets For ${totalPeople} Pax`;
+            document.getElementById('inner_flight_tickets_amount_input_id').value = `تذاكر الطيران الداخلي ل${wholePackagePersonAmountValue}`;
             document.getElementById('store_google_sheet_package_adult_amount_value').innerText = option.textContent;
         }
 
         hideOverlay();
     });
 });
+
+
+
+
+
+
+
+
 
 
 /* Count the amount of kids included */
@@ -534,26 +590,19 @@ kidsPackagePersonAmountInputOptions.forEach(option => {
         // Recalculate total people count
         const adultCount = extractNumberFromText(adultPackagePersonAmountInput.value || '');
         const kidsCount = extractNumberFromText(kidsPackagePersonAmountInput.value || '');
+
         const totalPeople = adultCount + kidsCount;
+        const wholePackagePersonAmountValue = getArabicTextForPeopleCount(totalPeople);
 
         // Update SMS card value with adult count only
-        document.getElementById('sms_card_with_internet_amount_input_id').value = `Internet Cards For ${adultCount} Pax`;
+        document.getElementById('sms_card_with_internet_amount_input_id').value = `شرائح إنترنت ل${getArabicTextForPeopleCount(adultCount)}`;
 
         // Update flight tickets with total people count
-        document.getElementById('inner_flight_tickets_amount_input_id').value = `Domestic Tickets For ${totalPeople} Pax`;
+        document.getElementById('inner_flight_tickets_amount_input_id').value = `تذاكر الطيران الداخلي ل${wholePackagePersonAmountValue}`;
 
         hideOverlay();
     });
 });
-
-
-
-
-
-
-
-
-
 
 
 
@@ -907,27 +956,27 @@ hideAllPackageDates = function () {
 
         /* Check which checkbox is checked then include the text in the content */
         if (document.getElementById('honeymoon_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Honeymooners Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Honeymooners Package';
+            clintPackageTypeH6.innerHTML = 'بكج شهر عسل';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج شهل عسل';
 
         } else if (document.getElementById('guys_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Guys Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Family Package';
+            clintPackageTypeH6.innerHTML = 'بكج شباب';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج شباب';
 
         } else if (document.getElementById('family_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Family Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Family Package';
+            clintPackageTypeH6.innerHTML = 'بكج عائلة';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج عائلة';
 
         } else if (document.getElementById('two_people_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Two People Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Two People Package';
+            clintPackageTypeH6.innerHTML = 'بكج شخصين';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج شخصين';
 
         } else if (document.getElementById('group_of_people_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Group Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Group Package';
+            clintPackageTypeH6.innerHTML = 'بكج قروب';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج قروب';
 
         } else {
-            clintPackageTypeH6.innerHTML = 'New Package';
+            clintPackageTypeH6.innerHTML = 'بكج جديد';
 
         }
 
@@ -1047,7 +1096,7 @@ ensureAllPackageDatesHiddenOrNo = function () {
             let words = inputText.split(' ');
 
             if (words.length > 1) {
-                clintPackageTypeH6.innerText = `Package ${words[1]}`;
+                clintPackageTypeH6.innerText = `بكج ${words[1]}`;
             }
         }
 
@@ -1667,7 +1716,7 @@ hotelLocationInputOptions.forEach(option => {
 
 
         /* Make sure to show or hide the 'hotel_bali_area_input_id' input based on the clikced hotel location */
-        if (option.textContent === 'Bali') {
+        if (option.textContent === 'بالي') {
             document.getElementById('hotel_bali_area_input_id').style.display = 'block';
 
         } else {
@@ -1806,7 +1855,7 @@ hotelRoomContainPoolInputOptions.forEach(option => {
             if (option.textContent === 'حذف') {
                 lastClickedPoolInput.value = ''; // Clear the input value if "حذف" is selected
             } else {
-                lastClickedPoolInput.value = `with ${option.textContent}`; // Set the input value to the selected option
+                lastClickedPoolInput.value = `مع ${option.textContent}`; // Set the input value to the selected option
             }
         }
 
@@ -1846,7 +1895,7 @@ hotelRoomViewInputOptions.forEach(option => {
             if (option.textContent === 'حذف') {
                 lastClickedViewInput.value = ''; // Clear the input value if "حذف" is selected
             } else {
-                lastClickedViewInput.value = `with ${option.textContent} View`; // Set the input value to the selected option
+                lastClickedViewInput.value = `بإطلالة على ${option.textContent}`; // Set the input value to the selected option
             }
         }
 
@@ -1910,10 +1959,10 @@ hotelBreakFastAmountInputOptions.forEach(option => {
             lastClickedBreakFastAmountInput.value = '';
 
         } else if (option.textContent === 'غير شامل') {
-            lastClickedBreakFastAmountInput.value = `(No BF)`
+            lastClickedBreakFastAmountInput.value = `غير شامل الإفطار`
 
         } else {
-            lastClickedBreakFastAmountInput.value = `Incl BF For ${option.textContent}`;
+            lastClickedBreakFastAmountInput.value = `شامل الإفطار ل${option.textContent}`;
 
         }
 
@@ -2094,6 +2143,9 @@ specialRoomRequestInputOptions.forEach(option => {
         if (option.textContent === 'حذف') {
             lastClickedSpecialRoomRequestInput.value = '';
 
+        } else if (option.textContent === 'باقة شهر عسل') {
+            lastClickedSpecialRoomRequestInput.value = '+ باقة شهر عسل بعشاء رومانسي على ضوء الشموع + عصير + زينة لمرة واحدة + علاج سبا لمدة 60 دقيقة + إفطار عائم لمرة واحدة بالإضافة لسلة فواكة + شاي بعد الظهر';
+
         } else {
             lastClickedSpecialRoomRequestInput.value = `+ ${option.textContent}`;
 
@@ -2137,34 +2189,34 @@ lastClickedHotelExtraBedInputOptions.forEach(option => {
             lastClickedHotelExtraBedInput.value = '';
 
         } else if (option.textContent === '1 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ One Extra Bed + One Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 1 إفطار إضافي`;
 
         } else if (option.textContent === '2 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Two Extra Bed + Two Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 2 إفطار إضافي`;
 
         } else if (option.textContent === '3 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Three Extra Bed + Three Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 3 إفطار إضافي`;
 
         } else if (option.textContent === '4 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Four Extra Bed + Four Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 4 إفطار إضافي`;
 
         } else if (option.textContent === '5 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Five Extra Bed + Five Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 5 إفطار إضافي`;
 
         } else if (option.textContent === '6 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Six Extra Bed + Six Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 6 إفطار إضافي`;
 
         } else if (option.textContent === '7 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Seven Extra Bed + Seven Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 7 إفطار إضافي`;
 
         } else if (option.textContent === '8 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Eight Extra Bed + Eight Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 8 إفطار إضافي`;
 
         } else if (option.textContent === '9 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Nine Extra Bed + Nine Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 9 إفطار إضافي`;
 
         } else if (option.textContent === '10 سرير إضافي') {
-            lastClickedHotelExtraBedInput.value = `+ Ten Extra Bed + Ten Extra BF`;
+            lastClickedHotelExtraBedInput.value = `+ ${option.textContent} + 10 إفطار إضافي`;
 
         }
 
@@ -2408,7 +2460,7 @@ smsCardWithInternetAmountInputOptions.forEach(option => {
 
                     } else {
                         // Set the value of the sms card input field with the selected option
-                        lastClickedClintMovementsCityInput.value = `Internet Cards For ${option.textContent} Pax`;
+                        lastClickedClintMovementsCityInput.value = `شرائح إنترنت ل${option.textContent}`;
 
                     }
 
@@ -2422,7 +2474,7 @@ smsCardWithInternetAmountInputOptions.forEach(option => {
 
                     } else {
                         // Set the value of the inner flight tickets input field with the selected option
-                        lastClickedClintMovementsCityInput.value = `domestic tickets For ${option.textContent}`;
+                        lastClickedClintMovementsCityInput.value = `تذاكر الطيران الداخلي ل${option.textContent}`;
 
                     }
 
@@ -2430,10 +2482,10 @@ smsCardWithInternetAmountInputOptions.forEach(option => {
                 } else if (lastClickedClintMovementsCityInput.id === 'hotel_breakfast_people_amount_input_id') {
 
                     if (option.textContent === 'غير شامل') {
-                        lastClickedClintMovementsCityInput.value = '(No BF)';
+                        lastClickedClintMovementsCityInput.value = 'غير شامل الإفطار';
 
                     } else {
-                        lastClickedClintMovementsCityInput.value = `Incl BF For ${option.textContent} Pax`;
+                        lastClickedClintMovementsCityInput.value = `شامل الإفطار ل${option.textContent}`;
 
                     }
 
@@ -2482,26 +2534,26 @@ specificCarTypeInputOptions.forEach(option => {
 
         } else if (option.textContent === 'افانزا') {
             /* Set the input value with the clicked rooms number h3 innerText */
-            specificCarTypeInput.value = 'Private Avanza car with a private driver for the entire duration of the trip, and there are no free days in the packages';
+            specificCarTypeInput.value = 'سيارة افانزا خاصة مع سائق خاص طوال مدة الرحلة ولاتوجد أيام حرة في البرنامج';
 
 
         } else if (option.textContent === 'اينوفا') {
             /* Set the input value with the clicked rooms number h3 innerText */
-            specificCarTypeInput.value = 'Private Innova car with a private driver for the entire duration of the trip, and there are no free days in the packages';
+            specificCarTypeInput.value = 'سيارة اينوفا خاصة مع سائق خاص طوال مدة الرحلة ولاتوجد أيام حرة في البرنامج';
 
 
         } else if (option.textContent === 'اينوفا ريبون') {
             /* Set the input value with the clicked rooms number h3 innerText */
-            specificCarTypeInput.value = 'Private Innova Reborn car with a private driver for the entire duration of the trip, and there are no free days in the packages';
+            specificCarTypeInput.value = 'سيارة اينوفا ريبون خاصة مع سائق خاص طوال مدة الرحلة ولاتوجد أيام حرة في البرنامج';
 
 
         } else if (option.textContent === 'باص هايس') {
             /* Set the input value with the clicked rooms number h3 innerText */
-            specificCarTypeInput.value = 'Private Hiace Bus with a private driver for the entire duration of the trip, and there are no free days in the packages';
+            specificCarTypeInput.value = 'باص هايس خاص مع سائق خاص طوال مدة الرحلة ولاتوجد أيام حرة في البرنامج';
 
         } else if (option.textContent === 'باص الفارد') {
             /* Set the input value with the clicked rooms number h3 innerText */
-            specificCarTypeInput.value = 'Private Alphard Bus with a private driver for the entire duration of the trip, and there are no free days in the packages';
+            specificCarTypeInput.value = 'باص الفارد خاص مع سائق خاص طوال مدة الرحلة ولاتوجد أيام حرة في البرنامج';
 
         }
 
@@ -3081,44 +3133,44 @@ function hideOverlay() {
 
 // Arabic month names
 let innerDatePickerArabicMonths = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+    'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'
 ];
 
 // Arabic day names
-let arabicDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+let arabicDays = ['أحد', 'إثن', 'ثلو', 'ربو', 'خمي', 'جمع', 'سبت'];
 
 
 // Arabic month names
 let arabicMonths = {
-    January: 'Jan',
-    February: 'Feb',
-    March: 'Mar',
-    April: 'Apr',
-    May: 'May',
-    June: 'Jun',
-    July: 'Jul',
-    August: 'Aug',
-    September: 'Sep',
-    October: 'Oct',
-    November: 'Nov',
-    December: 'Dec'
+    January: 'يناير',
+    February: 'فبراير',
+    March: 'مارس',
+    April: 'ابريل',
+    May: 'ماي',
+    June: 'يونيو',
+    July: 'يوليو',
+    August: 'اغسطس',
+    September: 'سبتمبر',
+    October: 'اكتوبر',
+    November: 'نوفمبر',
+    December: 'ديسمبر'
 };
 
 // Arabic month names reverse lookup
 let arabicMonthsReverse = {
-    'Jan': 'January',
-    'Feb': 'February',
-    'Mar': 'March',
-    'Apr': 'April',
-    'May': 'May',
-    'Jun': 'June',
-    'Jul': 'July',
-    'Aug': 'August',
-    'Sep': 'September',
-    'Oct': 'October',
-    'Nov': 'November',
-    'Dec': 'December'
+    'يناير': 'January',
+    'فبراير': 'February',
+    'مارس': 'March',
+    'ابريل': 'April',
+    'ماي': 'May',
+    'يونيو': 'June',
+    'يوليو': 'July',
+    'اغسطس': 'August',
+    'سبتمبر': 'September',
+    'اكتوبر': 'October',
+    'نوفمبر': 'November',
+    'ديسمبر': 'December'
 };
 
 
@@ -3138,8 +3190,8 @@ function calculateDaysDifference(startDate, endDate) {
 
 // Arabic month names
 let arabicMonthNames = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
+    "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"
 ];
 
 // Helper function to get Arabic month name from month number
@@ -3168,8 +3220,8 @@ function parseArabicDate(dateStr, year = null) {
     let parts = dateStr.split(' ');
     let day = parseInt(parts[0]);
     let monthShortNames = {
-        "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
-        "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
+        "يناير": 0, "فبراير": 1, "مارس": 2, "أبريل": 3, "مايو": 4, "يونيو": 5,
+        "يوليو": 6, "أغسطس": 7, "سبتمبر": 8, "أكتوبر": 9, "نوفمبر": 10, "ديسمبر": 11
     };
     let month = monthShortNames[parts[1]];
     year = year || new Date().getFullYear(); // Use provided year or default to current year
@@ -3409,8 +3461,8 @@ function parseArabicDate(dateStr, year = null) {
     let parts = dateStr.split(' ');
     let day = parseInt(parts[0]);
     let monthShortNames = {
-        "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
-        "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
+        "يناير": 0, "فبراير": 1, "مارس": 2, "أبريل": 3, "مايو": 4, "يونيو": 5,
+        "يوليو": 6, "أغسطس": 7, "سبتمبر": 8, "أكتوبر": 9, "نوفمبر": 10, "ديسمبر": 11
     };
     let month = monthShortNames[parts[1]];
     year = year || new Date().getFullYear(); // Use provided year or default to current year

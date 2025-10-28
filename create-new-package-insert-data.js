@@ -86,8 +86,7 @@ createWholePackageAndClintDataFunction = function () {
             let insertedCompanyNameLogoImage = document.createElement('img');
             // Replace spaces with dashes in the company name
             let companyNameWithoutSpaces = clintCompanyNameInput.replace(/\s+/g, '-');
-            insertedCompanyNameLogoImage.src = `../خلفية-الشركات/${companyNameWithoutSpaces}.jpg`;
-            ; // Assuming this path is correct
+            insertedCompanyNameLogoImage.src = `خلفية-الشركات/${companyNameWithoutSpaces}.jpg`; // Assuming this path is correct
             insertedCompanyNameLogoImage.className = 'inserted_company_name_logo';
             insertedCompanyNameLogoImage.id = 'inserted_company_name_logo_id';
             insertedCompanyNameLogoImage.onclick = function (event) {
@@ -136,7 +135,7 @@ createWholePackageAndClintDataFunction = function () {
 
 
             // Set the 'welcome_pdf_first_page_image_id' src to the clicked company logo name for pdf image
-            document.getElementById('welcome_pdf_first_page_image_id').src = `../خلفية-الشركات/${companyNameWithoutSpaces}.jpg`;
+            document.getElementById('welcome_pdf_first_page_image_id').src = `خلفية-الشركات/${companyNameWithoutSpaces}.jpg`;
 
 
             /* Show the company logo from the website */
@@ -168,24 +167,24 @@ createWholePackageAndClintDataFunction = function () {
         if (document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value')) {
 
             if (document.getElementById('economy_package_checkbox').checked) {
-                clintPackagePriceTypeH6.innerHTML = `  (Economy Package)`;
-                document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText = 'Economy Package';
+                clintPackagePriceTypeH6.innerHTML = `  (بكج إقتصادي)`;
+                document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText = 'بكج إقتصادي';
 
                 /* Make sure to show the element */
                 document.getElementById('package_price_type_h6_id').style.display = 'block';
 
 
             } else if (document.getElementById('medium_package_checkbox').checked) {
-                clintPackagePriceTypeH6.innerHTML = `  (Medium Package)`;
-                document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText = 'Medium Package';
+                clintPackagePriceTypeH6.innerHTML = `  (بكج متوسط)`;
+                document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText = 'بكج متوسط';
 
                 /* Make sure to show the element */
                 document.getElementById('package_price_type_h6_id').style.display = 'block';
 
 
             } else if (document.getElementById('vip_package_checkbox').checked) {
-                clintPackagePriceTypeH6.innerHTML = `  (VIP Package)`;
-                document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText = 'VIP Package';
+                clintPackagePriceTypeH6.innerHTML = `  (بكج VIP)`;
+                document.getElementById('store_google_sheet_clint_package_price_type_checkbox_value').innerText = 'بكج VIP';
 
                 /* Make sure to show the element */
                 document.getElementById('package_price_type_h6_id').style.display = 'block';
@@ -210,8 +209,8 @@ createWholePackageAndClintDataFunction = function () {
 
         /* Check which checkbox is checked then include the text in the content */
         if (document.getElementById('honeymoon_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Honeymooners Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Honeymooners Package';
+            clintPackageTypeH6.innerHTML = 'بكج شهر عسل';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج شهل عسل';
 
             if (document.getElementById('package_emoji_p_id')) {
                 document.getElementById('package_emoji_p_id').innerText = '👩🏻‍❤️‍👨🏻';
@@ -219,8 +218,8 @@ createWholePackageAndClintDataFunction = function () {
 
 
         } else if (document.getElementById('guys_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Guys Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Guys Package';
+            clintPackageTypeH6.innerHTML = 'بكج شباب';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج شباب';
 
 
             if (document.getElementById('package_emoji_p_id')) {
@@ -228,8 +227,8 @@ createWholePackageAndClintDataFunction = function () {
             }
 
         } else if (document.getElementById('family_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Family Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Family Package';
+            clintPackageTypeH6.innerHTML = 'بكج عائلة';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج عائلة';
 
 
             if (document.getElementById('package_emoji_p_id')) {
@@ -237,8 +236,8 @@ createWholePackageAndClintDataFunction = function () {
             }
 
         } else if (document.getElementById('two_people_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Two People Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Two People Package';
+            clintPackageTypeH6.innerHTML = 'بكج شخصين';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج شخصين';
 
 
             if (document.getElementById('package_emoji_p_id')) {
@@ -246,8 +245,8 @@ createWholePackageAndClintDataFunction = function () {
             }
 
         } else if (document.getElementById('group_of_people_checkbox').checked) {
-            clintPackageTypeH6.innerHTML = 'Group Package';
-            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'Group Package';
+            clintPackageTypeH6.innerHTML = 'بكج قروب';
+            document.getElementById('store_google_sheet_clint_package_type_checkbox_value').innerText = 'بكج قروب';
 
 
             if (document.getElementById('package_emoji_p_id')) {
@@ -255,7 +254,7 @@ createWholePackageAndClintDataFunction = function () {
             }
 
         } else {
-            clintPackageTypeH6.innerHTML = 'New Package';
+            clintPackageTypeH6.innerHTML = 'بكج جديد';
 
             if (document.getElementById('package_emoji_p_id')) {
                 document.getElementById('package_emoji_p_id').innerText = '✨';
@@ -620,70 +619,6 @@ deleteClickedCompanyLogo = function () {
 
 /* Down All Funtions For Package Include And Not Include Down */
 
-// Translation mapping for package including content
-const packageIncludingTranslations = {
-    // Private car with driver
-    'سيارة خاصة مريحة (تويوتا افانزا او مايماثلها) مع سائق خاص طوال الرحلة مع برنامج يومي منظم مناسب لكم': 'Comfortable private car (Toyota Avanza or similar) with private driver throughout the trip with organized daily visits suitable for you',
-    'سيارة خاصة مريحة (تويوتا افانزا': 'Comfortable private car (Toyota Avanza',
-    'او مايماثلها) مع سائق خاص طوال الرحلة مع برنامج يومي منظم مناسب لكم': 'or similar) with private driver throughout the trip with organized daily visits suitable for you',
-    'سيارة خاصة مريحة (تويوتا افانزا\n                            او مايماثلها) مع سائق خاص طوال الرحلة مع برنامج يومي منظم مناسب لكم': 'Comfortable private car (Toyota Avanza or similar) with private driver throughout the trip with organized daily visits suitable for you',
-
-    // Additional car for luggage
-    'سيارة إضافية للعفش': 'Additional car for luggage',
-
-    // Watersport and Rafting activities
-    'فعالية Watersport': 'Watersport Activity',
-    'فعالية Rafting': 'Rafting Activity',
-
-    // Hotel booking with breakfast
-    'إقامة مريحة في فنادق ومنتجعات مختارة تشمل إفطار يومي لشخصين، وإقامة مجانية لطفل تحت 5 سنوات إن وجد': 'Comfortable accommodation in selected hotels and resorts including daily breakfast for two people, and free accommodation for a child under 5 years old if available',
-    'إقامة مريحة في فنادق ومنتجعات': 'Comfortable accommodation in selected hotels and resorts',
-    'مختارة تشمل إفطار يومي لشخصين، وإقامة مجانية لطفل تحت 5 سنوات إن وجد': 'including daily breakfast for two people, and free accommodation for a child under 5 years old if available',
-    'إقامة مريحة في فنادق ومنتجعات\n                            مختارة تشمل إفطار يومي لشخصين، وإقامة مجانية لطفل تحت 5 سنوات إن وجد': 'Comfortable accommodation in selected hotels and resorts including daily breakfast for two people, and free accommodation for a child under 5 years old if available',
-
-    // Welcome and transfer
-    'الإستقبال والتوديع والتوصيل للفنادق والجولات السياحية': 'Welcome, farewell and transfer to hotels and tourist tours',
-    'الإستقبال والتوديع والتوصيل للفنادق': 'Welcome, farewell and transfer to hotels',
-    'والجولات السياحية': 'and tourist tours',
-    'الإستقبال والتوديع والتوصيل للفنادق\n                            والجولات السياحية': 'Welcome, farewell and transfer to hotels and tourist tours',
-
-    // Flight tickets
-    'تذاكر الطيران الداخلي': 'Domestic flight tickets',
-    'تذاكر الطيران الدولي': 'International flight tickets',
-
-    // Customer service
-    'خدمة عملاء 24 ساعة باللغة العربية لراحتكم وطمأنينتكم': '24-hour customer service in Arabic for your comfort and peace of mind',
-    'خدمة عملاء 24 ساعة باللغة العربية لراحتكم': '24-hour customer service in Arabic for your comfort',
-    'وطمأنينتكم': 'and peace of mind',
-    'خدمة عملاء 24 ساعة باللغة العربية لراحتكم\n                            وطمأنينتكم': '24-hour customer service in Arabic for your comfort and peace of mind',
-
-    // Internet cards
-    'شرائح إنترنت': 'Internet cards',
-
-    // Flower welcome
-    'إستقبال ورد': 'Flower welcome',
-
-    // Special oud
-    'صندوق عود مميز': 'Special oud box',
-
-    // Entrance fees and parking
-    'تكاليف دخوليات + مواقف السيارت في الحدائق والمنتزهات': 'Entrance fees + car parking in gardens and parks',
-    'تكاليف دخوليات + مواقف السيارت في الحدائق و': 'Entrance fees + car parking in gardens and',
-    'المنتزهات': 'parks',
-    'تكاليف دخوليات + مواقف السيارت في الحدائق و\n                            المنتزهات': 'Entrance fees + car parking in gardens and parks',
-
-    // Bali tax
-    'ضريبة دخول بالي': 'Bali entrance tax',
-
-    // Watersport special text
-    'استمتعوا ب 3 ألعاب بحرية ممتعة': 'Enjoy 3 fun water activities',
-    'كلها مشمولة بدون أي رسوم إضافية': 'All included without any additional fees',
-
-    // Rafting special text
-    'اكتشف متعة التجديف': 'Discover the fun of rafting',
-    'لحظات حماس وتجربة لاتُنسى هدية منا لكم': 'Exciting moments and unforgettable experience, a gift from us to you'
-};
-
 createAllPackageIncludingAndNotIncludingData = function () {
     let checkboxIds = [
         'privet_car_with_driver_to_welcome_and_etc_checkbox',
@@ -703,26 +638,6 @@ createAllPackageIncludingAndNotIncludingData = function () {
     ];
 
     playSoundEffect('success');
-
-    // Function to translate Arabic text to English
-    function translateToEnglish(text) {
-        // First try exact match
-        if (packageIncludingTranslations[text]) {
-            return packageIncludingTranslations[text];
-        }
-
-        // Try to clean the text and match
-        let cleanText = text.trim();
-        if (packageIncludingTranslations[cleanText]) {
-            return packageIncludingTranslations[cleanText];
-        }
-
-        // Debug: log untranslated text
-        console.log('Untranslated text:', text);
-
-        // If no translation found, return original text
-        return text;
-    }
 
     let privetCarWithDriverToWelcomeAndEtc = document.getElementById('specific_car_type_input_id').value;
     let packageIncludingDataTextArea = document.getElementById('package_details_textarea_id').value;
@@ -801,11 +716,11 @@ createAllPackageIncludingAndNotIncludingData = function () {
                 p.appendChild(icon);
 
                 if (id === 'watersport_activity_checkbox') {
-                    p.innerHTML += " 🌊" + translateToEnglish("استمتعوا ب 3 ألعاب بحرية ممتعة") + "<br>" + translateToEnglish("كلها مشمولة بدون أي رسوم إضافية") + "💙<br>";
+                    p.innerHTML += " 🌊استمتعوا ب 3 ألعاب بحرية ممتعة<br>كلها مشمولة بدون أي رسوم إضافية💙<br>";
                     p.setAttribute('data-gift-order', '1');
                     let container = document.createElement('div');
                     container.className = 'activity_icon_container';
-                    ['../activities/donat.webp', '../activities/panana.webp', '../activities/parasut.webp'].forEach(src => {
+                    ['activities/donat.webp', 'activities/panana.webp', 'activities/parasut.webp'].forEach(src => {
                         let img = document.createElement('img');
                         img.src = src;
                         img.className = 'activity_icon_img';
@@ -813,12 +728,12 @@ createAllPackageIncludingAndNotIncludingData = function () {
                     });
                     p.appendChild(container);
                 } else if (id === 'rafting_activity_checkbox') {
-                    p.innerHTML += " 🚣‍♂️" + translateToEnglish("اكتشف متعة التجديف") + "<br>" + translateToEnglish("لحظات حماس وتجربة لاتُنسى هدية منا لكم") + "💙<br>";
+                    p.innerHTML += " 🚣‍♂️اكتشف متعة التجديف<br>لحظات حماس وتجربة لاتُنسى هدية منا لكم💙<br>";
                     p.setAttribute('data-gift-order', '2');
                     let container = document.createElement('div');
                     container.className = 'activity_icon_container';
                     let img = document.createElement('img');
-                    img.src = '../activities/rafting.webp';
+                    img.src = 'activities/rafting.webp';
                     img.className = 'activity_icon_img';
                     container.appendChild(img);
                     p.appendChild(container);
@@ -831,7 +746,7 @@ createAllPackageIncludingAndNotIncludingData = function () {
                 icon.setAttribute('name', 'close-outline');
                 p.appendChild(icon);
                 labelText.forEach((text, index) => {
-                    p.appendChild(document.createTextNode(` ${translateToEnglish(text)}`));
+                    p.appendChild(document.createTextNode(` ${text}`));
                     if (index < labelText.length - 1) p.appendChild(document.createElement('br'));
                 });
                 p.className = 'inserted_package_not_including_data_text';
@@ -841,8 +756,8 @@ createAllPackageIncludingAndNotIncludingData = function () {
             return;
         }
 
-        // Special logic for special_oud_checkbox if first hotel city is "Bali"
-        if (id === 'special_oud_checkbox' && (firstHotelCityText === 'Bali' || firstHotelCityText === 'Lombok')) {
+        // Special logic for special_oud_checkbox if first hotel city is "بالي"
+        if (id === 'special_oud_checkbox' && (firstHotelCityText === 'بالي' || firstHotelCityText === 'لومبوك')) {
             // Treat as white (do not add to including/gift/not including)
             let pElement = document.createElement('p');
             pElement.innerText = id;
@@ -859,7 +774,7 @@ createAllPackageIncludingAndNotIncludingData = function () {
                 if (id === 'sms_card_with_internet_checkbox') {
                     let textContent = smsCardWithInternetAmountInputReayText !== ''
                         ? ` ${smsCardWithInternetAmountInputReayText}`
-                        : ' ' + translateToEnglish('شرائح إنترنت');
+                        : ' شرائح إنترنت';
                     p.appendChild(document.createTextNode(textContent));
                     p.style.padding = '0 5px';
                     document.getElementById('store_google_sheet_package_including_sms_value').innerText = smsCardWithInternetAmountInputReayText !== '' ? smsCardWithInternetAmountInputReayText : '';
@@ -867,33 +782,33 @@ createAllPackageIncludingAndNotIncludingData = function () {
                     let container = document.createElement('div');
                     container.className = 'activity_icon_container';
                     let img = document.createElement('img');
-                    img.src = '../activities/sms-cards.webp';
+                    img.src = 'activities/sms-cards.webp';
                     img.className = 'activity_icon_img';
                     container.appendChild(img);
                     p.appendChild(container);
                 } else if (id === 'welcome_with_flowers_checkbox') {
                     labelText.forEach((text, index) => {
-                        p.appendChild(document.createTextNode(` ${translateToEnglish(text)}`));
+                        p.appendChild(document.createTextNode(` ${text}`));
                         if (index < labelText.length - 1) p.appendChild(document.createElement('br'));
                     });
                     p.setAttribute('data-gift-order', '4');
                     let container = document.createElement('div');
                     container.className = 'activity_icon_container';
                     let img = document.createElement('img');
-                    img.src = '../activities/flower.webp';
+                    img.src = 'activities/flower.webp';
                     img.className = 'activity_icon_img';
                     container.appendChild(img);
                     p.appendChild(container);
                 } else if (id === 'special_oud_checkbox') {
                     labelText.forEach((text, index) => {
-                        p.appendChild(document.createTextNode(` ${translateToEnglish(text)}`));
+                        p.appendChild(document.createTextNode(` ${text}`));
                         if (index < labelText.length - 1) p.appendChild(document.createElement('br'));
                     });
                     p.setAttribute('data-gift-order', '5');
                     let container = document.createElement('div');
                     container.className = 'activity_icon_container';
                     let img = document.createElement('img');
-                    img.src = '../activities/special-oud.webp';
+                    img.src = 'activities/special-oud.webp';
                     img.className = 'activity_icon_img';
                     container.appendChild(img);
                     p.appendChild(container);
@@ -909,14 +824,14 @@ createAllPackageIncludingAndNotIncludingData = function () {
             if (id === 'sms_card_with_internet_checkbox') {
                 let textContent = smsCardWithInternetAmountInputReayText !== ''
                     ? ` ${smsCardWithInternetAmountInputReayText}`
-                    : ' ' + translateToEnglish('شرائح إنترنت');
+                    : ' شرائح إنترنت';
                 p.appendChild(document.createTextNode(textContent));
                 p.style.padding = '0 5px';
                 document.getElementById('store_google_sheet_package_including_sms_value').innerText = smsCardWithInternetAmountInputReayText !== '' ? smsCardWithInternetAmountInputReayText : '';
             } else if (id === 'inner_flight_tickets_checkbox') {
                 let textContent = innerFlightTicketsAmountInputReayText !== ''
                     ? ` ${innerFlightTicketsAmountInputReayText}`
-                    : ' ' + translateToEnglish('تذاكر الطيران الداخلي');
+                    : ' تذاكر الطيران الداخلي';
                 p.appendChild(document.createTextNode(textContent));
                 p.style.padding = '0 5px';
                 document.getElementById('store_google_sheet_package_including_inner_tickets_value').innerText = innerFlightTicketsAmountInputReayText !== '' ? innerFlightTicketsAmountInputReayText : '';
@@ -925,7 +840,7 @@ createAllPackageIncludingAndNotIncludingData = function () {
                 p.style.fontWeight = 'bold';
             } else {
                 labelText.forEach((text, index) => {
-                    p.appendChild(document.createTextNode(` ${translateToEnglish(text)}`));
+                    p.appendChild(document.createTextNode(` ${text}`));
                     if (index < labelText.length - 1) p.appendChild(document.createElement('br'));
                 });
             }
@@ -939,7 +854,7 @@ createAllPackageIncludingAndNotIncludingData = function () {
             icon.setAttribute('name', 'close-outline');
             p.appendChild(icon);
             labelText.forEach((text, index) => {
-                p.appendChild(document.createTextNode(` ${translateToEnglish(text)}`));
+                p.appendChild(document.createTextNode(` ${text}`));
                 if (index < labelText.length - 1) p.appendChild(document.createElement('br'));
             });
             p.className = 'inserted_package_not_including_data_text';
@@ -1016,8 +931,8 @@ createAllPackageIncludingAndNotIncludingData = function () {
         let pElement = document.createElement('p');
         pElement.innerText = id;
 
-        // Special logic for special_oud_checkbox if first hotel city is "Bali"
-        if (id === 'special_oud_checkbox' && firstHotelCityText === 'Bali') {
+        // Special logic for special_oud_checkbox if first hotel city is "بالي"
+        if (id === 'special_oud_checkbox' && firstHotelCityText === 'بالي') {
             document.getElementById('store_google_sheet_white_package_including_and_not_including_input_div').appendChild(pElement);
         } else if (currentColor === 'rgb(0, 255, 0)') {
             document.getElementById('store_google_sheet_green_checked_package_including_and_not_including_input_div').appendChild(pElement);
@@ -1189,7 +1104,7 @@ createAllFlightDataFunction = function () {
 
         let lastCity = null;  // Variable to store the last valid city encountered
         let lastDate = null;  // Variable to store the date associated with the last valid city
-        let validCities = ["Bali", "Jakarta", "Bandung", "Puncak", "Lombok"];  // Array of valid cities to check against
+        let validCities = ["بالي", "جاكرتا", "باندونق", "بونشاك", "لومبوك"];  // Array of valid cities to check against
 
 
 
@@ -1220,21 +1135,21 @@ createAllFlightDataFunction = function () {
             let currentDate = hotelRow.querySelector('h2').innerText;  // Get the date from the current hotel row's h2 element
 
             // Check if transition between Jakarta and Bandung (in either order) and skip
-            if ((lastCity === "Jakarta" && currentCity === "Bandung") || (lastCity === "Bandung" && currentCity === "Jakarta")) {
+            if ((lastCity === "جاكرتا" && currentCity === "باندونق") || (lastCity === "باندونق" && currentCity === "جاكرتا")) {
                 lastCity = currentCity;
                 lastDate = currentDate;
                 return; // Skip this iteration without creating a flightRowTableDiv
             }
 
             // Check if transition between Jakarta and Puncak and skip
-            if (lastCity === "Jakarta" && currentCity === "Puncak") {
+            if (lastCity === "جاكرتا" && currentCity === "بونشاك") {
                 lastCity = currentCity;
                 lastDate = currentDate;
                 return; // Skip this iteration without creating a flightRowTableDiv
             }
 
             // Check if transition between Puncak and Jakarta and skip
-            if (lastCity === "Puncak" && currentCity === "Jakarta") {
+            if (lastCity === "بونشاك" && currentCity === "جاكرتا") {
                 lastCity = currentCity;
                 lastDate = currentDate;
                 return; // Skip this iteration without creating a flightRowTableDiv
@@ -1242,25 +1157,25 @@ createAllFlightDataFunction = function () {
 
             // Check if the current and last city are valid and different
             if ((validCities.includes(currentCity) && lastCity && lastCity !== currentCity && validCities.includes(lastCity)) ||
-                (lastCity === "Puncak" && currentCity === "Bali") || (lastCity === "Bali" && currentCity === "Puncak")) {
+                (lastCity === "بونشاك" && currentCity === "بالي") || (lastCity === "بالي" && currentCity === "بونشاك")) {
 
                 let fromCity = lastCity;
                 let toCity = currentCity;
 
 
                 /* check the 'lastCity' and the 'currentCity' value and based on the below conditions set the value of the 'fromCity' and the 'toCity' */
-                if ((lastCity === "Puncak" && currentCity === "Bali") || (lastCity === "Bandung" && currentCity === "Bali")) {
-                    fromCity = "Jakarta";
-                    toCity = "Bali";
-                } else if ((lastCity === "Bali" && currentCity === "Puncak") || (lastCity === "Bali" && currentCity === "Bandung")) {
-                    fromCity = "Bali";
-                    toCity = "Jakarta";
+                if ((lastCity === "بونشاك" && currentCity === "بالي") || (lastCity === "باندونق" && currentCity === "بالي")) {
+                    fromCity = "جاكرتا";
+                    toCity = "بالي";
+                } else if ((lastCity === "بالي" && currentCity === "بونشاك") || (lastCity === "بالي" && currentCity === "باندونق")) {
+                    fromCity = "بالي";
+                    toCity = "جاكرتا";
                 }
 
 
 
                 // Check if transition between Bandung and Puncak (in either order) and skip
-                if ((lastCity === "Bandung" && currentCity === "Puncak") || (lastCity === "Puncak" && currentCity === "Bandung")) {
+                if ((lastCity === "باندونق" && currentCity === "بونشاك") || (lastCity === "بونشاك" && currentCity === "باندونق")) {
                     lastCity = currentCity;
                     lastDate = currentDate;
                     return; // Skip this iteration without creating a flightRowTableDiv
@@ -1280,17 +1195,17 @@ createAllFlightDataFunction = function () {
                     <div>
                         <p id="flight_adult_person_amount_${insertedFlightDataDivUniqueId}">
                             ${totalPeople === 1
-                        ? `${totalPeople} Adult`
+                        ? `${totalPeople} بالغ`
                         : totalPeople > 10
-                            ? `${totalPeople} Adult`
+                            ? `${totalPeople} بالغ`
                             : totalPeople !== 0
-                                ? `${totalPeople} Adults`
+                                ? `${totalPeople} بالغين`
                                 : ''
                     }
                         </p>
                         ${infantAmount ? `<p id="flight_infant_person_amount_${insertedFlightDataDivUniqueId}">${infantAmount}</p>` : ''}
                     </div>
-                    <div><p>20Kg Per Pax</p></div>
+                    <div><p>20Kg للشخص</p></div>
                     <div><h2 id='flight_from_city_${insertedFlightDataDivUniqueId}'>${fromCity}</h2></div>
                     <div><h3 id='flight_to_city_${insertedFlightDataDivUniqueId}'>${toCity}</h3></div>
                     <div><h1 id='flight_date_${insertedFlightDataDivUniqueId}' class="flight_date_for_matching_whole_package_date">${currentDate}</h1></div>
@@ -1453,7 +1368,7 @@ editClickedFlightData = function (clickedFlightDataDivIdName) {
     document.getElementById('confirm_new_flight_data_row_icon').style.display = 'block';
     document.getElementById('cancel_new_flight_data_row_icon').style.display = 'block';
 
-    document.getElementById('flight_content_section_title_text_id').innerText = 'EDIT TICKET';
+    document.getElementById('flight_content_section_title_text_id').innerText = 'تعديل تفاصيل الطيران';
     document.getElementById('toggle_flight_data_title_div_id').style.background = 'rgb(85, 127, 137)';
 
     document.getElementById('flight_data_dropdown_content').scrollIntoView({
@@ -1521,7 +1436,7 @@ editClickedFlightData = function (clickedFlightDataDivIdName) {
         document.getElementById('cancel_new_flight_data_row_icon').style.display = 'none';
 
         /* Reset the innerText and styling to default */
-        document.getElementById('flight_content_section_title_text_id').innerText = 'TICKET DATA';
+        document.getElementById('flight_content_section_title_text_id').innerText = 'تفاصيل الطيران';
         document.getElementById('toggle_flight_data_title_div_id').style.background = 'rgb(131, 0, 148)';
 
         /* Hide all inputs for editing the flight data */
@@ -1565,7 +1480,7 @@ editClickedFlightData = function (clickedFlightDataDivIdName) {
                 ${flightInfantPersonAmountInput ? `<p id="flight_infant_person_amount_${insertedFlightDataDivUniqueId}">${flightInfantPersonAmountInput}</p>` : ''}
             </div>
             <div>
-                <p>20Kg Per Pax</p>
+                <p>20Kg للشخص</p>
                 ${flightExtraBagsInput ? `<p id="flight_extra_bags_${insertedFlightDataDivUniqueId}">${flightExtraBagsInput}</p>` : ''}
             </div>
             <div>
@@ -1837,19 +1752,19 @@ manuallyCreateNewFlightRow = function () {
     let flightRowTableDivContent = `
         <div class="flight_row_flight_arrival_time_controller inserted_flight_data_row" style="cursor: pointer;"><p id='flight_air_line_${insertedFlightDataDivUniqueId}'></p></div>
         <div>
-            <p id="flight_adult_person_amount_${insertedFlightDataDivUniqueId}">
-                ${totalPeople === 1
-            ? `${totalPeople} Adult`
+                        <p id="flight_adult_person_amount_${insertedFlightDataDivUniqueId}">
+                            ${totalPeople === 1
+            ? `${totalPeople} بالغ`
             : totalPeople > 10
-                ? `${totalPeople} Adult`
+                ? `${totalPeople} بالغ`
                 : totalPeople !== 0
-                    ? `${totalPeople} Adults`
+                    ? `${totalPeople} بالغين`
                     : ''
         }
             </p>
             ${infantAmount ? `<p id="flight_infant_person_amount_${insertedFlightDataDivUniqueId}">${infantAmount}</p>` : ''}
         </div>
-        <div><p>20Kg Per Pax</p></div>
+        <div><p>20Kg للشخص</p></div>
         <div><h2 id='flight_from_city_${insertedFlightDataDivUniqueId}'></h2></div>
         <div><h3 id='flight_to_city_${insertedFlightDataDivUniqueId}'></h3></div>
         <div><h1 id='flight_date_${insertedFlightDataDivUniqueId}' class="flight_date_for_matching_whole_package_date"></h1></div>
@@ -1880,31 +1795,31 @@ manuallyCreateNewFlightRow = function () {
             h1Element.innerText = firstHotelRowH2Text;
         }
 
-        // Additional condition: If the h5 innerText is "Bali"
-        if (firstHotelRowH5Text === "Bali") {
+        // Additional condition: If the h5 innerText is "بالي"
+        if (firstHotelRowH5Text === "بالي") {
             let h2Element = flightRowTableDiv.querySelector('h2');
             let h3Element = flightRowTableDiv.querySelector('h3');
 
             if (h2Element) {
-                h2Element.innerText = "Jakarta";  // Set h2 to "Jakarta"
+                h2Element.innerText = "جاكرتا";  // Set h2 to "جاكرتا"
             }
 
             if (h3Element) {
-                h3Element.innerText = "Bali";  // Set h3 to "Bali"
+                h3Element.innerText = "بالي";  // Set h3 to "بالي"
             }
 
 
-            /* But if the first found hotel row does not located "Bali" then reveres the contries */
+            /* But if the first found hotel row does not located "بالي" then reveres the contries */
         } else {
             let h2Element = flightRowTableDiv.querySelector('h2');
             let h3Element = flightRowTableDiv.querySelector('h3');
 
             if (h2Element) {
-                h2Element.innerText = "Bali";  // Set h2 to "Jakarta"
+                h2Element.innerText = "بالي";  // Set h2 to "جاكرتا"
             }
 
             if (h3Element) {
-                h3Element.innerText = "Jakarta";  // Set h3 to "Bali"
+                h3Element.innerText = "جاكرتا";  // Set h3 to "بالي"
             }
         }
     }
@@ -2062,7 +1977,7 @@ createHotelsDataFunction = function () {
 
 
         /* Stop the process if the hotel location is bali but the area is not selected */
-        if (document.getElementById('hotel_location_input_id').value === 'Bali' && document.getElementById('hotel_bali_area_input_id').value === '') {
+        if (document.getElementById('hotel_location_input_id').value === 'بالي' && document.getElementById('hotel_bali_area_input_id').value === '') {
 
             // Play a sound effect
             playSoundEffect('error');
@@ -2144,7 +2059,7 @@ createHotelsDataFunction = function () {
             <div>
                 <h5 id='hotel_location_${insertedHotelDataDivUniqueId}'>${hotelLocationInput}</h5>
                 ${hotelBaliAreaInput ? `<br><h6 id='hotel_area_${insertedHotelDataDivUniqueId}'>${hotelBaliAreaInput}</h6>` : ''}
-                <img src="../صور-الفنادق/${starsAmount}-stars-hotel-image.jpg" id='hotel_image_${insertedHotelDataDivUniqueId}' class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
+                <img src="صور-الفنادق/${starsAmount}-stars-hotel-image.jpg" id='hotel_image_${insertedHotelDataDivUniqueId}' class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
             </div>
         `;
 
@@ -2402,7 +2317,7 @@ createHotelsDataFunction = function () {
             <div>
                 <h5 id='hotel_location_${insertedHotelDataDivUniqueId}'>${hotelLocationReadyText}</h5>
                 ${hotelAreaReadyText ? `<br><h6 id='hotel_area_${insertedHotelDataDivUniqueId}'>${hotelAreaReadyText}</h6>` : ''}
-                <img src="../صور-الفنادق/${hotelImgSrcReadyText}.jpg" class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
+                <img src="صور-الفنادق/${hotelImgSrcReadyText}.jpg" class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
             </div>
         `;
 
@@ -2667,7 +2582,7 @@ createHotelsDataFunction = function () {
 
         let lastCity = null;  // Variable to store the last valid city encountered
         let lastDate = null;  // Variable to store the date associated with the last valid city
-        let validCities = ["Bali", "Jakarta", "Bandung", "Puncak", "Lombok"];  // Array of valid cities to check against
+        let validCities = ["بالي", "جاكرتا", "باندونق", "بونشاك", "لومبوك"];  // Array of valid cities to check against
 
 
 
@@ -2698,21 +2613,21 @@ createHotelsDataFunction = function () {
             let currentDate = hotelRow.querySelector('h2').innerText;  // Get the date from the current hotel row's h2 element
 
             // Check if transition between Jakarta and Bandung (in either order) and skip
-            if ((lastCity === "Jakarta" && currentCity === "Bandung") || (lastCity === "Bandung" && currentCity === "Jakarta")) {
+            if ((lastCity === "جاكرتا" && currentCity === "باندونق") || (lastCity === "باندونق" && currentCity === "جاكرتا")) {
                 lastCity = currentCity;
                 lastDate = currentDate;
                 return; // Skip this iteration without creating a flightRowTableDiv
             }
 
             // Check if transition between Jakarta and Puncak and skip
-            if (lastCity === "Jakarta" && currentCity === "Puncak") {
+            if (lastCity === "جاكرتا" && currentCity === "بونشاك") {
                 lastCity = currentCity;
                 lastDate = currentDate;
                 return; // Skip this iteration without creating a flightRowTableDiv
             }
 
             // Check if transition between Puncak and Jakarta and skip
-            if (lastCity === "Puncak" && currentCity === "Jakarta") {
+            if (lastCity === "بونشاك" && currentCity === "جاكرتا") {
                 lastCity = currentCity;
                 lastDate = currentDate;
                 return; // Skip this iteration without creating a flightRowTableDiv
@@ -2720,25 +2635,25 @@ createHotelsDataFunction = function () {
 
             // Check if the current and last city are valid and different
             if ((validCities.includes(currentCity) && lastCity && lastCity !== currentCity && validCities.includes(lastCity)) ||
-                (lastCity === "Puncak" && currentCity === "Bali") || (lastCity === "Bali" && currentCity === "Puncak")) {
+                (lastCity === "بونشاك" && currentCity === "بالي") || (lastCity === "بالي" && currentCity === "بونشاك")) {
 
                 let fromCity = lastCity;
                 let toCity = currentCity;
 
 
                 /* check the 'lastCity' and the 'currentCity' value and based on the below conditions set the value of the 'fromCity' and the 'toCity' */
-                if ((lastCity === "Puncak" && currentCity === "Bali") || (lastCity === "Bandung" && currentCity === "Bali")) {
-                    fromCity = "Jakarta";
-                    toCity = "Bali";
-                } else if ((lastCity === "Bali" && currentCity === "Puncak") || (lastCity === "Bali" && currentCity === "Bandung")) {
-                    fromCity = "Bali";
-                    toCity = "Jakarta";
+                if ((lastCity === "بونشاك" && currentCity === "بالي") || (lastCity === "باندونق" && currentCity === "بالي")) {
+                    fromCity = "جاكرتا";
+                    toCity = "بالي";
+                } else if ((lastCity === "بالي" && currentCity === "بونشاك") || (lastCity === "بالي" && currentCity === "باندونق")) {
+                    fromCity = "بالي";
+                    toCity = "جاكرتا";
                 }
 
 
 
                 // Check if transition between Bandung and Puncak (in either order) and skip
-                if ((lastCity === "Bandung" && currentCity === "Puncak") || (lastCity === "Puncak" && currentCity === "Bandung")) {
+                if ((lastCity === "باندونق" && currentCity === "بونشاك") || (lastCity === "بونشاك" && currentCity === "باندونق")) {
                     lastCity = currentCity;
                     lastDate = currentDate;
                     return; // Skip this iteration without creating a flightRowTableDiv
@@ -2754,19 +2669,19 @@ createHotelsDataFunction = function () {
                 let flightRowTableDivContent = `
                 <div class="flight_row_flight_arrival_time_controller inserted_flight_data_row" style="cursor: pointer;"><p id='flight_air_line_${insertedFlightDataDivUniqueId}'></p></div>
                 <div>
-                        <p id="flight_adult_person_amount_${insertedFlightDataDivUniqueId}">
-                            ${totalPeople === 1
-                        ? `${totalPeople} Adult`
-                        : totalPeople > 10
-                            ? `${totalPeople} Adult`
-                            : totalPeople !== 0
-                                ? `${totalPeople} Adults`
-                                : ''
-                    }
-                        </p>
-                        ${infantAmount ? `<p id="flight_infant_person_amount_${insertedFlightDataDivUniqueId}">${infantAmount}</p>` : ''}
-                    </div>
-                <div><p>20Kg Per Pax</p></div>
+                    <p id="flight_adult_person_amount_${insertedFlightDataDivUniqueId}">
+                        ${totalPeople === 1
+                    ? `${totalPeople} بالغ`
+                    : totalPeople > 10
+                        ? `${totalPeople} بالغ`
+                        : totalPeople !== 0
+                            ? `${totalPeople} بالغين`
+                            : ''
+                }
+                    </p>
+                    ${infantAmount ? `<p id="flight_infant_person_amount_${insertedFlightDataDivUniqueId}">${infantAmount}</p>` : ''}
+                </div>
+                <div><p>20Kg للشخص</p></div>
                 <div><h2 id='flight_from_city_${insertedFlightDataDivUniqueId}'>${fromCity}</h2></div>
                 <div><h3 id='flight_to_city_${insertedFlightDataDivUniqueId}'>${toCity}</h3></div>
                 <div><h1 id='flight_date_${insertedFlightDataDivUniqueId}' class="flight_date_for_matching_whole_package_date">${currentDate}</h1></div>
@@ -2882,19 +2797,20 @@ createHotelsDataFunction = function () {
         // Function to increment a date by a specified number of days
         function incrementDate(dateString, days) {
             let [day, month] = dateString.split(' '); // Split the date string into day and month
-            let monthsMap = {
-                "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
-                "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
-            };
-            let monthNames = Object.keys(monthsMap); // Array of month names in English
+            let arabicMonths = {
+                "يناير": 0, "فبراير": 1, "مارس": 2, "أبريل": 3,
+                "مايو": 4, "يونيو": 5, "يوليو": 6, "أغسطس": 7,
+                "سبتمبر": 8, "أكتوبر": 9, "نوفمبر": 10, "ديسمبر": 11
+            }; // Arabic month names mapped to their corresponding month index
+            let monthNames = Object.keys(arabicMonths); // Array of month names in Arabic
 
             let date = new Date(); // Create a new date object
             date.setDate(parseInt(day)); // Set the day of the date object
-            date.setMonth(monthsMap[month]); // Set the month of the date object
+            date.setMonth(arabicMonths[month]); // Set the month of the date object
             date.setDate(date.getDate() + days); // Increment the date by the specified number of days
 
             let newDay = date.getDate(); // Get the new day after incrementing
-            let newMonth = monthNames[date.getMonth()]; // Get the new month name in English
+            let newMonth = monthNames[date.getMonth()]; // Get the new month name in Arabic
 
             return `${newDay} ${newMonth}`; // Return the new date in the same format (day month)
         }
@@ -2934,7 +2850,7 @@ createHotelsDataFunction = function () {
         let isFirstClintMovementsRowCreated = false; // Flag to track the first created clintMovementsRowTableDiv
 
 
-        /* Variable to store if the h5 inside the first found 'hotel_row_class_for_editing' is "Puncak" or "Bandung" */
+        /* Variable to store if the h5 inside the first found 'hotel_row_class_for_editing' is "بونشاك" or "باندونق" */
         let firstHotelCityName = allHotelRows[0].querySelector('h5').innerText;
 
 
@@ -2950,40 +2866,40 @@ createHotelsDataFunction = function () {
             let checkInDate = hotelRow.querySelector('h2').innerText;
             let nights = parseInt(hotelRow.querySelector('h4').innerText, 10);
             let cityName = hotelRow.querySelector('h5').innerText;
-            let areaName = cityName === "Bali" ? hotelRow.querySelector('h6').innerText : null;
+            let areaName = cityName === "بالي" ? hotelRow.querySelector('h6').innerText : null;
             let packageType = document.getElementById('clint_package_type_h6').innerText.trim();
 
             let packageMapping = {
-                "Honeymooners Package": "honeymoon",
-                "Guys Package": "guys",
-                "Family Package": "family",
-                "Two People Package": "twopeople",
-                "Group Package": "family",
-                "New Package": "family"
+                "بكج شهر عسل": "honeymoon",
+                "بكج شباب": "guys",
+                "بكج عائلة": "family",
+                "بكج شخصين": "twopeople",
+                "بكج قروب": "family",
+                "بكج جديد": "family"
             };
             let packageKey = packageMapping[packageType] || "family";
 
             let targetObject;
             let usedDays; // Declare usedDays to be assigned later
 
-            if (cityName === "Bali" && areaName) {
-                if (areaName === "Ubud" || areaName === "Keramas") {
+            if (cityName === "بالي" && areaName) {
+                if (areaName === "اوبود" || areaName === "كيراماس") {
                     targetObject = allClintVisitingPlacesArray[1][packageKey];
                     usedDays = usedVisitingPlaces.baliUbudKeramas;
-                } else if (["Kuta", "Nusa Dua", "Seminyak", "Jimbaran", "Uluwatu", "Legian", "Sanur", "Tabanan", "Canggu", "Tampaksiring"].includes(areaName)) {
+                } else if (["كوتا", "نوسا دوا", "سيمنياك", "جيمباران", "اولواتو", "ليجين", "سانور", "تابانان", "تشانغو", "Tampaksiring"].includes(areaName)) {
                     targetObject = allClintVisitingPlacesArray[0][packageKey];
                     usedDays = usedVisitingPlaces.baliOthers;
                 }
-            } else if (cityName === 'Jakarta') {
+            } else if (cityName === 'جاكرتا') {
                 targetObject = allClintVisitingPlacesArray[2][packageKey];
                 usedDays = usedVisitingPlaces.jakarta;
-            } else if (cityName === 'Puncak') {
+            } else if (cityName === 'بونشاك') {
                 targetObject = allClintVisitingPlacesArray[3][packageKey];
                 usedDays = usedVisitingPlaces.puncak;
-            } else if (cityName === 'Bandung') {
+            } else if (cityName === 'باندونق') {
                 targetObject = allClintVisitingPlacesArray[4][packageKey];
                 usedDays = usedVisitingPlaces.bandung;
-            } else if (cityName === 'Lombok') {
+            } else if (cityName === 'لومبوك') {
                 targetObject = allClintVisitingPlacesArray[5][packageKey];
                 usedDays = usedVisitingPlaces.lombok;
             }
@@ -3018,7 +2934,7 @@ createHotelsDataFunction = function () {
                     }
                 }
 
-                let checkInOutText = i === 0 ? `${hotelName} Check-in` : '';
+                let checkInOutText = i === 0 ? `تسجيل الدخول في ${hotelName}` : '';
                 let combinedCityName = cityName;
 
                 // Logic for check-in/out text and combined city name based on previous city/hotel
@@ -3032,38 +2948,38 @@ createHotelsDataFunction = function () {
                     }
 
                     let additionalText = "";
-                    if (isAirportWelcomeIncluded && (cityName === "Bali" || cityName === "Jakarta") && cityName !== previousCityName) {
-                        if (!(previousCityName === "Puncak" && cityName === "Jakarta") && !(previousCityName === "Bandung" && cityName === "Jakarta")) {
-                            additionalText = `Welcoming in ${cityName} Airport + `;
+                    if (isAirportWelcomeIncluded && (cityName === "بالي" || cityName === "جاكرتا") && cityName !== previousCityName) {
+                        if (!(previousCityName === "بونشاك" && cityName === "جاكرتا") && !(previousCityName === "باندونق" && cityName === "جاكرتا")) {
+                            additionalText = `الإستقبال في مطار ${cityName} + `;
                         }
                     }
 
 
                     if (!isCheckOutTextAdded) {
-                        checkInOutText = `${previousHotelName} Check-out `;
+                        checkInOutText = `تسجيل الخروج من ${previousHotelName} `;
 
                         if (previousCityName !== cityName) {
-                            checkInOutText += `+ Going To ${cityName} `;
+                            checkInOutText += `+ الذهاب الى ${cityName} `;
                         }
 
-                        checkInOutText += `+ ${additionalText}${visitingPlacesText} + ${hotelName} Check-in`;
+                        checkInOutText += `+ ${additionalText}${visitingPlacesText} + تسجيل الدخول في ${hotelName}`;
                         isCheckOutTextAdded = true;
                     }
                 }
 
-                if ((cityName === "Bali" || cityName === "Jakarta") && !hasCenterTourTextBeenAdded) {
-                    checkInOutText = checkInOutText.replace(`${hotelName} Check-in`, `${hotelName} Check-in + Going around the center`);
+                if ((cityName === "بالي" || cityName === "جاكرتا") && !hasCenterTourTextBeenAdded) {
+                    checkInOutText = checkInOutText.replace(`تسجيل الدخول في ${hotelName}`, `تسجيل الدخول في ${hotelName} + التجول في السنتر`);
                     hasCenterTourTextBeenAdded = true;
                 }
 
-                if (!isFirstHotelRowCreated && (cityName === "Bali" || cityName === "Jakarta") && isAirportWelcomeIncluded) {
-                    checkInOutText = `Welcoming in ${cityName} Airport + ${checkInOutText}`;
+                if (!isFirstHotelRowCreated && (cityName === "بالي" || cityName === "جاكرتا") && isAirportWelcomeIncluded) {
+                    checkInOutText = `الإستقبال في مطار ${cityName} + ${checkInOutText}`;
                     isFirstHotelRowCreated = true;
                 }
 
                 // Additional condition for the first hotel row
-                if (!isFirstHotelRowCreated && index === 0 && isAirportWelcomeIncluded && (firstHotelCityName === "Puncak" || firstHotelCityName === "Bandung")) {
-                    checkInOutText = `Welcoming in Jakarta + Going To ${cityName} + ${hotelName} Check-in`;
+                if (!isFirstHotelRowCreated && index === 0 && isAirportWelcomeIncluded && (firstHotelCityName === "بونشاك" || firstHotelCityName === "باندونق")) {
+                    checkInOutText = `الإستقبال في مطار جاكرتا + الذهاب الى ${cityName} + تسجيل الدخول في ${hotelName}`;
                     isFirstHotelRowCreated = true; // Set the flag to avoid reapplying this condition
                 }
 
@@ -3077,9 +2993,9 @@ createHotelsDataFunction = function () {
                 `;
 
                 // Apply the new condition to append text if needed, but skip the first hotel row
-                if (!isFirstJakartaHotelFound && cityName === "Jakarta" && i === 0 && index !== 0) {
+                if (!isFirstJakartaHotelFound && cityName === "جاكرتا" && i === 0 && index !== 0) {
                     let currentH2 = clintMovementsRowTableDiv.querySelector('h2');
-                    currentH2.innerText += " + Going To Alsadda restaurant for dinner";
+                    currentH2.innerText += " + الذهاب لمطعم السدة للعشاء";
                     currentH2.innerText = cleanUpText(currentH2.innerText); // Clean up text to ensure no duplicated '+'
                     isFirstJakartaHotelFound = true;
                 }
@@ -3138,7 +3054,7 @@ createHotelsDataFunction = function () {
 
                 extraClintMovementsRowTableDiv.innerHTML = `
             <div><h1>${extraDate}</h1></div>
-            <div><h2>${hotelName} Check-out and going to Airport for leaving</h2></div>
+            <div><h2>تسجيل الخروج من ${hotelName} والتحرك للمطار للمغادرة</h2></div>
             <div class="clint_movements_row_controller" style="cursor: pointer;"><h3>${cityName}-مغادرة</h3></div>
         `;
 
@@ -3332,7 +3248,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
 
 
     /* Change the innerText and the background color of the 'hotel_content_section_title_text_id' */
-    document.getElementById('hotel_content_section_title_text_id').innerText = 'EDIT HOTEL';
+    document.getElementById('hotel_content_section_title_text_id').innerText = 'تعديل تفاصيل الفندق';
     document.getElementById('toggle_hotel_data_title_div_id').style.backgroundColor = 'rgb(85, 127, 137)';
 
 
@@ -3474,8 +3390,8 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
         document.getElementById('hotel_stars_rate_input_id').style.display = 'block';
 
 
-        /* Show the 'hotel_bali_area_input_id' if the value of the 'hotel_location_input_id' is 'Bali' */
-        if (document.getElementById('hotel_location_input_id').value === 'Bali') {
+        /* Show the 'hotel_bali_area_input_id' if the value of the 'hotel_location_input_id' is 'بالي' */
+        if (document.getElementById('hotel_location_input_id').value === 'بالي') {
             // Show the hotel bali area input
             document.getElementById('hotel_bali_area_input_id').style.display = 'block';
 
@@ -3624,7 +3540,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
 
 
         /* Reset the innerText and styling to defualt */
-        document.getElementById('hotel_content_section_title_text_id').innerText = 'HOTEL DATA';
+        document.getElementById('hotel_content_section_title_text_id').innerText = 'تفاصيل الفندق';
         document.getElementById('toggle_hotel_data_title_div_id').style.background = 'rgb(131, 0, 148)';
 
 
@@ -3781,7 +3697,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
 
 
             /* Stop the process if the hotel location is bali but the area is not selected */
-            if (document.getElementById('hotel_location_input_id').value === 'Bali' && document.getElementById('hotel_bali_area_input_id').value === '') {
+            if (document.getElementById('hotel_location_input_id').value === 'بالي' && document.getElementById('hotel_bali_area_input_id').value === '') {
 
                 // Play a sound effect
                 playSoundEffect('error');
@@ -3847,7 +3763,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                 <div>
                     <h5 id='hotel_location_${insertedHotelDataDivUniqueId}'>${hotelLocationInput}</h5>
                     ${hotelBaliAreaInput ? `<br><h6 id='hotel_area_${insertedHotelDataDivUniqueId}'>${hotelBaliAreaInput}</h6>` : ''}
-                    <img src="../صور-الفنادق/${starsAmount}-stars-hotel-image.jpg" id='hotel_image_${insertedHotelDataDivUniqueId}' class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
+                    <img src="صور-الفنادق/${starsAmount}-stars-hotel-image.jpg" id='hotel_image_${insertedHotelDataDivUniqueId}' class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
                 </div>
             `;
 
@@ -4058,7 +3974,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                 <div>
                     <h5 id='hotel_location_${insertedHotelDataDivUniqueId}'>${hotelLocationReadyText}</h5>
                     ${hotelAreaReadyText ? `<br><h6 id='hotel_area_${insertedHotelDataDivUniqueId}'>${hotelAreaReadyText}</h6>` : ''}
-                    <img src="../صور-الفنادق/${hotelImgSrcReadyText}.jpg" class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
+                    <img src="صور-الفنادق/${hotelImgSrcReadyText}.jpg" class="hotel_row_image_controller inserted_hotel_data_row" style="cursor: pointer">
                 </div>
             `;
 
@@ -4250,7 +4166,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
 
             let lastCity = null;  // Variable to store the last valid city encountered
             let lastDate = null;  // Variable to store the date associated with the last valid city
-            let validCities = ["Bali", "Jakarta", "Bandung", "Puncak", "Lombok"];  // Array of valid cities to check against
+            let validCities = ["بالي", "جاكرتا", "باندونق", "بونشاك", "لومبوك"];  // Array of valid cities to check against
 
 
 
@@ -4281,21 +4197,21 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                 let currentDate = hotelRow.querySelector('h2').innerText;  // Get the date from the current hotel row's h2 element
 
                 // Check if transition between Jakarta and Bandung (in either order) and skip
-                if ((lastCity === "Jakarta" && currentCity === "Bandung") || (lastCity === "Bandung" && currentCity === "Jakarta")) {
+                if ((lastCity === "جاكرتا" && currentCity === "باندونق") || (lastCity === "باندونق" && currentCity === "جاكرتا")) {
                     lastCity = currentCity;
                     lastDate = currentDate;
                     return; // Skip this iteration without creating a flightRowTableDiv
                 }
 
                 // Check if transition between Jakarta and Puncak and skip
-                if (lastCity === "Jakarta" && currentCity === "Puncak") {
+                if (lastCity === "جاكرتا" && currentCity === "بونشاك") {
                     lastCity = currentCity;
                     lastDate = currentDate;
                     return; // Skip this iteration without creating a flightRowTableDiv
                 }
 
                 // Check if transition between Puncak and Jakarta and skip
-                if (lastCity === "Puncak" && currentCity === "Jakarta") {
+                if (lastCity === "بونشاك" && currentCity === "جاكرتا") {
                     lastCity = currentCity;
                     lastDate = currentDate;
                     return; // Skip this iteration without creating a flightRowTableDiv
@@ -4303,25 +4219,25 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
 
                 // Check if the current and last city are valid and different
                 if ((validCities.includes(currentCity) && lastCity && lastCity !== currentCity && validCities.includes(lastCity)) ||
-                    (lastCity === "Puncak" && currentCity === "Bali") || (lastCity === "Bali" && currentCity === "Puncak")) {
+                    (lastCity === "بونشاك" && currentCity === "بالي") || (lastCity === "بالي" && currentCity === "بونشاك")) {
 
                     let fromCity = lastCity;
                     let toCity = currentCity;
 
 
                     /* check the 'lastCity' and the 'currentCity' value and based on the below conditions set the value of the 'fromCity' and the 'toCity' */
-                    if ((lastCity === "Puncak" && currentCity === "Bali") || (lastCity === "Bandung" && currentCity === "Bali")) {
-                        fromCity = "Jakarta";
-                        toCity = "Bali";
-                    } else if ((lastCity === "Bali" && currentCity === "Puncak") || (lastCity === "Bali" && currentCity === "Bandung")) {
-                        fromCity = "Bali";
-                        toCity = "Jakarta";
+                    if ((lastCity === "بونشاك" && currentCity === "بالي") || (lastCity === "باندونق" && currentCity === "بالي")) {
+                        fromCity = "جاكرتا";
+                        toCity = "بالي";
+                    } else if ((lastCity === "بالي" && currentCity === "بونشاك") || (lastCity === "بالي" && currentCity === "باندونق")) {
+                        fromCity = "بالي";
+                        toCity = "جاكرتا";
                     }
 
 
 
                     // Check if transition between Bandung and Puncak (in either order) and skip
-                    if ((lastCity === "Bandung" && currentCity === "Puncak") || (lastCity === "Puncak" && currentCity === "Bandung")) {
+                    if ((lastCity === "باندونق" && currentCity === "بونشاك") || (lastCity === "بونشاك" && currentCity === "باندونق")) {
                         lastCity = currentCity;
                         lastDate = currentDate;
                         return; // Skip this iteration without creating a flightRowTableDiv
@@ -4339,17 +4255,17 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                     <div>
                         <p id="flight_adult_person_amount_${insertedFlightDataDivUniqueId}">
                             ${totalPeople === 1
-                            ? `${totalPeople} Adult`
-                            : totalPeople > 10
-                                ? `${totalPeople} Adult`
-                                : totalPeople !== 0
-                                    ? `${totalPeople} Adults`
-                                    : ''
-                        }
+                        ? `${totalPeople} بالغ`
+                        : totalPeople > 10
+                            ? `${totalPeople} بالغ`
+                            : totalPeople !== 0
+                                ? `${totalPeople} بالغين`
+                                : ''
+                    }
                         </p>
                         ${infantAmount ? `<p id="flight_infant_person_amount_${insertedFlightDataDivUniqueId}">${infantAmount}</p>` : ''}
                     </div>
-                    <div><p>20Kg Per Pax</p></div>
+                    <div><p>20Kg للشخص</p></div>
                     <div><h2 id='flight_from_city_${insertedFlightDataDivUniqueId}'>${fromCity}</h2></div>
                     <div><h3 id='flight_to_city_${insertedFlightDataDivUniqueId}'>${toCity}</h3></div>
                     <div><h1 id='flight_date_${insertedFlightDataDivUniqueId}' class="flight_date_for_matching_whole_package_date">${currentDate}</h1></div>
@@ -4465,19 +4381,20 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
             // Function to increment a date by a specified number of days
             function incrementDate(dateString, days) {
                 let [day, month] = dateString.split(' '); // Split the date string into day and month
-                let monthsMap = {
-                    "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
-                    "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
-                };
-                let monthNames = Object.keys(monthsMap); // Array of month names in English
+                let arabicMonths = {
+                    "يناير": 0, "فبراير": 1, "مارس": 2, "أبريل": 3,
+                    "مايو": 4, "يونيو": 5, "يوليو": 6, "أغسطس": 7,
+                    "سبتمبر": 8, "أكتوبر": 9, "نوفمبر": 10, "ديسمبر": 11
+                }; // Arabic month names mapped to their corresponding month index
+                let monthNames = Object.keys(arabicMonths); // Array of month names in Arabic
 
                 let date = new Date(); // Create a new date object
                 date.setDate(parseInt(day)); // Set the day of the date object
-                date.setMonth(monthsMap[month]); // Set the month of the date object
+                date.setMonth(arabicMonths[month]); // Set the month of the date object
                 date.setDate(date.getDate() + days); // Increment the date by the specified number of days
 
                 let newDay = date.getDate(); // Get the new day after incrementing
-                let newMonth = monthNames[date.getMonth()]; // Get the new month name in English
+                let newMonth = monthNames[date.getMonth()]; // Get the new month name in Arabic
 
                 return `${newDay} ${newMonth}`; // Return the new date in the same format (day month)
             }
@@ -4517,7 +4434,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
             let isFirstClintMovementsRowCreated = false; // Flag to track the first created clintMovementsRowTableDiv
 
 
-            /* Variable to store if the h5 inside the first found 'hotel_row_class_for_editing' is "Puncak" or "Bandung" */
+            /* Variable to store if the h5 inside the first found 'hotel_row_class_for_editing' is "بونشاك" or "باندونق" */
             let firstHotelCityName = allHotelRows[0].querySelector('h5').innerText;
 
 
@@ -4533,40 +4450,40 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                 let checkInDate = hotelRow.querySelector('h2').innerText;
                 let nights = parseInt(hotelRow.querySelector('h4').innerText, 10);
                 let cityName = hotelRow.querySelector('h5').innerText;
-                let areaName = cityName === "Bali" ? hotelRow.querySelector('h6').innerText : null;
+                let areaName = cityName === "بالي" ? hotelRow.querySelector('h6').innerText : null;
                 let packageType = document.getElementById('clint_package_type_h6').innerText.trim();
 
                 let packageMapping = {
-                    "Honeymooners Package": "honeymoon",
-                    "Guys Package": "guys",
-                    "Family Package": "family",
-                    "Two People Package": "twopeople",
-                    "Group Package": "family",
-                    "New Package": "family"
+                    "بكج شهر عسل": "honeymoon",
+                    "بكج شباب": "guys",
+                    "بكج عائلة": "family",
+                    "بكج شخصين": "twopeople",
+                    "بكج قروب": "family",
+                    "بكج جديد": "family"
                 };
                 let packageKey = packageMapping[packageType] || "family";
 
                 let targetObject;
                 let usedDays; // Declare usedDays to be assigned later
 
-                if (cityName === "Bali" && areaName) {
-                    if (areaName === "Ubud" || areaName === "Keramas") {
+                if (cityName === "بالي" && areaName) {
+                    if (areaName === "اوبود" || areaName === "كيراماس") {
                         targetObject = allClintVisitingPlacesArray[1][packageKey];
                         usedDays = usedVisitingPlaces.baliUbudKeramas;
-                    } else if (["Kuta", "Nusa Dua", "Seminyak", "Jimbaran", "Uluwatu", "Legian", "Sanur", "Payangan", "Canggu", "Tampaksiring"].includes(areaName)) {
+                    } else if (["كوتا", "نوسا دوا", "سيمنياك", "جيمباران", "اولواتو", "ليجين", "سانور", "بيانجان", "تشانغو", "Tampaksiring"].includes(areaName)) {
                         targetObject = allClintVisitingPlacesArray[0][packageKey];
                         usedDays = usedVisitingPlaces.baliOthers;
                     }
-                } else if (cityName === 'Jakarta') {
+                } else if (cityName === 'جاكرتا') {
                     targetObject = allClintVisitingPlacesArray[2][packageKey];
                     usedDays = usedVisitingPlaces.jakarta;
-                } else if (cityName === 'Puncak') {
+                } else if (cityName === 'بونشاك') {
                     targetObject = allClintVisitingPlacesArray[3][packageKey];
                     usedDays = usedVisitingPlaces.puncak;
-                } else if (cityName === 'Bandung') {
+                } else if (cityName === 'باندونق') {
                     targetObject = allClintVisitingPlacesArray[4][packageKey];
                     usedDays = usedVisitingPlaces.bandung;
-                } else if (cityName === 'Lombok') {
+                } else if (cityName === 'لومبوك') {
                     targetObject = allClintVisitingPlacesArray[5][packageKey];
                     usedDays = usedVisitingPlaces.lombok;
                 }
@@ -4601,7 +4518,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                         }
                     }
 
-                    let checkInOutText = i === 0 ? `${hotelName} Check-in` : '';
+                    let checkInOutText = i === 0 ? `تسجيل الدخول في ${hotelName}` : '';
                     let combinedCityName = cityName;
 
                     // Logic for check-in/out text and combined city name based on previous city/hotel
@@ -4615,38 +4532,38 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                         }
 
                         let additionalText = "";
-                        if (isAirportWelcomeIncluded && (cityName === "Bali" || cityName === "Jakarta") && cityName !== previousCityName) {
-                            if (!(previousCityName === "Puncak" && cityName === "Jakarta") && !(previousCityName === "Bandung" && cityName === "Jakarta")) {
-                                additionalText = `Welcoming in ${cityName} Airport + `;
+                        if (isAirportWelcomeIncluded && (cityName === "بالي" || cityName === "جاكرتا") && cityName !== previousCityName) {
+                            if (!(previousCityName === "بونشاك" && cityName === "جاكرتا") && !(previousCityName === "باندونق" && cityName === "جاكرتا")) {
+                                additionalText = `الإستقبال في مطار ${cityName} + `;
                             }
                         }
 
 
                         if (!isCheckOutTextAdded) {
-                            checkInOutText = `${previousHotelName} Check-out `;
+                            checkInOutText = `تسجيل الخروج من ${previousHotelName} `;
 
                             if (previousCityName !== cityName) {
-                                checkInOutText += `+ Going To ${cityName} `;
+                                checkInOutText += `+ الذهاب الى ${cityName} `;
                             }
 
-                            checkInOutText += `+ ${additionalText}${visitingPlacesText} + ${hotelName} Check-in`;
+                            checkInOutText += `+ ${additionalText}${visitingPlacesText} + تسجيل الدخول في ${hotelName}`;
                             isCheckOutTextAdded = true;
                         }
                     }
 
-                    if ((cityName === "Bali" || cityName === "Jakarta") && !hasCenterTourTextBeenAdded) {
-                        checkInOutText = checkInOutText.replace(`${hotelName} Check-in`, `${hotelName} Check-in + Going around the center`);
+                    if ((cityName === "بالي" || cityName === "جاكرتا") && !hasCenterTourTextBeenAdded) {
+                        checkInOutText = checkInOutText.replace(`تسجيل الدخول في ${hotelName}`, `تسجيل الدخول في ${hotelName} + التجول في السنتر`);
                         hasCenterTourTextBeenAdded = true;
                     }
 
-                    if (!isFirstHotelRowCreated && (cityName === "Bali" || cityName === "Jakarta") && isAirportWelcomeIncluded) {
-                        checkInOutText = `Welcoming in ${cityName} Airport + ${checkInOutText}`;
+                    if (!isFirstHotelRowCreated && (cityName === "بالي" || cityName === "جاكرتا") && isAirportWelcomeIncluded) {
+                        checkInOutText = `الإستقبال في مطار ${cityName} + ${checkInOutText}`;
                         isFirstHotelRowCreated = true;
                     }
 
                     // Additional condition for the first hotel row
-                    if (!isFirstHotelRowCreated && index === 0 && isAirportWelcomeIncluded && (firstHotelCityName === "Puncak" || firstHotelCityName === "Bandung")) {
-                        checkInOutText = `Welcoming in Jakarta Airport + Going to ${cityName} + ${hotelName} Check-in`;
+                    if (!isFirstHotelRowCreated && index === 0 && isAirportWelcomeIncluded && (firstHotelCityName === "بونشاك" || firstHotelCityName === "باندونق")) {
+                        checkInOutText = `الإستقبال في مطار جاكرتا + الذهاب الى ${cityName} + تسجيل الدخول في ${hotelName}`;
                         isFirstHotelRowCreated = true; // Set the flag to avoid reapplying this condition
                     }
 
@@ -4660,9 +4577,9 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
                     `;
 
                     // Apply the new condition to append text if needed, but skip the first hotel row
-                    if (!isFirstJakartaHotelFound && cityName === "Jakarta" && i === 0 && index !== 0) {
+                    if (!isFirstJakartaHotelFound && cityName === "جاكرتا" && i === 0 && index !== 0) {
                         let currentH2 = clintMovementsRowTableDiv.querySelector('h2');
-                        currentH2.innerText += " + Going To Alsadda restaurant for dinner";
+                        currentH2.innerText += " + الذهاب لمطعم السدة للعشاء";
                         currentH2.innerText = cleanUpText(currentH2.innerText); // Clean up text to ensure no duplicated '+'
                         isFirstJakartaHotelFound = true;
                     }
@@ -4721,7 +4638,7 @@ editClickedHotelDataFunction = function (clickedHotelRowIdName) {
 
                     extraClintMovementsRowTableDiv.innerHTML = `
                 <div><h1>${extraDate}</h1></div>
-                <div><h2>${hotelName} Check-out and going to Airport for leaving</h2></div>
+                <div><h2>تسجيل الخروج من ${hotelName} والتحرك للمطار للمغادرة</h2></div>
                 <div class="clint_movements_row_controller" style="cursor: pointer;"><h3>${cityName}-مغادرة</h3></div>
             `;
 
@@ -5145,21 +5062,22 @@ autoCreateALlClintMovementsData = function () {
         // Function to increment a date by a specified number of days
         function incrementDate(dateString, days) {
             let [day, month] = dateString.split(' '); // Split the date string into day and month
-            let monthsMap = {
-                "Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5,
-                "Jul": 6, "Aug": 7, "Sep": 8, "Oct": 9, "Nov": 10, "Dec": 11
-            };
-            let monthNames = Object.keys(monthsMap); // Array of month names in English
+            let arabicMonths = {
+                "يناير": 0, "فبراير": 1, "مارس": 2, "أبريل": 3,
+                "مايو": 4, "يونيو": 5, "يوليو": 6, "أغسطس": 7,
+                "سبتمبر": 8, "أكتوبر": 9, "نوفمبر": 10, "ديسمبر": 11
+            }; // Arabic month names mapped to their corresponding month index
+            let monthNames = Object.keys(arabicMonths); // Array of month names in Arabic
 
             let currentYear = new Date().getFullYear(); // Get the current year
 
             // Set the full date including the correct month and year
-            let date = new Date(currentYear, monthsMap[month], parseInt(day));
+            let date = new Date(currentYear, arabicMonths[month], parseInt(day));
 
             date.setDate(date.getDate() + days); // Increment the date by the specified number of days
 
             let newDay = date.getDate(); // Get the new day after incrementing
-            let newMonth = monthNames[date.getMonth()]; // Get the new month name in English
+            let newMonth = monthNames[date.getMonth()]; // Get the new month name in Arabic
 
             return `${newDay} ${newMonth}`; // Return the new date in the same format (day month)
         }
@@ -5200,7 +5118,7 @@ autoCreateALlClintMovementsData = function () {
         let isFirstClintMovementsRowCreated = false; // Flag to track the first created clintMovementsRowTableDiv
 
 
-        /* Variable to store if the h5 inside the first found 'hotel_row_class_for_editing' is "Puncak" or "Bandung" */
+        /* Variable to store if the h5 inside the first found 'hotel_row_class_for_editing' is "بونشاك" or "باندونق" */
         let firstHotelCityName = allHotelRows[0].querySelector('h5').innerText;
 
 
@@ -5216,16 +5134,16 @@ autoCreateALlClintMovementsData = function () {
             let checkInDate = hotelRow.querySelector('h2').innerText;
             let nights = parseInt(hotelRow.querySelector('h4').innerText, 10);
             let cityName = hotelRow.querySelector('h5').innerText;
-            let areaName = cityName === "Bali" ? hotelRow.querySelector('h6').innerText : null;
+            let areaName = cityName === "بالي" ? hotelRow.querySelector('h6').innerText : null;
             let packageType = document.getElementById('clint_package_type_h6').innerText.trim();
 
             let packageMapping = {
-                "Honeymooners Package": "honeymoon",
-                "Guys Package": "guys",
-                "Family Package": "family",
-                "Two People Package": "twopeople",
-                "Group Package": "family",
-                "New Package": "family"
+                "بكج شهر عسل": "honeymoon",
+                "بكج شباب": "guys",
+                "بكج عائلة": "family",
+                "بكج شخصين": "twopeople",
+                "بكج قروب": "family",
+                "بكج جديد": "family"
             };
 
             let packageKey = packageMapping[packageType] || "family";
@@ -5233,24 +5151,24 @@ autoCreateALlClintMovementsData = function () {
             let targetObject;
             let usedDays; // Declare usedDays to be assigned later
 
-            if (cityName === "Bali" && areaName) {
-                if (areaName === "Ubud" || areaName === "Keramas") {
+            if (cityName === "بالي" && areaName) {
+                if (areaName === "اوبود" || areaName === "كيراماس") {
                     targetObject = allClintVisitingPlacesArray[1][packageKey];
                     usedDays = usedVisitingPlaces.baliUbudKeramas;
-                } else if (["Kuta", "Nusa Dua", "Seminyak", "Jimbaran", "Uluwatu", "Legian", "Sanur", "Payangan", "Canggu", "Tampaksiring"].includes(areaName)) {
+                } else if (["كوتا", "نوسا دوا", "سيمنياك", "جيمباران", "اولواتو", "ليجين", "سانور", "بيانجان", "تشانغو", "Tampaksiring"].includes(areaName)) {
                     targetObject = allClintVisitingPlacesArray[0][packageKey];
                     usedDays = usedVisitingPlaces.baliOthers;
                 }
-            } else if (cityName === 'Jakarta') {
+            } else if (cityName === 'جاكرتا') {
                 targetObject = allClintVisitingPlacesArray[2][packageKey];
                 usedDays = usedVisitingPlaces.jakarta;
-            } else if (cityName === 'Puncak') {
+            } else if (cityName === 'بونشاك') {
                 targetObject = allClintVisitingPlacesArray[3][packageKey];
                 usedDays = usedVisitingPlaces.puncak;
-            } else if (cityName === 'Bandung') {
+            } else if (cityName === 'باندونق') {
                 targetObject = allClintVisitingPlacesArray[4][packageKey];
                 usedDays = usedVisitingPlaces.bandung;
-            } else if (cityName === 'Lombok') {
+            } else if (cityName === 'لومبوك') {
                 targetObject = allClintVisitingPlacesArray[5][packageKey];
                 usedDays = usedVisitingPlaces.lombok;
             }
@@ -5285,7 +5203,7 @@ autoCreateALlClintMovementsData = function () {
                     }
                 }
 
-                let checkInOutText = i === 0 ? `${hotelName} Check-in` : '';
+                let checkInOutText = i === 0 ? `تسجيل الدخول في ${hotelName}` : '';
                 let combinedCityName = cityName;
 
                 // Logic for check-in/out text and combined city name based on previous city/hotel
@@ -5299,38 +5217,38 @@ autoCreateALlClintMovementsData = function () {
                     }
 
                     let additionalText = "";
-                    if (isAirportWelcomeIncluded && (cityName === "Bali" || cityName === "Jakarta") && cityName !== previousCityName) {
-                        if (!(previousCityName === "Puncak" && cityName === "Jakarta") && !(previousCityName === "Bandung" && cityName === "Jakarta")) {
-                            additionalText = `Welcome in ${cityName} Airport + `;
+                    if (isAirportWelcomeIncluded && (cityName === "بالي" || cityName === "جاكرتا") && cityName !== previousCityName) {
+                        if (!(previousCityName === "بونشاك" && cityName === "جاكرتا") && !(previousCityName === "باندونق" && cityName === "جاكرتا")) {
+                            additionalText = `الإستقبال في مطار ${cityName} + `;
                         }
                     }
 
 
                     if (!isCheckOutTextAdded) {
-                        checkInOutText = `${previousHotelName} Check-out `;
+                        checkInOutText = `تسجيل الخروج من ${previousHotelName} `;
 
                         if (previousCityName !== cityName) {
-                            checkInOutText += `+ Going To ${cityName} `;
+                            checkInOutText += `+ الذهاب الى ${cityName} `;
                         }
 
-                        checkInOutText += `+ ${additionalText}${visitingPlacesText} + ${hotelName} Check-in`;
+                        checkInOutText += `+ ${additionalText}${visitingPlacesText} + تسجيل الدخول في ${hotelName}`;
                         isCheckOutTextAdded = true;
                     }
                 }
 
-                if ((cityName === "Bali" || cityName === "Jakarta") && !hasCenterTourTextBeenAdded) {
-                    checkInOutText = checkInOutText.replace(`${hotelName} Check-in`, `${hotelName} Check-in + Around the center`);
+                if ((cityName === "بالي" || cityName === "جاكرتا") && !hasCenterTourTextBeenAdded) {
+                    checkInOutText = checkInOutText.replace(`تسجيل الدخول في ${hotelName}`, `تسجيل الدخول في ${hotelName} + التجول في السنتر`);
                     hasCenterTourTextBeenAdded = true;
                 }
 
-                if (!isFirstHotelRowCreated && (cityName === "Bali" || cityName === "Jakarta") && isAirportWelcomeIncluded) {
-                    checkInOutText = `Welcome in ${cityName} Airport + ${checkInOutText}`;
+                if (!isFirstHotelRowCreated && (cityName === "بالي" || cityName === "جاكرتا") && isAirportWelcomeIncluded) {
+                    checkInOutText = `الإستقبال في مطار ${cityName} + ${checkInOutText}`;
                     isFirstHotelRowCreated = true;
                 }
 
                 // Additional condition for the first hotel row
-                if (!isFirstHotelRowCreated && index === 0 && isAirportWelcomeIncluded && (firstHotelCityName === "Puncak" || firstHotelCityName === "Bandung")) {
-                    checkInOutText = `Welcome in Jakarta Airport + Going to ${cityName} + ${hotelName} Check-in`;
+                if (!isFirstHotelRowCreated && index === 0 && isAirportWelcomeIncluded && (firstHotelCityName === "بونشاك" || firstHotelCityName === "باندونق")) {
+                    checkInOutText = `الإستقبال في مطار جاكرتا + الذهاب الى ${cityName} + تسجيل الدخول في ${hotelName}`;
                     isFirstHotelRowCreated = true; // Set the flag to avoid reapplying this condition
                 }
 
@@ -5344,9 +5262,9 @@ autoCreateALlClintMovementsData = function () {
                 `;
 
                 // Apply the new condition to append text if needed, but skip the first hotel row
-                if (!isFirstJakartaHotelFound && cityName === "Jakarta" && i === 0 && index !== 0) {
+                if (!isFirstJakartaHotelFound && cityName === "جاكرتا" && i === 0 && index !== 0) {
                     let currentH2 = clintMovementsRowTableDiv.querySelector('h2');
-                    currentH2.innerText += " + Going To Alsadda restaurant for dinner";
+                    currentH2.innerText += " + الذهاب لمطعم السدة للعشاء";
                     currentH2.innerText = cleanUpText(currentH2.innerText); // Clean up text to ensure no duplicated '+'
                     isFirstJakartaHotelFound = true;
                 }
@@ -5405,8 +5323,8 @@ autoCreateALlClintMovementsData = function () {
 
                 extraClintMovementsRowTableDiv.innerHTML = `
                     <div><h1>${extraDate}</h1></div>
-                    <div><h2>${hotelName} Check-out and going to Airport for leaving</h2></div>
-                    <div class="clint_movements_row_controller" style="cursor: pointer;"><h3>${cityName}-Leave</h3></div>
+                    <div><h2>تسجيل الخروج من ${hotelName} والتحرك للمطار للمغادرة</h2></div>
+                    <div class="clint_movements_row_controller" style="cursor: pointer;"><h3>${cityName}-مغادرة</h3></div>
                 `;
 
                 document.getElementById('inserted_clint_movements_data_position_div').appendChild(extraClintMovementsRowTableDiv);
@@ -5504,7 +5422,7 @@ deleteClickedClintMovementsData = function (currentClintMovementsDataDiv) {
         document.getElementById('cancel_new_clint_movements_data_row_icon').style.display = 'none';
 
         /* Reset the innerText and styling to default */
-        document.getElementById('clint_movements_content_section_title_text_id').innerText = 'TRANSPORTATION';
+        document.getElementById('clint_movements_content_section_title_text_id').innerText = 'برنامج تحركات مقترح';
         document.getElementById('toggle_clint_movements_details_title_div_id').style.background = 'rgb(131, 0, 148)';
 
         /* Update the available clint visiting places based on the current existing visiting places */
@@ -5548,7 +5466,7 @@ editClickedClintMovementsData = function (currentClintMovementsDataDiv) {
     document.getElementById('cancel_new_clint_movements_data_row_icon').style.display = 'block';
 
     // Change the innerText and styling to default
-    document.getElementById('clint_movements_content_section_title_text_id').innerText = `EDIT DAY ${currentClintMovementsDataDiv.querySelector('h1').innerText}`;
+    document.getElementById('clint_movements_content_section_title_text_id').innerText = `تعديل خط سير يوم ${currentClintMovementsDataDiv.querySelector('h1').innerText}`;
     document.getElementById('toggle_clint_movements_details_title_div_id').style.background = 'rgb(85, 127, 137)';
 
     // Scroll up to the middle of the 'toggle_clint_movements_details_title_div_id'
@@ -5606,7 +5524,7 @@ editClickedClintMovementsData = function (currentClintMovementsDataDiv) {
 
 
         /* Reset the innerText and styling to defualt */
-        document.getElementById('clint_movements_content_section_title_text_id').innerText = 'TRANSPORTATION';
+        document.getElementById('clint_movements_content_section_title_text_id').innerText = 'برنامج تحركات مقترح';
         document.getElementById('toggle_clint_movements_details_title_div_id').style.background = 'rgb(131, 0, 148)';
 
 
@@ -6451,18 +6369,18 @@ function filterUsedClintVisitingPlacesNames() {
 /* Function to highlight the first div inside the clint movements row that are in Saturday or Sunday */
 function highlightWeekendClintMovements() {
     let monthNames = {
-        "Jan": 0,
-        "Feb": 1,
-        "Mar": 2,
-        "Apr": 3,
-        "May": 4,
-        "Jun": 5,
-        "Jul": 6,
-        "Aug": 7,
-        "Sep": 8,
-        "Oct": 9,
-        "Nov": 10,
-        "Dec": 11
+        "يناير": 0,
+        "فبراير": 1,
+        "مارس": 2,
+        "أبريل": 3,
+        "مايو": 4,
+        "يونيو": 5,
+        "يوليو": 6,
+        "أغسطس": 7,
+        "سبتمبر": 8,
+        "أكتوبر": 9,
+        "نوفمبر": 10,
+        "ديسمبر": 11
     };
 
     // Target all divs with the class "clint_movements_row_class_for_editing"
@@ -6474,8 +6392,8 @@ function highlightWeekendClintMovements() {
         let h3Element = div.querySelector("h3");
 
         if (h1Element && h3Element) {
-            // Extract date in English short month format, e.g., "2 May" -> now "2 May" but we standardize to short names elsewhere
-            let dateText = h1Element.innerText.trim();
+            // Extract date in Arabic format
+            let dateText = h1Element.innerText.trim(); // Example: "2 مايو" or "10 يوليو"
             let [day, monthName] = dateText.split(" ");
             let dayNumber = parseInt(day, 10);
             let monthNumber = monthNames[monthName];
@@ -6488,7 +6406,7 @@ function highlightWeekendClintMovements() {
 
                 // Check if the day is Saturday or Sunday
                 let dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
-                if ((dayOfWeek === 0 || dayOfWeek === 6) && h3Element.innerText.includes('Puncak')) {
+                if ((dayOfWeek === 0 || dayOfWeek === 6) && h3Element.innerText.includes('بونشاك')) {
                     // Find the first div inside the target .clint_movements_row_class_for_editing div
                     let firstChildDiv = div.querySelector("div:first-child");
 
@@ -6838,7 +6756,7 @@ downloadPdfWithCustomName = async function (pdfName) {
 
         // Change to white text on blue background
         imgElements.forEach(img => {
-            img.src = '../moghader-middle-pdf-image.jpg'; // Google blue background
+            img.src = 'moghader-middle-pdf-image.jpg'; // Google blue background
         });
 
 
@@ -6892,7 +6810,7 @@ downloadPdfWithCustomName = async function (pdfName) {
 
         // Change to white text on blue background
         imgElements.forEach(img => {
-            img.src = '../vid-middle-pdf-image.jpg'; // Google blue background
+            img.src = 'vid-middle-pdf-image.jpg'; // Google blue background
         });
 
 
@@ -6960,11 +6878,11 @@ downloadPdfWithCustomName = async function (pdfName) {
 
         // Change to white text on blue background
         imgElements.forEach(img => {
-            img.src = '../sky-global-middle-pdf-image.jpg'; // Google blue background
+            img.src = 'sky-global-middle-pdf-image.jpg'; // Google blue background
         });
 
 
-        document.getElementById('welcome_pdf_first_page_image_id').src = '../خلفية-الشركات/سكاي-جلوبال.jpg';
+        document.getElementById('welcome_pdf_first_page_image_id').src = 'خلفية-الشركات/سكاي-جلوبال.jpg';
         /* document.getElementById('inserted_package_important_notes_data_section_page_image_id').src = 'ajwaa-sky-last-pdf-image.jpg'; */
 
 
@@ -7035,7 +6953,7 @@ downloadPdfWithCustomName = async function (pdfName) {
         });
 
 
-        document.getElementById('welcome_pdf_first_page_image_id').src = '../خلفية-الشركات/ترافل-جت.jpg';
+        document.getElementById('welcome_pdf_first_page_image_id').src = 'خلفية-الشركات/ترافل-جت.jpg';
         /* document.getElementById('inserted_package_important_notes_data_section_page_image_id').src = 'travel-gate-last-pdf-image.jpg'; */
 
 
@@ -7165,7 +7083,7 @@ downloadPdfWithCustomName = async function (pdfName) {
             img.src = 'middle-pdf-image.jpg';
         });
 
-        document.getElementById('welcome_pdf_first_page_image_id').src = `../خلفية-الشركات/${document.getElementById('clint_company_name_input_id').value.replace(/\s+/g, '-')}.jpg`;
+        document.getElementById('welcome_pdf_first_page_image_id').src = `خلفية-الشركات/${document.getElementById('clint_company_name_input_id').value.replace(/\s+/g, '-')}.jpg`;
         /* document.getElementById('inserted_package_important_notes_data_section_page_image_id').src = 'last-pdf-image.jpg'; */
 
         document.getElementById('package_clint_code_number_p_id').style.display = 'none';
@@ -7448,7 +7366,7 @@ runDownloadOnlyClintMovementsDataFunction = async function () {
         let companyNameWithoutSpaces = document.getElementById('clint_company_name_input_id').value.replace(/\s+/g, '-');
 
         // in case there is campany name then set the company name as the first pdf image inside the 'downloaded_pdf_clint_movements_data_page'
-        document.getElementById('downloaded_pdf_clint_movements_data_page').querySelector('img').src = `../خلفية-الشركات/${companyNameWithoutSpaces}.jpg`;
+        document.getElementById('downloaded_pdf_clint_movements_data_page').querySelector('img').src = `خلفية-الشركات/${companyNameWithoutSpaces}.jpg`;
 
 
         /* Name the clint movements data pdf file */

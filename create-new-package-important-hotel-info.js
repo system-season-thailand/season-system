@@ -1,6 +1,5 @@
 
 
-
 const hotelMessageInfoArray = [
 
     {
@@ -18,23 +17,6 @@ const hotelMessageInfoArray = [
         messageInfo_p3: "صالح للإستخدام الى 31 أكتوبر 2025",
     },
 
-
-    {
-        hotelName: "Tanadewa Nusa Dua",
-        messageInfo_p1: "حجز ليلين او اكثر:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
-        messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
-    },
-
-
-    {
-        hotelName: "Impiana Villa",
-        messageInfo_p1: "حجز ليلين او اكثر في ديوكس فيلا من غرفة نوم واحدة:",
-        messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
-        messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
-    },
-
-
     {
         hotelName: "Maharaja Villas Seminyak",
         messageInfo_p1: "حجز ليلين او اكثر:",
@@ -49,15 +31,6 @@ const hotelMessageInfoArray = [
         messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 03 يناير 2026",
     },
-
-
-    {
-        hotelName: "Four Seasons Sayan",
-        messageInfo_p1: "حجز ليلين تاخذ شاي بعد الظهر يحبو قلبك",
-        messageInfo_p2: "حجز ثلاث ليالي او أكثر تاخذ شاي بعد الظهر وثلاث وجبات عشاء (طعام فقط) لشخصين",
-        messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2025",
-    },
-
 
     {
         hotelName: "Komaneka Tanggayuda",
@@ -80,14 +53,6 @@ const hotelMessageInfoArray = [
         messageInfo_p1: "حجز ليلين او اكثر",
         messageInfo_p2: "إفطار عائم مجاني لشخصين لمره واحدة",
         messageInfo_p3: "صالح للإستخدام الى 31 مارس 2026",
-    },
-
-
-    {
-        hotelName: "Four Seasons Jimbaran",
-        messageInfo_p1: "حجز ثلاث ليالي = ثلاث وجبات غداء لشخصين",
-        messageInfo_p2: "حجز اربع ليالي او أكثر = ثلاث وجبات غداء لشخصين + مساج لشخصين لمدة 60 دقيقة لمره واحدة",
-        messageInfo_p3: "صالح للإستخدام الى 30 سبتمبر 2026",
     },
 
 

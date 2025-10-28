@@ -72,8 +72,8 @@ const fetchAllCloseSellDataFunction_Supabase = async () => {
     console.log("🟡 Check-out input:", checkOutInput); */
 
     if (checkInInput && checkOutInput) {
-        const checkInDate = parseEnglishDateForCloseSellData(checkInInput);
-        const checkOutDate = parseEnglishDateForCloseSellData(checkOutInput);
+        const checkInDate = parseArabicDateForCloseSellData(checkInInput);
+        const checkOutDate = parseArabicDateForCloseSellData(checkOutInput);
 
         /* console.log("📆 Parsed check-in:", checkInDate);
         console.log("📆 Parsed check-out:", checkOutDate); */
@@ -109,8 +109,8 @@ const fetchAllCloseSellDataFunction_Supabase = async () => {
                 const clickHandler = () => {
                     const packageStartInput = document.getElementById("whole_package_start_date_input_id").value;
                     const packageEndInput = document.getElementById("whole_package_end_date_input_id").value;
-                    const packageStartDate = parseEnglishDateForCloseSellData(packageStartInput);
-                    const packageEndDate = parseEnglishDateForCloseSellData(packageEndInput);
+                    const packageStartDate = parseArabicDateForCloseSellData(packageStartInput);
+                    const packageEndDate = parseArabicDateForCloseSellData(packageEndInput);
 
                     const roomAvailabilityMap = new Map();
                     const roomTypesFound = []; // Array to store found room types
@@ -270,6 +270,17 @@ const parseEnglishDates = (entry) => {
     }
 };
 
+// Function to parse Arabic date into a JavaScript Date object
+const parseArabicDateForCloseSellData = (arabicDate) => {
+    const arabicMonths = {
+        "يناير": 0, "فبراير": 1, "مارس": 2, "أبريل": 3,
+        "مايو": 4, "يونيو": 5, "يوليو": 6, "أغسطس": 7,
+        "سبتمبر": 8, "أكتوبر": 9, "نوفمبر": 10, "ديسمبر": 11,
+    };
+    const [day, month] = arabicDate.split(" ");
+    return new Date(new Date().getFullYear(), arabicMonths[month], parseInt(day));
+};
+
 // Helper to parse English month names
 const parseMonth = (month) => {
     const englishMonths = {
@@ -279,15 +290,9 @@ const parseMonth = (month) => {
     return englishMonths[month];
 };
 
-// Function to parse English date into a JavaScript Date object
-const parseEnglishDateForCloseSellData = (englishDate) => {
-    const englishMonths = {
-        Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
-        Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
-    };
-    const [day, month] = englishDate.split(" ");
-    return new Date(new Date().getFullYear(), englishMonths[month], parseInt(day));
-};
+
+
+
 
 
 
