@@ -12,6 +12,14 @@
     border-radius: 3px;
 }
 
+
+
+
+
+
+
+
+
 #package_user_code_name_for_later_import_reference_p_id,
 #package_clint_code_number_p_id {
     font-size: 2vw;
@@ -32,6 +40,11 @@
     padding-right: 3px;
 }
 
+
+
+
+
+
 #clint_full_name_p {
     width: 100%;
     font-size: 2vw;
@@ -39,10 +52,25 @@
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Inserted clint data position */
 .clint_data_row_class {
     background: white;
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -54,11 +82,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
 }
 
 .clint_data_row_class div * {
     text-align: center;
+    direction: ltr;
 }
 
 .clint_data_row_class div:first-child {
@@ -78,30 +107,65 @@
 /* Reduce the width of "مجموع الليالي" cells */
 .clint_data_row_class div:nth-child(4) {
     flex-grow: 0.4;
-    border-left: none;
 }
 
-/* Inserted package including data position */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container */
 .inserted_package_including_and_not_icluding_data_div_class {
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
 }
 
+/* Each line */
 .inserted_package_including_and_not_icluding_data_div_class p {
     width: 100%;
     font-size: 2vw;
-    margin: 0 0 0.5vmax 0;
-    padding: 0 0.5vmax 0 0;
-    text-align: start;
+    margin: 0 0 0.7vmax 0;
+    padding: 0.3vmax 1vmax;
+    text-align: start; /* Make it look more natural */
+    direction: ltr; /* Keep icon and text aligned in left-to-right order */
     cursor: pointer;
+    line-height: 1.4;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .special_package_including_data_background_color_text {
     background: rgb(85, 127, 137);
     color: white;
 }
+
+
+
+
 
 /* Styling For Vide Styling */
 .no_right_padding_for_vid_design_h6_class {
@@ -133,11 +197,16 @@
     background: rgb(99, 37, 35) !important;
 }
 
+
+
+
+
 /* Pdf section title */
 .pdf_section_title_div_class {
     background: white;
     width: 100%;
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
     align-items: center;
     justify-content: flex-start;
     margin: auto;
@@ -165,11 +234,39 @@
     margin-right: 5px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Inserted hotel data position */
 .hotel_row_class,
 .all_hotel_row_data_divs_container {
     background: white;
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -182,11 +279,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
 }
 
 .hotel_row_class div * {
-    text-align: center;
+    text-align: center !important;
+    direction: ltr;
 }
 
 .hotel_row_class div:first-child {
@@ -217,6 +315,7 @@
 .hotel_row_class span {
     font-size: 1.5vw;
     font-weight: 600;
+    direction: ltr;
 }
 
 /* Reduce the width of "تاريخ الدخول وتاريخ الخروج" and cells */
@@ -244,7 +343,7 @@
 .hotel_row_class div:nth-child(7) {
     flex-grow: 0.65;
     font-size: 0.5vw;
-    border-left: none;
+    border-right: none;
 }
 
 .hotel_row_class_for_editing div * {
@@ -261,15 +360,32 @@
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Inserted package important note position */
 #company_by_value_p_id {
     width: fit-content;
     font-size: 2vw;
     margin: 5px 0;
-    justify-self: left;
+    justify-self: right;
     text-align: center;
     padding: 1px 3px !important;
-    margin-left: 5px !important;
+    margin-right: 5px !important;
     border-radius: 3px;
 }
 
@@ -288,16 +404,23 @@
 
 .activity_icon_container {
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
     flex-wrap: wrap;
     align-items: center;
     gap: 4px;
     margin-top: 2px;
 }
 
+
+
+
+
+
 /* Inserted package total price section */
 #package_total_price_div {
     width: 100%;
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: center;
     align-items: center;
 }
@@ -318,10 +441,23 @@
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* Inserted flight data position */
 .flight_row_class {
-    background: white;
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    background: white;
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -333,11 +469,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
 }
 
 .flight_row_class div * {
-    text-align: center;
+    text-align: center !important;
 }
 
 .flight_row_class div:first-child {
@@ -376,14 +512,29 @@
 
 /* Reduce the width of "وقت الوصول" cell */
 .flight_row_class div:nth-child(8) {
-    border-left: none;
+    border-right: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Inserted transportation_plan data position */
 .clint_movements_row_class {
     background: white;
     min-height: 9vw;
     display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
     justify-content: space-between;
     align-items: stretch;
     border-bottom: 0.5px solid black;
@@ -395,12 +546,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
     transition: all 0.1s ease-in-out;
 }
 
 .clint_movements_row_class div * {
-    text-align: center;
+    text-align: center !important;
 }
 
 .clint_movements_row_class h1,
@@ -420,8 +571,9 @@
 /* Reduce the width of "الى" cell */
 .clint_movements_row_class div:nth-child(3) {
     flex-grow: 0.3;
-    border-left: none;
+    border-right: none;
 }
+
 
 .clint_movements_all_p_elements_div_class {
     display: flex;
@@ -433,6 +585,17 @@
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .Important_notes_for_each_pdf_section_div_class {
     padding: 5px 5px 0 5px;
     display: none;
@@ -441,7 +604,36 @@
 .Important_notes_for_each_pdf_section_div_class h5,
 .Important_notes_for_each_pdf_section_div_class h6 {
     font-size: 1.5vw;
+    direction: ltr;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Delete box message */
 .ensure_your_delete_action {
@@ -476,6 +668,39 @@
 .ensure_your_delete_action button:hover {
     box-shadow: 0 0.5px 3px black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Name pdf file box */
 #name_pdf_file_div {
@@ -515,6 +740,33 @@
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* inserted main row data coloring */
 .inserted_main_row_color_class {
     background: rgb(207, 83, 21);
@@ -532,12 +784,22 @@
     color: white;
 }
 
+
+
+
 /* Media Queries */
 /* 950px */
-@media (max-width: 950px) {
+@media(max-width:950px) {
     .inserted_company_name_logo {
         width: 25vw;
     }
+
+
+
+
+
+
+
 
     #package_user_code_name_for_later_import_reference_p_id {
         font-size: 2.5vw;
@@ -547,9 +809,21 @@
         font-size: 2.5vw;
     }
 
+
+
+
     #clint_full_name_p {
         font-size: 2.5vw;
     }
+
+
+
+
+
+
+
+
+
 
     .pdf_section_title_div_class {
         padding: 6px;
@@ -568,6 +842,25 @@
         font-size: 5.5vw;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .inserted_package_including_and_not_icluding_data_div_class p {
         font-size: 2.5vw;
     }
@@ -581,10 +874,28 @@
         margin-top: 2px;
     }
 
+
+
+
+
+
+
+
+
     .Important_notes_for_each_pdf_section_div_class h5,
     .Important_notes_for_each_pdf_section_div_class h6 {
         font-size: 2vw;
     }
+
+
+
+
+
+
+
+
+
+
 
     .ensure_your_delete_action button {
         font-size: 4vw;
@@ -597,7 +908,8 @@
 }
 
 /* 650px */
-@media (max-width: 650px) {
+@media(max-width:650px) {
+
     #package_user_code_name_for_later_import_reference_p_id {
         font-size: 3vw;
     }
@@ -616,20 +928,41 @@
     }
 }
 
+
 /* 580px */
-@media (max-width: 580px) {
+@media(max-width:580px) {
     .inserted_company_name_logo {
         width: 30vw;
         margin-bottom: 5px;
     }
 
+
+
+
+
+
+
+
+
     #clint_full_name_p {
         font-size: 3.5vw;
     }
 
+
+
+
+
+
+
     .clint_data_row_class p {
         font-size: 3.5vw;
     }
+
+
+
+
+
+
 
     .pdf_section_title_div_class {
         padding: 4px;
@@ -647,6 +980,17 @@
     .pdf_section_title_div_class p {
         font-size: 6.5vw;
     }
+
+
+
+
+
+
+
+
+
+
+
 
     .hotel_row_class h1,
     .hotel_row_class h2,
@@ -670,6 +1014,18 @@
         font-size: 2.4vw;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
     .flight_row_class h1,
     .flight_row_class h2,
     .flight_row_class h3,
@@ -681,6 +1037,16 @@
         font-size: 2.4vw;
     }
 
+
+
+
+
+
+
+
+
+
+
     .clint_movements_row_class h1,
     .clint_movements_row_class h2,
     .clint_movements_row_class h3,
@@ -689,27 +1055,63 @@
         font-size: 2.5vw;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .Important_notes_for_each_pdf_section_div_class h5,
     .Important_notes_for_each_pdf_section_div_class h6 {
         font-size: 2.4vw;
     }
+
+
+
 
     #company_by_value_p_id {
         font-size: 2.5vw;
         padding: 2px 0;
     }
 
+
+
+
+
+
+
+
+
+
     #vid_clint_deposit_note_p_id {
         font-size: 2.1vw;
     }
+
+
+
+
 }
 
 /* 400px */
-@media (max-width: 400px) {
+@media(max-width:400px) {
     .inserted_company_name_logo {
         width: 35vw;
         margin-bottom: 0px;
     }
+
+
+
+
+
 
     #package_user_code_name_for_later_import_reference_p_id {
         font-size: 3.5vw;
@@ -719,9 +1121,18 @@
         font-size: 3.5vw;
     }
 
+
+
     #clint_full_name_p {
         font-size: 4.5vw;
     }
+
+
+
+
+
+
+
 
     .inserted_package_including_and_not_icluding_data_div_class p {
         font-size: 3.2vw;
@@ -737,6 +1148,11 @@
         margin-top: 2px;
     }
 
+
+
+
+
+
     .hotel_row_class span {
         font-size: 2.4vw;
     }
@@ -745,14 +1161,47 @@
         font-size: 1.7vw !important;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .Important_notes_for_each_pdf_section_div_class h5,
     .Important_notes_for_each_pdf_section_div_class h6 {
         font-size: 2.6vw;
     }
 
+
+
+
     #company_by_value_p_id {
         font-size: 2.7vw;
     }
+
+
+
+
+
+
+
+
+
+
 
     #package_total_price_div h6 {
         font-size: 7vw;
@@ -764,6 +1213,17 @@
         padding: 3px 10px;
     }
 
+
+
+
+
+
+
+
+
+
+
+
     .ensure_your_delete_action {
         padding: 5px;
     }
@@ -772,6 +1232,10 @@
         font-size: 7vw;
         padding: 2px;
     }
+
+
+
+
 
     /* Name pdf file box */
     #name_pdf_file_div {
@@ -782,6 +1246,10 @@
     #name_pdf_file_div p {
         font-size: 4.5vw;
     }
+
+
+
+
 
     #vid_clint_deposit_note_p_id {
         font-size: 2.2vw;

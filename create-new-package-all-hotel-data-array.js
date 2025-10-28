@@ -1,1 +1,1024 @@
-let allHotelDataArray=[{hotelName:"Komaneka Keramas",hotelLocation:"بالي",hotelArea:"كيراماس",hotelRoomTypes:["فيلا اوشن من غرفة نوم واحدة","فيلا هيلتوب من غرفتين نوم"]},{hotelName:"Four Seasons Sayan",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["سويت دوبلكس","سويت من غرفة نوم واحدة","فاميلي سويت","فيلا من غرفة نوم واحدة","فيلا سايان","فيلا من غرفتين نوم","رويال فيلا من ثلاث غرف نوم"]},{hotelName:"Komaneka Tanggayuda",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا فالي","فيلا بريمير فالي"]},{hotelName:"Samsara Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا ديلوكس من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم"]},{hotelName:"Tejaprana Resort & Spa",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا تراس","فيلا فالي","فيلا من غرفتين نوم"]},{hotelName:"K Club",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا لوكسري من غرفة نوم واحدة","فيلا لوكسري من غرفتين نوم","فيلا لوكسري من ثلاث غرف نوم","فيلا لوكسري من اربع غرف نوم","فيلا رويال من اربع غرف نوم","فيلا رويال من خمس غرف نوم"]},{hotelName:"Ulaman Eco Luxury",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","ديلوكس سويت","فيلا ليك","سكاي فيلا","Cocoon upper deluxe","جراند روم"]},{hotelName:"Aksari Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا جراند رويال من غرفة نوم واحدة","فيلا جراند رويال على النهر من غرفة نوم واحدة","فيلا جراند رويال من غرفتين نوم","جراند اكساري سويت","اكساري سويت","سويت دبل","سويت توين"]},{hotelName:"Amarea Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["اوبود روم","سويت اوبود مع حوض إستحمام","كوخ اوبود مع حوض إستحمام","كوخ جراند مع حوض إستحمام","فيلا ذكية من غرفة نوم واحدة مع حوض إستحمام","فيلا جراند لوفت من غرفتين نوم"]},{hotelName:"Asvara Villa",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا رويال من غرفة نوم واحدة مع جاكوزي","فيلا جراند من غرفة نوم واحدة مع جاكوزي","فيلا رويال من غرفتين نوم مع جاكوزي"]},{hotelName:"Kaamala Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا جراند رويال من غرفة نوم واحدة","فيلا جراند رويال من غرفتين نوم","جراند سويت","سويت"]},{hotelName:"Natya Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا فاميلي","فيلا رويال","فيلا لوكسري"]},{hotelName:"Padma Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["بريمير روم","بريمير ديلوكس روم","برمير اوفرسايز توين","بريمير كلوب روم","سويت من غرفة نوم واحدة","سويت من غرتين نوم","فاميلي سويت"]},{hotelName:"Seres Spring",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["ديلوكس روم","ديلوكس بول اكسس","بريميوم روم","بريميوم بول اكسس","فيلا اناندا من غرفة نوم واحدة العلوية","فيلا اناندا من غرفة نوم واحدة المنخفضة","فيلا سوتيرا من غرفة نوم واحدة"]},{hotelName:"The Westin Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["ديلوكس روم","ديلوكس بول اكسس","جونيور سويت","سويت تنفيذي"]},{hotelName:"Black Penny",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا ديلوكس من غرفة نوم واحدة"]},{hotelName:"Dedary Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة مع حوض سباحة","فيلا جاردن من غرفة نوم واحدة مع حوض سباحة","فيلا من غرفتين نوم مع حوض سباحة"]},{hotelName:"Komaneka Rasa Sayang",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["ديلوكس روم","فيلا روفتوب جاردن","فيلا روفتوب جاردن من غرفتين نوم"]},{hotelName:"Nau Villa",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","لوكسري من غرفة نوم واحدة"]},{hotelName:"Tanadewa Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["سكاي سويت","فيلا كورتيارد","سويت جراند تانداوا من غرفتين نوم"]},{hotelName:"Bubble Bali",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["سويت مع حوض إستحمام سبا"]},{hotelName:"Padma Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["بريمير روم","بريمير دلوكس روم","بريمير اوفرسايز توين","بريمير كلوب روم","سويت من غرفة نوم واحدة","سويت من غرفتين نوم","فاميلي سويت"]},{hotelName:"Kappa Senses Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة"]},{hotelName:"E Sanctuary Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا لوكسري من غرفة نوم واحدة"]},{hotelName:"Element by Westin Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["ديلوكس روم"]},{hotelName:"Abisena Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["ريفر سويت","فالي سويت","تيراس فيلا","فيلا الغابة","ابيسينا رويال سويت"]},{hotelName:"Nandini Jungle",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا من غرفة نوم واحدة","سويت من غرفة نوم واحدة"]},{hotelName:"Inara Alas Harum",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["إنارا روم","سويت","سويت كورنر","سويت دوبلكس","فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم"]},{hotelName:"Hanging Garden of Bali",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["فيلا ريفرسايد من غرفة نوم واحدة","سويت سبا","فيلا بانوراميك","فيلا هانجنج جاردن","فيلا فاميلي"]},{hotelName:"AnandaDara Ubud Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["اناندا ديلوكس روم","اناندا جونيور سويت","اناندا سويت","فيلا روفتوب جراند فيو من غرفة نوم واحدة","فيلا روفتوب بانوراميك فيو من غرفتين نوم"]},{hotelName:"Como Uma Ubud",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["اوبود روم"]},{hotelName:"Sanctoo Suites And Villas",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["سانتاكو سويت","سويت بول اكسس","بانوراميك سويت","ريسيدنتيال سويت","فاميلي سويت","جاردن فيلا من غرفة نوم واحدة","ريفرسايد فيلا من غرفة نوم واحدة","","","",""]},{hotelName:"Anantara Ubud Bali Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["بريمير روم","فوريست فيو روم","بايانغان سويت","فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم"]},{hotelName:"Visesa Ubud Resort",hotelLocation:"بالي",hotelArea:"اوبود",hotelRoomTypes:["جنغل سويت","ريفر فالي سويت","فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا لاجون انفينيتي من غرفتين نوم","فيلا سكاي من غرفتين نوم"]},{hotelName:"The Apurva Kempinski",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["جراند ديلوكس روم","جراند ديلوكس اوشن كورت","جراند ديلوكس لاجون روم","جناح كليف جونيور","فيلا سنجاساري من غرفة نوم واحدة","فيلا سريواجايا من غرفتين نوم","اوشن فرونت جونيور سويت"]},{hotelName:"Ulu Segara",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["اوشن سويت روم","سويت بريس","فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم"]},{hotelName:"Merusaka Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ديلوكس روم","ديلوكس بول اكسس","سويت روم","سويت اوشن روم","سويت من غرفتين نوم","فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم"]},{hotelName:"The Nest Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ديلوكس روم","سويت روم","جناح تنفيذي"]},{hotelName:"Agranusa Villa",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم"]},{hotelName:"Renaissance Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ديلوكس روم"]},{hotelName:"Sofitel Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["لوكسري روم","لوكسري روم بول اكسس","سويت بيستينج","فيلا من غرفة نوم واحدة"]},{hotelName:"Courtyard Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ديلوكس بلكوني","بريميوم ديلوكس بلكوني","ديلوكس روم بول اكسس","فيلا من غرفة نوم واحدة"]},{hotelName:"Tanadewa Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم"]},{hotelName:"Conrad Bali",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ديلوكس روم","ديلوكس لاجون اكسس","كونراد سويت","سويت ماجهة للمحيط"]},{hotelName:"Hilton Bali",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ديلوكس جاردن روم","ديلوكس اوشن روم","ديلوكس كليف اوشن روم"]},{hotelName:"Holiday Inn Nusa Dua",hotelLocation:"بالي",hotelArea:"نوسا دوا",hotelRoomTypes:["ستاندرد روم","ستاندرد روم مقابل المحيط","ستاندرد روم بول اكسس","كيدس ادفانتشور سويت","فاميلي ادفانتشور سويت"]},{hotelName:"The Trans Bali",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["بريمير روم","بريمير اولتومنت","بريمير كلوب روم","فيلا من غرفة نوم واحدة"]},{hotelName:"Indigo Bali",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["ستاندرد روم","ستاندرد كورتيارد اكسس","سويت روم","فيلا وانجسا من غرفة نوم واحدة"]},{hotelName:"Sini Vie Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا ذكية من غرفة نوم واحدة مع جاكوزي","فيلا جراند ذكية مع جاكوزي"]},{hotelName:"Impiana Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم"]},{hotelName:"W Bali",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["وندرفل","سبكتاكلر مواجهة للمحيط","فيلا مارفيلوز من غرفة نوم واحدة","فيلا واو من غرفتين نوم"]},{hotelName:"Aleva Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا رويال من غرفة نوم واحدة"]},{hotelName:"Monolocale Resort",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا رويال من غرفة نوم واحدة","فيلا جراند من غرفة نوم واحدة","سويت سمنياك دبل","سويت سمنياك توين"]},{hotelName:"Ize Seminyak",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["ديلوكس روم","ديلوكس جاكوزي","كلوب روم","جونيور سويت"]},{hotelName:"Aksari Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا رويال ذكية من غرفة نوم واحدة مع حوض إستحمام"]},{hotelName:"Astera Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة مع حوض إستحمام"]},{hotelName:"Ayona Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة وحوض إستحمام","فيلا جراند من غرفة نوم واحدة وحوض إستحمام"]},{hotelName:"Cyrus Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة وحوض إستحمام","فيلا جراند من غرفة نوم واحدة وحوض إستحمام"]},{hotelName:"Double Six Luxury",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["سويت ليجور","سويت ديلوكس","سويت بريمير بول اكسس","سويت ليجور من غرفتين نوم","سويت ديلوكس من غرفتين نوم"]},{hotelName:"Potato Head Suites",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["ستوديو شروق الشمس","بامبو ستوديو","ديسا ستوديو","ريسيدينت ستوديو","ستوديو مواجهة للمحيط","سويت ذا ايلاند","سويت روفتوب"]},{hotelName:"Sana Vie Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا ذكية من غرفة نوم واحدة مع حوض إستحمام","فيلا رويال ذكية من غرفة نوم واحدة مع حوض إستحمام","فيلا من غرفتين نوم مع حوض إستحمام"]},{hotelName:"The Claremont Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة"]},{hotelName:"Elysian Boutique Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم"]},{hotelName:"The Samaya Seminyak",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا رويال كورتيارد من غرفة نوم واحدة","فيلا من غرفة نوم واحدة"]},{hotelName:"Aloft Seminyak",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["الوفت روم","الوفت بلكوني روم"]},{hotelName:"La Mira Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا رويال من غرفة نوم واحدة مع زحليقة مائية","فيلا رويال من غرفتين نوم مع زحليقة مائية","فيلا رويال من ثلاث غرف نوم مع زحليقة مائية وحوض إستحمام"]},{hotelName:"Seminyak Sanctuary",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا جراند من غرفة نوم واحدة وحوض إستحمام"]},{hotelName:"Kolila Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم"]},{hotelName:"Courtyard Seminyak",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["ديلوكس روم"]},{hotelName:"Eight Palms Villa",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفتين نوم وحوض إستحمام","فيلا من ثلاث غرف نوم وحوض إستحمام","فيلا رويال من ثلاث غرف نوم وجاكوزي","فيلا رويال من ثلاث غرف نوم مع زحليقة مائية وجاكوزي"]},{hotelName:"Maharaja Villas Seminyak",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا سوبريور من غرفة نوم واحدة","فيلا ديلوكس من غرفة نوم واحدة","فيلا من غرفتين نوم"]},{hotelName:"Je Ne Sais Quoi Seminyak",hotelLocation:"بالي",hotelArea:"سيمنياك",hotelRoomTypes:["فيلا من غرفة نوم واحدة"]},{hotelName:"Sheraton Kuta",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["جيست روم","جونيور سويت","سويت مواجهة للمحيط","لارجر سويت مواجهة للمحيط"]},{hotelName:"Aryaduta Kuta",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["سوبريور روم","ديلوكس روم","جراند ديلوكس روم","بريمير روم"]},{hotelName:"Tribe Kuta",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["ترايب كومفورت بلكوني","ترايب كومفورت XL بلكوني"]},{hotelName:"Aloft Kuta",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["الوفت"]},{hotelName:"Paasha Atelier",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["سوبريور روم","دوبلكس روم","جونيور سويت","سويت دوبلكس"]},{hotelName:"Mamaka By Ovolo",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["بالي هاي روم","كوكومو روم","سمر جاردين تراس","سواجر سويت"]},{hotelName:"Beachwalk Residence",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["ريسيدينس من غرفتين نوم","سويت من غرفتين نوم","ريسيدينس من ثلاث غرف نوم","سويت من ثلاث غرف نوم"]},{hotelName:"Discovery Kartika Plaza",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["ديلوكس روم","ديلوكس جاردن اكسس","جاردن ديلوكس مواجهة للمحيط","جونيور سويت","فاميلي سويت","ديسكوفيري سويت"]},{hotelName:"Ramayana Suites",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["جاردن ديلوكس روم","بريمير روم","جونيور سويت روم","ريسورت روم","فاميلي روم","سويت لومبونغ","سويت من غرفة نوم واحدة","فاميلي سويت متصل ببعض","سويت من غرفتين نوم","سيتا سويت"]},{hotelName:"The Anvaya Beach",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["ديلوكس روم","بريمير روم"]},{hotelName:"Fairfield Marriott",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["سوبريور روم","سوبريور بلكوني","ديلوكس روم","جونيور سويت"]},{hotelName:"Holiday Inn Express Baruna",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["غرفة ستاندرد"]},{hotelName:"Holiday Inn Resort Baruna",hotelLocation:"بالي",hotelArea:"كوتا",hotelRoomTypes:["غرفة ستاندرد","غرفة ستاندرد جاردن","بريمير بول جاردن","غرفة بريمير اوشن","سويت روم"]},{hotelName:"Four Seasons Jimbaran",hotelLocation:"بالي",hotelArea:"جيمباران",hotelRoomTypes:["فيلا جاردن","فيلا جيمبران باي","فيلا ديلوكس","فيلا بريمير اوشن","فيلا فاميلي بريمير","فيلا جاردن من غرفتين نوم","فيلا جيماران باي من غرفتين نوم","فيلا بريمير اوشن بغرفتين نوم","فيلا رويال بغرفتين نوم","فيلا امبراطورية من ثلاث غرف نوم","فيلا جاردن ريسيدنس من غرفتين نوم","فيلا ريسيدنس من ثلاث غرف نوم","فيلا ريسيدنس من اربع غرف نوم"]},{hotelName:"Movenpick Jimbaran",hotelLocation:"بالي",hotelArea:"جيمباران",hotelRoomTypes:["كلاسيك روم","جونيور سويت","فاميلي دوبلاكس روم","بريميوم سويت","جيمباران سويت"]},{hotelName:"Platinum Jimbaran",hotelLocation:"بالي",hotelArea:"جيمباران",hotelRoomTypes:["بزنس روم","ديلوكس روم","جيمباران روم","اوشن روم","ديلوكس فاميلي","سويت تنفيذي","بنتهاوس"]},{hotelName:"Le Meridien Jimbaran",hotelLocation:"بالي",hotelArea:"جيمباران",hotelRoomTypes:["كلاسيك روم","ديلوكس لاجون اكسس","اكوا سويت ستوديو لاجون فيو","اكوا سويت استوديو لاجون اكسس","اكوا بول سكاي بنتهاوس","فيلا سكاي"]},{hotelName:"Intercontinental Bali",hotelLocation:"بالي",hotelArea:"جيمباران",hotelRoomTypes:["كلاسيك بلكوني","Classic Singaraja Space Access","Premium Mezzanine Singaraja Space Access","Premium Club Lounge Access Balcony","Premium Mezzanine Area Club Lounge Access Balcony","Suite Club Lounge Access"]},{hotelName:"Umana Bali",hotelLocation:"بالي",hotelArea:"اولواتو",hotelRoomTypes:["فيلا تروبيكال جاردن من غرفة نوم واحدة","فيلا من غرفة نوم واحدة","فيلا اوشن من غرفة نوم واحدة","فيلا بانوراميك اوشن من غرفة نوم واحدة","فيلا تروبيكال جاردن من غرفتين نوم","فيلا من غرفتين نوم","فيلا اوشن من غرفتين نوم","فيلا بانوراميك اوشن من غرفتين نوم"]},{hotelName:"Jumeirah Bali",hotelLocation:"بالي",hotelArea:"اولواتو",hotelRoomTypes:["فيلا جاردن","فيلا غروب الشمس","فيلا بريمير جاردن","فيلا اوشن من غرفة نوم واحدة","فيلا جاردن من غرفتين نوم","فيلا اوشن من غرفتين نوم"]},{hotelName:"Renaissance Uluwatu",hotelLocation:"بالي",hotelArea:"اولواتو",hotelRoomTypes:["ديلوكس روم","ديلوكس اوشن بلكوني","ديلوكس اوشن تراس","جونيور سويت","سويت تنفيذي"]},{hotelName:"Six Senses Uluwatu",hotelLocation:"بالي",hotelArea:"اولواتو",hotelRoomTypes:["سكاي سويت","فيلا كليف من غرفة نوم واحدة","سكاي بينتهاوس سويت من غرفتين نوم","فيلا كليف من غرفين نوم","فيلا كليف من ثلاث غرف نوم","بريزيدنتيال فيلا","ذا ريتريت"]},{hotelName:"Anantara Uluwatu Bali Resort",hotelLocation:"بالي",hotelArea:"اولواتو",hotelRoomTypes:["سويت","انانتارا سويت","سويت مقابل للمحيط","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","ديداري بنتهاوس من غرفة نوم واحدة","ديواتا بنتهاوس من غرفتين نوم"]},{hotelName:"La Vie Villa",hotelLocation:"بالي",hotelArea:"ليجين",hotelRoomTypes:["فيلا من غرفة نوم واحدة وحوض إستحمام","فيلا رويال من غرفة نوم واحدة وحوض إستحمام"]},{hotelName:"Padma Legian",hotelLocation:"بالي",hotelArea:"ليجين",hotelRoomTypes:["ديلوكس روم","ديلوكس شاليه","جاردن كلوب شاليه","بريمير دبل دبل"]},{hotelName:"Ini Vie Villa",hotelLocation:"بالي",hotelArea:"ليجين",hotelRoomTypes:["فيلا رويال من غرفة نوم واحدة وجاكوزي","فيلا من غرفتين نوم وجاكوزي"]},{hotelName:"Raffles Jakarta",hotelLocation:"جاكرتا",hotelRoomTypes:["رافيلز روم","سيجنتشور روم","سويت ارتيست","سويت جالوري"]},{hotelName:"Ascott Jakarta",hotelLocation:"جاكرتا",hotelRoomTypes:["ستوديو بريمير","بريمير روم من غرفة نوم واحدة","تنفيذي روم من غرفتين نوم","بريمير روم من غرفتين نوم","بريمير روم من ثلاث غرف نوم"]},{hotelName:"Citadines Sudirman",hotelLocation:"جاكرتا",hotelRoomTypes:["ستوديو تنفيذي","ديلوكس روم من غرفة نوم واحدة","تنفيذي روم من غرفة نوم واحدة","فاميلي سويت","ديلوكس روم من غرفتين نوم","تنفيذي روم من غرفتين نوم","بريمير سويت من غرفة نوم واحدة"]},{hotelName:"Citadines Gatot Jakarta",hotelLocation:"جاكرتا",hotelRoomTypes:["ستوديو سويت","سويت تنفيذي من غرفة نوم واحدة","ديلوكس روم من غرفتين نوم","تنفيذي روم من غرفتين نوم","تنفيذي روم من ثلاث غرف نوم"]},{hotelName:"DoubleTree Hilton",hotelLocation:"جاكرتا",hotelRoomTypes:["جيست روم","ديلوكس روم","جناح كينغ تنفيذي"]},{hotelName:"Parkroyal Serviced Suites",hotelLocation:"جاكرتا",hotelRoomTypes:["سويت ستوديو","سويت من غرفة نوم واحدة","سويت ديلوكس من غرفة نوم واحدة","سويت بريمير من غرفة نوم واحدة","سويت تنفيذي من غرفة نوم واحدة","سويت ديلوكس من غرفتين نوم"]},{hotelName:"Somerset Sudirman",hotelLocation:"جاكرتا",hotelRoomTypes:["تنفيذي روم","ستوديو تنفيذي","ستوديو بريمير","سويت تنفيذي","تنفيذي من غرفة نوم واحدة","بريمير من غرفة نوم واحدة","كلوب من غرفتين نوم","كلاسيك من غرفتين نوم"]},{hotelName:"Aloft Wahied Hasiem",hotelLocation:"جاكرتا",hotelRoomTypes:["الوفت روم"]},{hotelName:"Ascott Sudirman",hotelLocation:"جاكرتا",hotelRoomTypes:["ستوديو بريمير","بريمير من غرفة نوم واحدة","بريمير من غرفتين نوم","بريمير من ثلاث غرف نوم","ديلوكس روم","سويت روم"]},{hotelName:"Kempinski Jakarta",hotelLocation:"جاكرتا",hotelRoomTypes:["جراند ديلوكس","ديلوكس","جراند ديلوكس تنفيذي","سويت صالون"]},{hotelName:"Pullman Park",hotelLocation:"جاكرتا",hotelRoomTypes:["ديلوكس روم","ديلوكس تنفيذي مع امكانية الوصول الى الصالة التنفيذية","سويت تنفيذي روم","سويت تنفيذي مع امكانية الوصول الى الصالة التنفيذية"]},{hotelName:"Vertu Harmoni",hotelLocation:"جاكرتا",hotelRoomTypes:["ڤي روم","فيرتو روم","فيرتو تنفيذي روم","فيرتو سويت"]},{hotelName:"Pan Pacific",hotelLocation:"جاكرتا",hotelRoomTypes:["ديلوكس من غرفة نوم واحدة","بريمير من غرفة نوم واحدة","تنفيذي روم","باسيفيك كلوب ديلوكس","باسيفيك كلوب بريمير","باسيفيك كلوب تنفيذي","جونيور سويت","بريمير سويت","بان باسيفيك سويت"]},{hotelName:"Ascott Kuningan",hotelLocation:"جاكرتا",hotelRoomTypes:["التنفيذي من غرفة نوم واحدة","بريمير من غرفة نوم واحدة","بريمير من غرفتين نوم","بريمير من ثلاث غرف نوم","ديلوكس روم","سويت روم"]},{hotelName:"Grand Mercure",hotelLocation:"جاكرتا",hotelRoomTypes:["سوبريور روم","ديلوكس روم","ديلوكس كورنر روم","سويت بزنس روم","سويت تنفيذي","بنتهاوس"]},{hotelName:"Sheraton Soekarno",hotelLocation:"جاكرتا",hotelRoomTypes:["ديلوكس جاردن"]},{hotelName:"Grove Suites",hotelLocation:"جاكرتا",hotelRoomTypes:["سويت من غرفة نوم واحدة","سويت من غرفتين نوم"]},{hotelName:"FM7 Tangerang",hotelLocation:"جاكرتا",hotelRoomTypes:["سوبريور روم","ديلوكس روم","ديلوكس بلس","بريمير روم","بريمير فاميلي","جونيور سويت"]},{hotelName:"Harris Hotel",hotelLocation:"جاكرتا",hotelRoomTypes:["هاريس يونيكيو من غرفة نوم واحدة","ديلوكس روم"]},{hotelName:"Le Meridien Jakarta",hotelLocation:"جاكرتا",hotelRoomTypes:["ديلوكس روم"]},{hotelName:"Mulia Senayan",hotelLocation:"جاكرتا",hotelRoomTypes:["جرانديور روم","جرانديور ديلوكس روم","سيجناشور روم","تنفيذي روم","جونيور سويت"]},{hotelName:"Merlynn Park",hotelLocation:"جاكرتا",hotelRoomTypes:["تنفيذي روم","تيفاني سويت","فاميلي سويت","برادا سويت","بولجاري سويت","ارماني سويت","مرليان سويت","ذا ريسيدينس","امباير مينشن"]},{hotelName:"Grand Aston",hotelLocation:"بونشاك",hotelRoomTypes:["ديلوكس روم","جونيور سويت","جونيور سويت مع امكانية دخول المسبح","سويت تنفيذي"]},{hotelName:"Le Eminence",hotelLocation:"بونشاك",hotelRoomTypes:["جونيور سويت","سويت تنفيذي","رويال سويت","ايميننس سويت"]},{hotelName:"Botanica Sanctuary",hotelLocation:"بونشاك",hotelRoomTypes:["سوبريور روم","ديلوكس روم","برمير روم","ذا فالي سويت"]},{hotelName:"Pesona Alam",hotelLocation:"بونشاك",hotelRoomTypes:["ديلوكس روم","فيلا من غرفة نوم واحدة","فيلا سوبريور من غرفتين نوم","فيلا من ثلاث غرف نوم"]},{hotelName:"Villa Marina",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم"]},{hotelName:"Villa Neom",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من ثلاث غرف نوم","فيلا من غرفتين نوم"]},{hotelName:"Alandalus Puncak",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم","فيلا ديلوكس من اربع غرف نوم"]},{hotelName:"Alandalus Royal",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من ثلاث غرف نوم","فيلا ديلوكس من اربع غرف نوم","فيلا سوبريور من خمس غرف نوم"]},{hotelName:"Aljumeirah Puncak",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم"]},{hotelName:"Marseillia Puncak",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم"]},{hotelName:"Villa London",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم","فيلا من تسع غرف نوم"]},{hotelName:"Villa Alwaha",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا من اربع غرف نوم","فيلا من خمس غرف نوم"]},{hotelName:"Armada Puncak",hotelLocation:"بونشاك",hotelRoomTypes:["فيلا من غرفتين نوم","فيلا من ثلاث غرف نوم","فيلا سوبريور من خمس غرف نوم"]},{hotelName:"Mahha Dii Meru Resort",hotelLocation:"بونشاك",hotelRoomTypes:["كيف ادج","فوريست فيلا"]},{hotelName:"Courtyard Bandung",hotelLocation:"باندونق",hotelRoomTypes:["ديلوكس روم","بريمير روم","سويت تنفيذي","بريمير سويت","كوربورات سويت","كورتيارد سويت","رويال سويت"]},{hotelName:"Sheraton Bandung",hotelLocation:"باندونق",hotelRoomTypes:["ديلوكس روم","تنفيذي روم","تاور روم","جونيور سويت","سويت تنفيذي","سويت تاور"]},{hotelName:"The Trans Luxury",hotelLocation:"باندونق",hotelRoomTypes:["بريمير روم"]},{hotelName:"Four Points Sheraton",hotelLocation:"باندونق",hotelRoomTypes:["كلاسيك روم","بريميوم روم","ديلوكس روم","سويت تنفيذي","بريمير سويت"]},{hotelName:"Oakwood Merdeka Bandung",hotelLocation:"باندونق",hotelRoomTypes:["سوبريور روم","ديلوكس روم","بريمير روم"]},{hotelName:"The Papandayan",hotelLocation:"باندونق",hotelRoomTypes:["كلاسيك روم","بريمير روم","امباستور روم","سويت روم"]},{hotelName:"Hotel Indigo Bandung",hotelLocation:"باندونق",hotelRoomTypes:["ستاندرد روم","بريميوم روم","سويت كينج"]},{hotelName:"Kalandara",hotelLocation:"لومبوك",hotelRoomTypes:["فيلا من غرفة نوم واحدة"]},{hotelName:"The Kayana Lombok",hotelLocation:"لومبوك",hotelRoomTypes:["فيلا ديلوكس","فيلا دوبلكس","فيلا من غرفة نوم واحدة","فيلا هيل سايد من غرفة نوم واحدة"]},{hotelName:"Royal Avila Boutique Resort",hotelLocation:"لومبوك",hotelRoomTypes:["اوشن ديلوكس","اوشن بريمير","اوشن روفتوب","اوشن سويت","روفتوب سويت","ذا بينتهاوس"]},{hotelName:"Seascape Luxury Resort & Spa",hotelLocation:"بالي",hotelArea:"سانور",hotelRoomTypes:["سويت روم","سويت اوشن فيو","فيلا من غرفة نوم واحدة","فيلا جراند من غرفة نوم واحدة"]},{hotelName:"Bali Beach Hotel Sanur",hotelLocation:"بالي",hotelArea:"سانور",hotelRoomTypes:["ديلوكس اوشن","تنفيذي اوشن","سويت تنفيذي اوشن"]},{hotelName:"The Meru Sanur",hotelLocation:"بالي",hotelArea:"سانور",hotelRoomTypes:["تروبيكال سويت","تروبيكال جاردن سويت","كورنر تروبيكال سويت","بريمير تروبيكال سويت"]},{hotelName:"Ayona Villa Canggu",hotelLocation:"بالي",hotelArea:"تشانغو",hotelRoomTypes:["فيلا من غرفة نوم واحدة","جراند فيلا من غرفة نوم واحدة","سكاي فيلا من غرفة نوم واحدة"]},{hotelName:"Regent Resort Canggu",hotelLocation:"بالي",hotelArea:"تشانغو",hotelRoomTypes:["ستوديو سويت","ستوديو سويت لاجون اكسس","سويت من غرفة نوم واحدة","سويت لاجون اكسس من غرفة نوم واحدة","كورنر سويت من غرفة نوم واحدة","كورنر سويت لاجون اكسس من غرفة نوم واحدة","سويت من غرفتين نوم","سويت لاجون اكسس من غرفتين نوم","فيلا من غرفة نوم واحدة","فيلا من غرفة نوم واحدة مقابلة للشاطئ","بنتهاوس من غرفتين نوم مقابلة للمحيط"]},{hotelName:"Holiday Inn Resort Canggu",hotelLocation:"بالي",hotelArea:"تشانغو",hotelRoomTypes:["بريميوم بلكوني"]},{hotelName:"Nandini Jungle",hotelLocation:"بالي",hotelArea:"تابانان",hotelRoomTypes:["فيلا من غرفة نوم واحدة","ديلوكس سويت","فيلا ليك","سكاي فيلا","Cocoon Upper Deluxe","جراند لاجون"]},{hotelName:"Eco Six Bali",hotelLocation:"بالي",hotelArea:"Tampaksiring",hotelRoomTypes:["فيلا من غرفة نوم واحدة","فيلا من غرفتين نوم"]}];
+/* Array to store the hotel room types description for later use */
+
+
+
+let allHotelDataArray = [
+    /* Keramas */
+    {
+        hotelName: 'Komaneka Keramas',
+        hotelLocation: 'Bali',
+        hotelArea: 'Keramas',
+        hotelRoomTypes: ['One BR Ocean Pool Villa', 'Hilltop Two BR Pool Villa'],
+    },
+
+
+
+
+
+    /* Ubud */
+    {
+        hotelName: 'Four Seasons Sayan',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Duplex Suite', 'One BR Suite', 'Family Suite', 'One BR Villa', 'River Front One BR Villa', 'Sayan Villa', 'Two BR Villa', 'River View Two BR Villa', 'Three BR Royal Villa'],
+    },
+    {
+        hotelName: 'Komaneka Tanggayuda',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Valley Pool Villa', 'Premiere Valley Pool Villa '],
+    },
+    {
+        hotelName: 'Samsara Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR Pool Villa', 'One BR Deluxe Pool Villa', 'Two BR Pool Villa', 'Three BR Pool Villa'],
+    },
+    {
+        hotelName: 'Tejaprana Resort & Spa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Terrace Villa', 'Valley View Villa', 'Two BR Villa'],
+    },
+    {
+        hotelName: 'K Club',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR Luxury Pool Villa Paddy View', 'One BR Luxury Pool Villa Jungle View', 'Sensual Hangin Tent One BR', 'Sensual Infinity Pool Tent Suite One BR', 'Two BR Luxury Pool Villa Paddy View', 'Two BR Luxury Pool Villa Jungle View', 'Three BR Luxury Pool Villa Garden View', 'Three BR Luxury Pool Villa Paddy View', 'Three BR Luxury Pool Villa Jungle View', 'Three BR Luxury Pool Villa Paddy View', 'Four BR Royal Pool Villa Paddy View', 'Five BR Royal Pool Villa Paddy View'],
+    },
+    {
+        hotelName: 'Ulaman Eco Luxury',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR Villa with PP', 'Deluxe Suite', 'Lake Villa', 'Sky Villa', 'Cocoon Upper Deluxe', 'Grand Lagoon'],
+    },
+    {
+        hotelName: 'Aksari Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR Villa with PP', 'Grand One BR Villa with PP', 'Grand One BR River View Villa with PP', 'Grand One BR PP Villa with Riverside View', 'Grand Two BR River View Villa with PP', 'Grand Aksari Suite', 'Aksari Suite', 'Suite Forest View'],
+    },
+    {
+        hotelName: 'Amarea Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Ubud Room', 'Ubud Suite with Bathub', 'Ubud Cottage with Bathub', 'Grand Cottage', 'Cottage Room with Pool', 'Smart One BR Villa with PP and Bathub', 'Grand One BR Villa with PP and Bathub', 'Grand Two BR Loft Forest View Villa with PP', 'Grand Two BR Villa with PP'],
+    },
+    {
+        hotelName: 'Asvara Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Royal One BR Villa with PP and Jacuzzi', 'Grand One BR Rice Field View Villa with PP and Jacuzzi', 'Royal Two BR Villa with PP and Jacuzzi'],
+    },
+    {
+        hotelName: 'Kaamala Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR Villa with PP', 'Grand One BR Ricefield View Villa with PP', 'Grand Two BR Ricefield View Villa with PP', 'Presidential Two BR PP Villa with Ricefield View', 'Grand Suite Forest View', 'Suite Forest View '],
+    },
+    {
+        hotelName: 'Natya Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Family Pool Villa', 'Royal Pool Villa', 'Luxury Pool Villa'],
+    },
+    {
+        hotelName: 'Padma Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Premier Room', 'Premier Deluxe Room', 'Premier Oversized Twin', 'Premier Club Room', 'One BR Suite', 'Two BR Suite', 'Family Suite'],
+    },
+    {
+        hotelName: 'Seres Spring',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Deluxe', 'Deluxe Pool Access', 'Premium', 'Premium Pool Access', 'Ananda Upper One BR Pool Villa', 'Ananda Lower One BR Pool Villa', 'Sutera Garden One BR Pool Villa'],
+    },
+    {
+        hotelName: 'The Westin Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Deluxe Garden View', 'Deluxe Pool View', 'Junior Suite', 'Executive Suite'],
+    },
+    {
+        hotelName: 'Black Penny',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR Pool Villa', 'One BR Deluxe Pool Villa with Valley View'],
+    },
+    {
+        hotelName: 'Dedary Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['one BR Villa with PP and Bathub', 'One BR Forest View Villa with PP and Bathub', 'Two BR Villa with PP and Bathub', 'Grand Two BR Forest View Villa with PP'],
+    },
+    {
+        hotelName: 'Komaneka Rasa Sayang',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Deluxe Room', 'Rooftop Garden Villa', 'Two BR Rooftop Garden Villa'],
+    },
+    {
+        hotelName: 'Nau Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['One BR PP Villa with Garden View', 'One BR PP Villa with Ricefield View', 'Luxury One BR PP'],
+    },
+    {
+        hotelName: 'Tanadewa Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Sky Suite', 'Courtyard Pool Villa', 'Grand Suite Two BR'],
+    },
+    {
+        hotelName: 'Bubble Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Suite with Spa Bathub'],
+    },
+    {
+        hotelName: 'Padma Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Premier Room', 'Premier Deluxe Room', 'Premier Oversized Twin', 'Premier Club Room', 'One BR Suite', 'Two BR Suite', 'Family Suite'],
+    },
+    {
+        hotelName: 'Kappa Senses Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Jungle Suite', 'Deluxe Suite with Private Hot Tub', 'Deluxe Pool Villa', 'One BR Pool Villa', 'One BR Pool Villa - Rice Paddy Field View', 'Two BR Pool Villa'],
+    },
+    {
+        hotelName: 'E Sanctuary Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Luxury One BR PP Villa'],
+    },
+    {
+        hotelName: 'Element by Westin Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Deluxe Room'],
+    },
+    {
+        hotelName: 'Abisena Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['River Suite', 'Valley Suite', 'Valley Suite Pool', 'Terrace Pool Villa', 'Jungle Pool Villa', 'Abisena Royal Suite'],
+    },
+
+    {
+        hotelName: 'Nandini Jungle',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Jungle View Villa', 'Sunrise View Villa', 'Panoramic View Villa', 'Garden View Royal Suites', 'Jungle View Royal Suites', 'Panoramic Jacuzzi Corner Suite', 'Family Suite Duplex', 'Presidential Suites'],
+    },
+    {
+        hotelName: 'Inara Alas Harum',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Inara Room', 'Lagoon View Suite', 'Corner Suite', 'Pool Suite', 'Duplex Pool Suite', 'One BR Pool Villa', 'Two BR Pool Villa', 'Three BR Pool Villa'],
+    },
+    {
+        hotelName: 'Hanging Garden of Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Riverside Pool Villa', 'Spa Suite', 'Panoramic Pool Villa', 'Hanging Garden Pool Villa', 'Family Pool Villa', 'The Hidden Palace Five BR Villa'],
+    },
+
+    {
+        hotelName: 'AnandaDara Ubud Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Ananda Deluxe Room', 'Ananda Junior Suite', 'Ananda Suite', 'Grand View One BR Rooftop Pool Villa', 'Rice Field View One BR Private Heated Plunge Pool Villa', 'Family Rooftop Pool Villa', 'Panoramic View Two BR Rooftop Pool Villa'],
+    },
+    {
+        hotelName: 'Como Uma Ubud',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Ubud Room'],
+    },
+    {
+        hotelName: 'Sanctoo Suites And Villas',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Sanctoo Suites', 'Suites Pool Access', 'Panoramic Suites', 'Residential Suites', 'Family Suites', 'One BR Garden Pool Villa', 'One BR Riverside Pool Villa', 'Garden Pool Villa'],
+    },
+    {
+        hotelName: 'Anantara Ubud Bali Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Premier Room', 'Forest View Room', 'Payangan Suite', 'One BR Forest View Pool Villa', 'Two BR Pool Villa', 'Two BR Forest View Villa'],
+    },
+    {
+        hotelName: 'Visesa Ubud Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Ubud',
+        hotelRoomTypes: ['Jungle Suite', 'River Valley Suite', 'One BR Pool Villa', 'Two BR Pool Villa', 'Two BR Lagoon Infinity Pool Villa', 'Two BR Sky Pool Villa'],
+    },
+
+
+
+
+
+
+
+
+
+
+    /* Nusa Dua */
+    {
+        hotelName: 'The Apurva Kempinski',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Grand Deluxe Room', 'Grand Deluxe Ocean Court Resort View', 'Grand Deluxe Lagoon Room', 'Cliff Private Pool Junior Suite', 'Cliff Private Pool Ocean Junior Suite', 'Singhasari One BR Villa', 'Sriwijaya Two BR Villa'],
+    },
+    {
+        hotelName: 'Ulu Segara',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Ocean Suite Room', 'Press Suite Two BR', 'One BR Villa', 'Two BR Villa', 'Three BR Villa'],
+    },
+    {
+        hotelName: 'Merusaka Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Deluxe Room', 'Deluxe Garden View', 'Deluxe Ocean View', 'Deluxe Family', 'Deluxe Pool Access', 'Suite Garden', 'Suite Ocean Room', 'Two BR Suite', 'One BR Pool Villa', 'Two BR Pool Villa'],
+    },
+    {
+        hotelName: 'The Nest Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Deluxe Room', 'Suite Room', 'Executive Suite'],
+    },
+    {
+        hotelName: 'Agranusa Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa', 'Three BR Villa'],
+    },
+    {
+        hotelName: 'Renaissance Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Deluxe Garden', 'Deluxe Sea View'],
+    },
+    {
+        hotelName: 'Sofitel Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Luxury Room', 'Luxury Room Resort View', 'Luxury Room Plunge Pool', 'Luxury Room Pool Access Club Millesime', 'Pestige Suite Club Millesime', 'Pool Villa One BR'],
+    },
+    {
+        hotelName: 'Courtyard Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Deluxe Balcony', 'Premium Deluxe Balcony', 'Deluxe Pool Access', 'Villa One BR'],
+    },
+    {
+        hotelName: 'Tanadewa Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['One BR Pool Villa', 'Two BR Pool Villa'],
+    },
+    {
+        hotelName: 'Conrad Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Deluxe Garden View', 'Deluxe Pool View', 'Deluxe Ocean Front', 'Conrad Suite', 'Ocean Front Suite'],
+    },
+    {
+        hotelName: 'Hilton Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Deluxe Garden View', 'Deluxe Ocean Room', 'Deluxe Cliff Ocean Room'],
+    },
+    {
+        hotelName: 'Holiday Inn Nusa Dua',
+        hotelLocation: 'Bali',
+        hotelArea: 'Nusa Dua',
+        hotelRoomTypes: ['Standard Room', 'Standard Pool View', 'Standard Ocean View', 'Standard Ocean Front', 'Standard Pool Access', 'Kids Adventure Suite', 'Family Adventure Suite'],
+    },
+
+
+
+
+
+    /* Seminyak */
+    {
+        hotelName: 'The Trans Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Premier Room', 'Premier Club Room', 'Celebrity Suite', 'One BR Pool Villa'],
+    },
+    {
+        hotelName: 'Indigo Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Standard Room', 'Standard Garden View', 'Standard Courtyard Access', 'Standard Partial Ocean View', 'Suite Garden View', 'Wangsa One BR Pool Villa'],
+    },
+    {
+        hotelName: 'Sini Vie Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Smart One BR Villa with PP and Jacuzi', 'Grand Smart One BR Villa with PP and Jacuzzi', 'Grand Smart One BR Villa with PP and Jacuzzi with Lagoon Access', 'Grand Smart Suite Double with Bathtub', 'Grand Smart Suite Twin with Bathtub', 'Smart Suite Room'],
+    },
+    {
+        hotelName: 'Impiana Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Pool Villa', 'Deluxe One BR Pool Villa', 'Two BR Pool Villa', 'Three BR Pool Villa','Four BR Pool Villa','Five BR Pool Villa'],
+    },
+    {
+        hotelName: 'W Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Wonderful Garden View Escape', 'Spectacular Ocean Facing Escape', 'Marvelous One BR Pool Villa', 'Wow Two BR Pool Villa'],
+    },
+    {
+        hotelName: 'Aleva Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Royal One BR Villa with Private Pool & Bathub'],
+    },
+    {
+        hotelName: 'Monolocale Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Villa with PP', 'Royal One BR Villa with PP', 'Grand One BR Villa with PP', 'Seminyak Suite Double', 'Seminyak Suite Twin'],
+    },
+    {
+        hotelName: 'Ize Seminyak',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Deluxe Room', 'Club Room', 'Deluxe Jacuzzi', 'Deluxe Pool', 'Junior Suite'],
+    },
+    {
+        hotelName: 'Aksari Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Royal Smart One BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Astera Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Villa with PP and Bathub', 'Royal One BR Villa with PP'],
+    },
+    {
+        hotelName: 'Ayona Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Villa with PP and Bathub', 'Grand One BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Cyrus Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Villa with PP and Bathub', 'Grand One BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Double Six Luxury',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Leisure Suite', 'Deluxe Suite Ocean View', 'Deluxe Suite Plunge Pool', 'Premium Suite Pool Access', 'Two Bedroodm Leisure Suite', 'Two BR Deluxe Suite Ocean View'],
+    },
+    {
+        hotelName: 'Potato Head Suites',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Sunrise Studio', 'Bamboo Studio', 'Desa Studio', 'Resident Studio', 'Oceanfront Studio', 'Garden Suite', 'The Island Suite', 'The Pool Suite', 'Rooftop Suites'],
+    },
+    {
+        hotelName: 'Sana Vie Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Smart One BR Villa with PP', 'Grand Smart One BR Villa with PP', 'Two BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'The Claremont Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Villa with Private Pool'],
+    },
+    {
+        hotelName: 'Elysian Boutique Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Villa One BR', 'Villa 2 BR'],
+    },
+    {
+        hotelName: 'The Samaya Seminyak',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Royal Courtyard Villa', 'One BR Pool Villa'],
+    },
+    {
+        hotelName: 'Aloft Seminyak',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Aloft Room', 'Aloft Balcony Room', 'Aloft Larger Room'],
+    },
+    {
+        hotelName: 'La Mira Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Royal One BR Waterslide Villa with PP and Bathub', 'Royal Two BR Waterslide Villa with PP', 'Royal Three BR Waterslide Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Seminyak Sanctuary',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Grand One BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Kolila Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Two BR Villa with PP & Bathub', 'Three BR Villa with PP & Bathub'],
+    },
+    {
+        hotelName: 'Courtyard Seminyak',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Deluxe Room', 'Deluxe Pool View Room'],
+    },
+    {
+        hotelName: 'Eight Palms Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Two BR Villa with PP and Bathtub', 'Three BR Villa with PP and Bathtub', 'Royal Three BR Villa with PP and Jacuzzi', 'Royal Three BR Waterslide Villa with PP and Jacuzzi'],
+    },
+    {
+        hotelName: 'Maharaja Villas Seminyak',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['Superior One BR Pool Villa', 'Deluxe One BR Pool Villa', 'Two BR Pool Villa'],
+    },
+    {
+        hotelName: 'Je Ne Sais Quoi Seminyak',
+        hotelLocation: 'Bali',
+        hotelArea: 'Seminyak',
+        hotelRoomTypes: ['One BR Pool Villa'],
+    },
+
+
+
+
+
+
+
+
+
+    /* Kuta */
+    {
+        hotelName: 'Sheraton Kuta',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Guest Room', 'Junior Suite', 'Suite Ocean Front', 'Larger Suite Ocean Front'],
+    },
+    {
+        hotelName: 'Aryaduta Kuta',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Superior Room', 'Deluxe Room', 'Grand Deluxe Room', 'Premier Room'],
+    },
+    {
+        hotelName: 'Tribe Kuta',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Tribe Comfort Balcony', 'Tribe Comfort XL Balcony'],
+    },
+    {
+        hotelName: 'Aloft Kuta',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Aloft Room'],
+    },
+    {
+        hotelName: 'Paasha Atelier',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Superior', 'Superior Pool View', 'Duplex Room', 'Junior Suite', 'Deluxe Pool', 'Deluxe Pool Suite'],
+    },
+    {
+        hotelName: 'Mamaka By Ovolo',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Bali High Room', 'Kokomo Room', 'Summer Garden Terrace', 'Swagger Suite'],
+    },
+    {
+        hotelName: 'Beachwalk Residence',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Two BR Residence ', 'Two BR Residence Garden View', 'Two BR Suite', 'Three BR Residence Garden View', 'Three BR Suite'],
+    },
+    {
+        hotelName: 'Discovery Kartika Plaza',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Deluxe Garden View', 'Deluxe Garden Access', 'Deluxe Pool View', 'Deluxe Ocean View', 'Grand Deluxe Ocean Front', 'Junior Suite', 'Family Suite', 'Discovery Suite', 'Two BR Beach Front Villa'],
+    },
+    {
+        hotelName: 'Ramayana Suites',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Grand Deluxe', 'Premier Room', 'Junior Suite Room', 'Resort Room', 'Family Room', 'Lumbung Suite', 'One BR Suite', 'Interconnecting Family Suite', 'Two BR Suite', 'Sita Suite'],
+    },
+    {
+        hotelName: 'The Anvaya Beach',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Deluxe Room', 'Premiere Room'],
+    },
+    {
+        hotelName: 'Fairfield Marriott',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Superior Non-Balcony', 'Superior Balcony', 'Deluxe Room', 'Junior Suite'],
+    },
+    {
+        hotelName: 'Holiday Inn Express Baruna',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Standard Room'],
+    },
+    {
+        hotelName: 'Holiday Inn Resort Baruna',
+        hotelLocation: 'Bali',
+        hotelArea: 'Kuta',
+        hotelRoomTypes: ['Standard Room', 'Standard Garden View', 'Premium Pool Garden', 'Premium Ocean View', 'Suite Garden View'],
+    },
+
+
+
+
+
+
+
+
+    /* Jimbaran */
+    {
+        hotelName: 'Four Seasons Jimbaran',
+        hotelLocation: 'Bali',
+        hotelArea: 'Jimbaran',
+        hotelRoomTypes: ['Garden Villa', 'Jimbaran Bay Villa', 'Deluxe Villa', 'Premiere Ocean Villa', 'Family Premier Villa'],
+    },
+    {
+        hotelName: 'Movenpick Jimbaran',
+        hotelLocation: 'Bali',
+        hotelArea: 'Jimbaran',
+        hotelRoomTypes: ['Classic', 'Classic Pool View', 'Junior Suite', 'Family Duplex Room', 'Family Duplex Pool View Room', 'Premium Suite', 'Jimbaran Pool Suite'],
+    },
+    {
+        hotelName: 'Platinum Jimbaran',
+        hotelLocation: 'Bali',
+        hotelArea: 'Jimbaran',
+        hotelRoomTypes: ['Business Room', 'Deluxe Room', 'Jimbaran Room', 'Ocean Room', 'Deluxe Family', 'Family Suite', 'Executive Suite', 'Penthouse'],
+    },
+    {
+        hotelName: 'Le Meridien Jimbaran',
+        hotelLocation: 'Bali',
+        hotelArea: 'Jimbaran',
+        hotelRoomTypes: ['Classic Room', 'Lagoon View Room', 'Lagoon Access Room', 'Aqua Studio Suite Lagoon View', 'Aqua Studio Suite Lagoon Access', 'Aqua Pool Sky Penthouse', 'Oceanic View Sky Villa'],
+    },
+    {
+        hotelName: 'Intercontinental Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Jimbaran',
+        hotelRoomTypes: ['Classic Garden View Balcony', 'Classic Singaraja Space Access Garden View', 'Premium Mezzanine Singaraja Space Access', 'Premium Club Lounge Access Garden View Balcony', 'Premium Mezzanine Area Club Lounge Access Balcony', 'One BR Suite Club Lounge Access'],
+    },
+
+
+
+
+
+
+
+    /* Uluwatu */
+    {
+        hotelName: 'Umana Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Uluwatu',
+        hotelRoomTypes: ['One BR Tropical Garden Pool Villa', 'One BR Partial Ocean Pool Villa', 'One BR Ocean View Pool Villa', 'One BR Panoramic Ocean Pool Villa', 'Two BR Tropical Garden Pool Villa', 'Two BR Partial Ocean Pool Villa', 'Two BR Ocean View Pool Villa', 'Two BR Panoramic Ocean Pool Villa'],
+    },
+    {
+        hotelName: 'Jumeirah Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Uluwatu',
+        hotelRoomTypes: ['Garden Villa With PP', 'Sunset Villa with PP', 'Premier Garden Villa with PP', 'Ocean Villa with PP Partial Ocean View', 'Two BR Garden Villa with PP'],
+    },
+    {
+        hotelName: 'Renaissance Uluwatu',
+        hotelLocation: 'Bali',
+        hotelArea: 'Uluwatu',
+        hotelRoomTypes: ['Deluxe Room', 'Deluxe Ocean Balcony', 'Deluxe Ocean Terrace', 'Junior Suite', 'Executive Suite'],
+    },
+    {
+        hotelName: 'Six Senses Uluwatu',
+        hotelLocation: 'Bali',
+        hotelArea: 'Uluwatu',
+        hotelRoomTypes: ['Sky Suite', 'Sky Pool Suite', 'Cliff Pool Villa One BR', 'Sky Penthouse Suite with Pool Two BR', 'Cliff Pool Villa Two BR', 'Cliff Pool Villa Three BR', 'Presidential Villa', 'The Retreat'],
+    },
+    {
+        hotelName: 'Anantara Uluwatu Bali Resort',
+        hotelLocation: 'Bali',
+        hotelArea: 'Uluwatu',
+        hotelRoomTypes: ['Ocean View Suite', 'Anantara Pool Suite', 'Ocean View Pool Suite', 'Ocean Front Suite', 'Ocean Front Pool Suite', 'Two BR Garden View Pool Villa', 'Two BR Ocean View Pool Villa', 'Three BR Garden View Pool Villa', 'Three BR Ocean View Pool Villa', 'Three BR Ocean Front Pool Villa', 'Dedari Penthouse (One BR Penthouse)', 'Dewata Penthouse (Two BR Penthouse)'],
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Legian */
+    {
+        hotelName: 'La Vie Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Legian',
+        hotelRoomTypes: ['Royal One BR Villa with PP and Bathub', 'Grand One BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Padma Legian',
+        hotelLocation: 'Bali',
+        hotelArea: 'Legian',
+        hotelRoomTypes: ['Deluxe Room', 'Deluxe Lagoon View', 'Deluxe Chalet', 'Garden Club Chalet', 'Premier Double Double'],
+    },
+    {
+        hotelName: 'Ini Vie Villa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Legian',
+        hotelRoomTypes: ['Smart 1 BR Villa with PP and Jacuzi', 'Grand Smart 1 BR Villa with PP and Jacuzzi', 'Grand Smart One BR Villa with PP and Jacuzzi with Lagoon Access', 'Grand Smart Suite Double with Bathtub', 'Grand Smart Suite Twin with Bathtub', 'Smart Suite Room'],
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Jakarta */
+    {
+        hotelName: 'Raffles Jakarta',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Raffles Room City View', 'Raffles Room Garden View', 'Signature Room', 'Artist Suite', 'Gallery Suite'],
+    },
+    {
+        hotelName: 'Ascott Jakarta',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Studio Premier', 'One BR Premier', 'Two BR Executive', 'Two BR Premier', 'Three BR Premier'],
+    },
+    {
+        hotelName: 'Citadines Sudirman',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Studio Executive', 'One BR Deluxe', 'One BR Executive ', 'Family Suite', 'Two BR Deluxe', 'Two BR Executive', 'بريمير سويت من غرفة نوم واحدة'],
+    },
+    {
+        hotelName: 'Citadines Gatot Jakarta',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Studio Suite', 'One BR Executive Suite ', 'Two BR Deluxe', 'Two BR Executive', 'Three BR Executive'],
+    },
+    {
+        hotelName: 'DoubleTree Hilton',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Guest Room', 'Deluxe Room', 'Executive Room'],
+    },
+    {
+        hotelName: 'Parkroyal Serviced Suites',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Studio Suites', 'One BR Suites', 'One BR Deluxe Suites', 'One BR Premier Suites', 'One BR Executive Suites', 'Two BR Deluxe Suites'],
+    },
+    {
+        hotelName: 'Somerset Sudirman',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Executive Room', 'Studio Executive', 'Studio Premier', 'Executive Suite', 'One BR Executive', 'One BR Premier', 'Two BR Club', 'Two BR Classic', 'Two BR Deluxe', 'Two BR Executive', 'Three BR Deluxe', 'Three BR Executive'],
+    },
+    {
+        hotelName: 'Aloft Wahied Hasiem',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Aloft Room', 'Urban Room'],
+    },
+    {
+        hotelName: 'Ascott Sudirman',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Studio Premier', 'One BR Premier', 'Two BR Premier', 'Three BR Premier'],
+    },
+    {
+        hotelName: 'Kempinski Jakarta',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Deluxe Inner Courtyard View', 'Deluxe Bunderan HI View', 'Grand Deluxe Inner Courtyard View', 'Grand Deluxe Bunderan HI View', 'Grand Deluxe Corner Room'],
+    },
+    {
+        hotelName: 'Pullman Park',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Deluxe Room', 'Deluxe Park View Room', 'Executive Deluxe with Executive Lounge Access', 'Executive Suite Room', 'Executive Suite with Executive Lounge Access'],
+    },
+    {
+        hotelName: 'Vertu Harmoni',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['V Room', 'V Room Monas View', 'Vertu Room', 'Vertu Room Monas View', 'Vertu Executive', 'Vertu Executive Monas View', 'Vertu Executive Corner Monas View', 'Vertu Suite', 'Vertu Suite Monas View'],
+    },
+    {
+        hotelName: 'Pan Pacific',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Deluxe Room', 'Premier Room', 'Executive Room', 'Pacific Club Deluxe', 'Pacific Club Premier', 'Pacific Club Executive', 'Junior Suite', 'Premier Suite', 'Pan Pacific Suite'],
+    },
+    {
+        hotelName: 'Ascott Kuningan',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['One BR Executive', 'One BR Premier ', 'Two BR Premier', 'Three BR Premier'],
+    },
+    {
+        hotelName: 'Grand Mercure',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Superior Room', 'Deluxe Room', 'Classic Room', 'Executive Room', 'Business Suite Room', 'Executive Suite'],
+    },
+    {
+        hotelName: 'Sheraton Soekarno',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Deluxe Garden'],
+    },
+    {
+        hotelName: 'Grove Suites',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['One BR Suite City View', 'One BR Suite Pool View', 'Executive Suite', 'Executive Suite Pool View', 'Two BR Suite City View', 'Two BR Suite Pool View', 'Family Suite', 'Family Suite Pool View'],
+    },
+    {
+        hotelName: 'FM7 Tangerang',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Superior Room', 'Deluxe Room', 'Signature Room', 'Premier Room', 'Premier Family', 'Junior Suite'],
+    },
+    {
+        hotelName: 'Harris Hotel',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['One BR Harris Hotel', 'Deluxe Room'],
+    },
+    {
+        hotelName: 'Le Meridien Jakarta',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Deluxe Room', 'Premier Room', 'Deluxe Club'],
+    },
+    {
+        hotelName: 'Mulia Senayan',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Grandeur City View', 'Grandeur Deluxe Room', 'Signature Room City View', 'Executive Room', 'Junior Suite'],
+    },
+
+    {
+        hotelName: 'Merlynn Park',
+        hotelLocation: 'Jakarta',
+        hotelRoomTypes: ['Executive Room', 'Tiffany Suite', 'Family Suite', 'Prada Suite', 'Bulgari Suite', 'Armany Suite', 'Merlynn Suite', 'The Resident', 'Presidential Suite'],
+    },
+
+
+
+
+
+
+
+
+
+    /* Puncak */
+    {
+        hotelName: 'Grand Aston',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Deluxe Room', 'Grande Room', 'Deluxe Mountain View', 'Deluxe Premier', 'Grande Pool Access', 'Deluxe Panoramic', 'Junior Suite Mountain View', 'Junior Suite Pool & Mountain View', 'Junior Suite Pool Access', 'Executive Suite Pool View', 'Executive Suite Mountain View'],
+    },
+    {
+        hotelName: 'Le Eminence',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Deluxe Room', 'Junior Suite', 'Executive Suite', 'Royal Suite', 'Royal Suite with Pool', 'Eminence Suite with Pool'],
+    },
+    {
+        hotelName: 'Botanica Sanctuary',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Deluxe Room', 'Deluxe Secret Garden', 'Premier Room', 'Unique Corner', 'Loft Room', 'The Garden Suites', 'The Valley Suite'],
+    },
+    {
+        hotelName: 'Pesona Alam',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Deluxe Garden Room', 'Deluxe Mountain View', 'Villa One BR', 'Villa Superior Two BR', 'Villa Three BR'],
+    },
+    {
+        hotelName: 'Villa Marina',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa', 'Three BR Villa', 'Four BR Villa', 'Five BR Villa'],
+    },
+    {
+        hotelName: 'Villa Neom',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Three BR Villa', 'Two BR Villa'],
+    },
+    {
+        hotelName: 'Alandalus Puncak',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Two BR Villa', 'Three BR Villa', 'Four BR Villa', 'Five BR Villa', 'Four BR Deluxe Villa'],
+    },
+    {
+        hotelName: 'Alandalus Royal',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Three BR Villa', 'Four BR Deluxe Villa', 'Five BR Superior Villa'],
+    },
+    {
+        hotelName: 'Aljumeirah Puncak',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa', 'Three BR Villa', 'Four BR Villa', 'Five BR Villa'],
+    },
+    {
+        hotelName: 'Marseillia Puncak',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa', 'Three BR Villa', 'Four BR Villa', 'Five BR Villa'],
+    },
+    {
+        hotelName: 'Villa London',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa', 'Three BR Villa', 'Four BR Villa', 'Five BR Villa', 'Nine BR Villa'],
+    },
+    {
+        hotelName: 'Villa Alwaha',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa', 'Three BR Villa', 'Four BR Villa', 'Five BR Villa'],
+    },
+    {
+        hotelName: 'Armada Puncak',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Two BR Villa', 'Three BR Villa', 'Five BR Superior Villa'],
+    },
+    {
+        hotelName: 'Mahha Dii Meru Resort',
+        hotelLocation: 'Puncak',
+        hotelRoomTypes: ['Cliff Edge with Private Jacuzzi', 'Forest Villa with Private Jacuzzi'],
+    },
+
+
+
+
+
+
+
+
+
+
+    /* Bandung */
+    {
+        hotelName: 'Courtyard Bandung',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['Deluxe Room', 'Premier Room', 'Executive Suite', 'Premier Suite', 'Corporate Suite', 'Courtyard Suite', 'Royal Suite'],
+    },
+    {
+        hotelName: 'Sheraton Bandung',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['Deluxe Room', 'Executive Room', 'Tower Room', 'Junior Suite', 'Executive Suite', 'Tower Suite'],
+    },
+    {
+        hotelName: 'The Trans Luxury',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['Premiere Room'],
+    },
+    {
+        hotelName: 'Four Points Sheraton',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['Classic Room', 'Premium Room', 'Deluxe Room', 'Executive Suite', 'Premier Suite'],
+    },
+    {
+        hotelName: 'Oakwood Merdeka Bandung',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['Superior Room', 'Deluxe Room', 'Premier Room'],
+    },
+    {
+        hotelName: 'The Papandayan',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['The Classic Room', 'The Premier Room', 'The Ambassador Room', 'The Suite Room'],
+    },
+    {
+        hotelName: 'Hotel Indigo Bandung',
+        hotelLocation: 'Bandung',
+        hotelRoomTypes: ['Standard Room', 'Premium Room', 'Suite City View'],
+    },
+
+
+
+
+
+
+
+
+
+    /* Lombok */
+    {
+        hotelName: 'Kalandara',
+        hotelLocation: 'Lombok',
+        hotelRoomTypes: ['One BR Villa'],
+    },
+    {
+        hotelName: 'The Kayana Lombok',
+        hotelLocation: 'Lombok',
+        hotelRoomTypes: ['Deluxe Villa', 'Duplex Villa', 'Hill Side Villa', 'Beach Front Villa'],
+    },
+    {
+        hotelName: 'Royal Avila Boutique Resort',
+        hotelLocation: 'Lombok',
+        hotelRoomTypes: ['Ocean Deluxe', 'Ocean Premier', 'Ocean Rooftop', 'Ocean Suite', 'Rooftop Suite', 'The Penthouse'],
+    },
+
+
+
+
+
+
+
+
+
+    /* Sanora */
+    {
+        hotelName: 'Seascape Luxury Resort & Spa',
+        hotelLocation: 'Bali',
+        hotelArea: 'Sanur',
+        hotelRoomTypes: ['One BR Villa with PP', 'Grand One BR Villa with PP', 'Suite Ocean View', 'Suite Room'],
+    },
+    {
+        hotelName: 'Bali Beach Hotel Sanur',
+        hotelLocation: 'Bali',
+        hotelArea: 'Sanur',
+        hotelRoomTypes: ['Deluxe Ocean', 'Executive Ocean', 'Executive Suite Ocean'],
+    },
+    {
+        hotelName: 'The Meru Sanur',
+        hotelLocation: 'Bali',
+        hotelArea: 'Sanur',
+        hotelRoomTypes: ['Tropical Suite', 'Tropical Garden Suite', 'Corner Tropical Suite', 'Premier Tropical Suite'],
+    },
+
+
+
+
+
+
+
+
+
+    /* Canggu */
+    {
+        hotelName: 'Ayona Villa Canggu',
+        hotelLocation: 'Bali',
+        hotelArea: 'Canggu',
+        hotelRoomTypes: ['One BR Villa with PP and Bathub', 'Grand One BR Villa with PP and Bathub'],
+    },
+    {
+        hotelName: 'Regent Resort Canggu',
+        hotelLocation: 'Bali',
+        hotelArea: 'Canggu',
+        hotelRoomTypes: ['Studio Suite', 'Studio Suite Ocean View', 'Studio Suite Lagoon Access', 'One BR Suite', 'One BR Suite Lagoon Access', 'One BR Suite Ocean View', 'One BR Corner Suite Garden View', 'One BR Corner Suite Lagoon Access', 'One BR Corner Suite Ocean View', 'Two BR Suite', 'Two BR Suite Lagoon Access', 'One BR Villa Garden View PP', 'One BR Villa Beachfront PP', 'Two BR Penthouse Oceanfront PP'],
+    },
+    {
+        hotelName: 'Holiday Inn Resort Canggu',
+        hotelLocation: 'Bali',
+        hotelArea: 'Canggu',
+        hotelRoomTypes: ['Premium with Balcony', 'Premier Ocean View with Balcony'],
+    },
+
+
+
+
+
+
+
+
+    /* Tabanan */
+    {
+        hotelName: 'Nandini Jungle',
+        hotelLocation: 'Bali',
+        hotelArea: 'Tabanan',
+        hotelRoomTypes: ['Jungle View Villa', 'Sunrise View Villa', 'Panoramic View Villa', 'Garden View Royal Suites', 'CocooJungle View Royal Suites', 'Panoramic Jacuzzi Corner Suite', 'Family Suite Duplex', 'Presidential Suites '],
+    },
+
+
+
+
+
+
+
+
+
+
+    /* Tampaksiring */
+    {
+        hotelName: 'Eco Six Bali',
+        hotelLocation: 'Bali',
+        hotelArea: 'Tampaksiring',
+        hotelRoomTypes: ['One BR Villa', 'Two BR Villa'],
+    },
+];
