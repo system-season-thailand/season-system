@@ -1,0 +1,294 @@
+.thank_you_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.thank_you_card {
+    position: relative;
+    width: 95%;
+    max-width: 95%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px 10px 80px;
+    overflow: hidden;
+}
+
+/* Echo corner circles (concentric) */
+.thank_you_card::before,
+.thank_you_card::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    width: min(26vw, 140px);
+    height: min(26vw, 140px);
+    border-radius: 50%;
+    /* Concentric rings using layered radial-gradients */
+    background:
+        radial-gradient(circle, rgba(164, 177, 151, 0.85) 0%, rgba(164, 177, 151, 0.85) 24%, transparent 25%) 50% 50% / 100% 100% no-repeat,
+        radial-gradient(circle, rgba(164, 177, 151, 0.5) 0%, rgba(164, 177, 151, 0.5) 18%, transparent 19%) 50% 50% / 75% 75% no-repeat,
+        radial-gradient(circle, rgba(164, 177, 151, 0.35) 0%, rgba(164, 177, 151, 0.35) 14%, transparent 15%) 50% 50% / 55% 55% no-repeat,
+        radial-gradient(circle, rgba(164, 177, 151, 0.25) 0%, rgba(164, 177, 151, 0.25) 10%, transparent 11%) 50% 50% / 38% 38% no-repeat,
+        radial-gradient(circle, rgba(164, 177, 151, 0.18) 0%, rgba(164, 177, 151, 0.18) 7%, transparent 8%) 50% 50% / 26% 26% no-repeat;
+    filter: blur(0.2px);
+}
+
+.thank_you_card::before {
+    top: -12px;
+    left: -12px;
+}
+
+.thank_you_card::after {
+    top: -18px;
+    right: -18px;
+    transform: scale(0.95);
+}
+
+@media(max-width:580px) {
+
+    .thank_you_card::before,
+    .thank_you_card::after {
+        width: min(30vw, 110px);
+        height: min(30vw, 110px);
+    }
+}
+
+@media(max-width:400px) {
+
+    .thank_you_card::before,
+    .thank_you_card::after {
+        width: min(35vw, 95px);
+        height: min(35vw, 95px);
+    }
+}
+
+/* NEW LOVELY HEADER DESIGN */
+.thank_you_header_glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom,
+            rgba(164, 177, 151, 0.8) 0%,
+            rgba(164, 177, 151, 0.4) 40%,
+            rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Heart pattern overlay */
+.thank_you_header_glow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.8) 2px, transparent 3px),
+        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.6) 2px, transparent 3px),
+        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.7) 2px, transparent 3px),
+        radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.5) 2px, transparent 3px);
+    background-size: 100px 100px;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-45deg);
+    z-index: 2;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: 10px;
+    top: 0;
+}
+
+.heart:nth-child(1) {
+    top: 20px;
+    left: 10%;
+    animation-delay: 0s;
+    width: 15px;
+    height: 15px;
+}
+
+.heart:nth-child(1)::before,
+.heart:nth-child(1)::after {
+    width: 15px;
+    height: 15px;
+}
+
+.heart:nth-child(1)::before {
+    top: -7.5px;
+}
+
+.heart:nth-child(1)::after {
+    left: 7.5px;
+}
+
+.heart:nth-child(2) {
+    top: 40px;
+    left: 25%;
+    animation-delay: 1s;
+    width: 25px;
+    height: 25px;
+}
+
+.heart:nth-child(2)::before,
+.heart:nth-child(2)::after {
+    width: 25px;
+    height: 25px;
+}
+
+.heart:nth-child(2)::before {
+    top: -12.5px;
+}
+
+.heart:nth-child(2)::after {
+    left: 12.5px;
+}
+
+.heart:nth-child(3) {
+    top: 15px;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(4) {
+    top: 50px;
+    left: 65%;
+    animation-delay: 3s;
+    width: 18px;
+    height: 18px;
+}
+
+.heart:nth-child(4)::before,
+.heart:nth-child(4)::after {
+    width: 18px;
+    height: 18px;
+}
+
+.heart:nth-child(4)::before {
+    top: -9px;
+}
+
+.heart:nth-child(4)::after {
+    left: 9px;
+}
+
+.heart:nth-child(5) {
+    top: 30px;
+    left: 85%;
+    animation-delay: 4s;
+    width: 22px;
+    height: 22px;
+}
+
+.heart:nth-child(5)::before,
+.heart:nth-child(5)::after {
+    width: 22px;
+    height: 22px;
+}
+
+.heart:nth-child(5)::before {
+    top: -11px;
+}
+
+.heart:nth-child(5)::after {
+    left: 11px;
+}
+
+
+.thank_you_title {
+    text-align: center;
+    font-size: 2.9vw;
+    color: rgb(161, 45, 10);
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thank_you_text {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.02);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px;
+    position: relative;
+    z-index: 3;
+}
+
+.thank_you_text p {
+    font-size: 1.9vw;
+    line-height: 1.7;
+    margin: 6px 0;
+    color: #222;
+    text-align: center;
+    direction: ltr;
+}
+
+@media(max-width:950px) {
+    .thank_you_title {
+        font-size: 3.4vw;
+    }
+
+    .thank_you_text p {
+        font-size: 2.4vw;
+    }
+}
+
+@media(max-width:580px) {
+    .thank_you_title {
+        font-size: 3.9vw;
+    }
+
+    .thank_you_text p {
+        font-size: 2.9vw;
+    }
+
+    .thank_you_header_glow {
+        height: 100px;
+    }
+}
+
+@media(max-width:400px) {
+    .thank_you_title {
+        font-size: 4.1vw;
+    }
+
+    .thank_you_text p {
+        font-size: 3.1vw;
+    }
+
+    .thank_you_header_glow {
+        height: 80px;
+    }
+}

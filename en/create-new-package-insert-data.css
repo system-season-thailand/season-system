@@ -1,0 +1,1257 @@
+/* Inserted company logo data position */
+#inserted_company_name_image_position_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inserted_company_name_logo {
+    margin-bottom: 10px;
+    width: 20vw;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+#package_user_code_name_for_later_import_reference_p_id,
+#package_clint_code_number_p_id {
+    font-size: 2vw;
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#package_user_code_name_for_later_import_reference_p_id {
+    text-align: left;
+    float: left;
+    padding-left: 3px;
+}
+
+#package_clint_code_number_p_id {
+    text-align: right;
+    float: right;
+    padding-right: 3px;
+}
+
+
+
+
+
+
+#clint_full_name_p {
+    width: 100%;
+    font-size: 2vw;
+    padding: 3px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inserted clint data position */
+.clint_data_row_class {
+    background: white;
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 0.5px solid black;
+}
+
+.clint_data_row_class div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px solid black;
+}
+
+.clint_data_row_class div * {
+    text-align: center;
+    direction: ltr;
+}
+
+.clint_data_row_class div:first-child {
+    flex-grow: 0.9;
+}
+
+.clint_data_row_class p {
+    font-size: 2.5vw;
+}
+
+/* Reduce the width of "من" and "الى" cells */
+.clint_data_row_class div:nth-child(2),
+.clint_data_row_class div:nth-child(3) {
+    flex-grow: 0.5;
+}
+
+/* Reduce the width of "مجموع الليالي" cells */
+.clint_data_row_class div:nth-child(4) {
+    flex-grow: 0.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container */
+.inserted_package_including_and_not_icluding_data_div_class {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Each line */
+.inserted_package_including_and_not_icluding_data_div_class p {
+    width: 100%;
+    font-size: 2vw;
+    margin: 0 0 0.7vmax 0;
+    padding: 0.3vmax 1vmax;
+    text-align: start; /* Make it look more natural */
+    direction: ltr; /* Keep icon and text aligned in left-to-right order */
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.special_package_including_data_background_color_text {
+    background: rgb(85, 127, 137);
+    color: white;
+}
+
+
+
+
+
+/* Styling For Vide Styling */
+.no_right_padding_for_vid_design_h6_class {
+    padding-right: 0 !important;
+}
+
+.no_right_padding_for_vid_design_h6_class h6 {
+    background: rgb(230, 184, 183) !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    color: black !important;
+}
+
+.no_right_padding_for_vid_design_img_class {
+    padding-bottom: 0 !important;
+}
+
+.no_right_padding_for_vid_design_p_class {
+    background: rgb(230, 184, 183) !important;
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    color: white !important;
+    width: fit-content !important;
+    padding-right: 5px !important;
+    color: black !important;
+}
+
+.no_right_padding_for_vid_design_div_class {
+    background: rgb(99, 37, 35) !important;
+}
+
+
+
+
+
+/* Pdf section title */
+.pdf_section_title_div_class {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.pdf_section_title_div_class h6 {
+    background: rgb(161, 45, 10);
+    width: fit-content;
+    color: white;
+    font-size: 2.5vw;
+    padding: 5px 15px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.pdf_section_title_div_class ion-icon {
+    font-size: 4.5vw;
+}
+
+.pdf_section_title_div_class p {
+    font-size: 4.5vw;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inserted hotel data position */
+.hotel_row_class,
+.all_hotel_row_data_divs_container {
+    background: white;
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 0.5px solid black;
+}
+
+.hotel_row_class div,
+.all_hotel_row_data_divs_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px solid black;
+}
+
+.hotel_row_class div * {
+    text-align: center !important;
+    direction: ltr;
+}
+
+.hotel_row_class div:first-child {
+    flex-grow: 0.9;
+}
+
+.hotel_row_class div:last-child {
+    flex-grow: 0.65;
+}
+
+.hotel_row_class div:last-child img {
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hotel_row_class h1,
+.hotel_row_class h2,
+.hotel_row_class h3,
+.hotel_row_class h4,
+.hotel_row_class h5,
+.hotel_row_class h6,
+.hotel_row_class p {
+    font-size: 2.2vw;
+    font-weight: 600;
+}
+
+.hotel_row_class span {
+    font-size: 1.5vw;
+    font-weight: 600;
+    direction: ltr;
+}
+
+/* Reduce the width of "تاريخ الدخول وتاريخ الخروج" and cells */
+.hotel_row_class div:nth-child(2),
+.hotel_row_class div:nth-child(3) {
+    flex-grow: 0.6;
+}
+
+/* Reduce the width of "عدد الليالي" and "المدينة" cells */
+.hotel_row_class div:nth-child(4) {
+    flex-grow: 0.5;
+}
+
+/* Reduce the width of "نوع الغرفة" and "المدينة" cells */
+.hotel_row_class div:nth-child(5) {
+    flex-grow: 1.2;
+}
+
+/* Reduce the width of "عدد الوحدات" cell */
+.hotel_row_class div:nth-child(6) {
+    flex-grow: 0.55;
+}
+
+/* Reduce the width of "المدينة والصورة" cells */
+.hotel_row_class div:nth-child(7) {
+    flex-grow: 0.65;
+    font-size: 0.5vw;
+    border-right: none;
+}
+
+.hotel_row_class_for_editing div * {
+    padding: 0 2px;
+}
+
+/* Reduce the width of "المدينة والصورة" cells */
+.hotel_row_class div:nth-child(1) * {
+    padding: 0 1.5px;
+}
+
+/* Reduce the width of "المدينة والصورة" cells */
+.hotel_row_class div:nth-child(7) * {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inserted package important note position */
+#company_by_value_p_id {
+    width: fit-content;
+    font-size: 2vw;
+    margin: 5px 0;
+    justify-self: right;
+    text-align: center;
+    padding: 1px 3px !important;
+    margin-right: 5px !important;
+    border-radius: 3px;
+}
+
+.inserted_package_including_data_text {
+    margin: 2px 0;
+}
+
+/* Inline icons beside activity text */
+.activity_icon_img {
+    height: 14vw;
+    width: auto;
+    margin: 0 1px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.activity_icon_container {
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+
+
+
+
+
+/* Inserted package total price section */
+#package_total_price_div {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    justify-content: center;
+    align-items: center;
+}
+
+#package_total_price_div h6 {
+    background: rgb(182, 54, 15);
+    color: white;
+    font-size: 5vw;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#package_total_price_div p {
+    font-size: 5vw;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inserted flight data position */
+.flight_row_class {
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    background: white;
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 0.5px solid black;
+}
+
+.flight_row_class div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px solid black;
+}
+
+.flight_row_class div * {
+    text-align: center !important;
+}
+
+.flight_row_class div:first-child {
+    flex-grow: 0.9;
+}
+
+.flight_row_class h1,
+.flight_row_class h2,
+.flight_row_class h3,
+.flight_row_class p {
+    font-size: 2.3vw;
+    font-weight: 600;
+}
+
+/* Reduce the width of "من" and "الى" cells */
+.flight_row_class div:nth-child(4),
+.flight_row_class div:nth-child(5) {
+    flex-grow: 0.9;
+}
+
+/* Reduce the width of "عدد الأشخاص" cell */
+.flight_row_class div:nth-child(2) {
+    flex-grow: 1;
+}
+
+/* Reduce the width of "عدد الأشخاص" cell */
+.flight_row_class div:nth-child(6) {
+    flex-grow: 0.8;
+}
+
+/* Reduce the width of "وقت الإقلاع" and "وقت الوصول" cells */
+.flight_row_class div:nth-child(7),
+.flight_row_class div:nth-child(8) {
+    flex-grow: 0.75;
+}
+
+/* Reduce the width of "وقت الوصول" cell */
+.flight_row_class div:nth-child(8) {
+    border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inserted transportation_plan data position */
+.clint_movements_row_class {
+    background: white;
+    min-height: 9vw;
+    display: flex;
+    flex-direction: row-reverse; /* 👈 reverses the div order */
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 0.5px solid black;
+}
+
+.clint_movements_row_class div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+.clint_movements_row_class div * {
+    text-align: center !important;
+}
+
+.clint_movements_row_class h1,
+.clint_movements_row_class h2,
+.clint_movements_row_class h3,
+.clint_movements_row_class h4,
+.clint_movements_row_class p {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+/* Reduce the width of "من" cell */
+.clint_movements_row_class div:nth-child(1) {
+    flex-grow: 0.2;
+}
+
+/* Reduce the width of "الى" cell */
+.clint_movements_row_class div:nth-child(3) {
+    flex-grow: 0.3;
+    border-right: none;
+}
+
+
+.clint_movements_all_p_elements_div_class {
+    display: flex;
+    flex-direction: column;
+}
+
+.clint_movements_all_p_elements_div_class p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Important_notes_for_each_pdf_section_div_class {
+    padding: 5px 5px 0 5px;
+    display: none;
+}
+
+.Important_notes_for_each_pdf_section_div_class h5,
+.Important_notes_for_each_pdf_section_div_class h6 {
+    font-size: 1.5vw;
+    direction: ltr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Delete box message */
+.ensure_your_delete_action {
+    z-index: 1000;
+    background-color: white;
+    width: 95%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    transform: translate(-50%, -130vh);
+    transition: transform 0.5s ease;
+}
+
+.ensure_your_delete_action button {
+    color: black;
+    font-size: 3vw;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0.5px solid black;
+}
+
+.ensure_your_delete_action button:hover {
+    box-shadow: 0 0.5px 3px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Name pdf file box */
+#name_pdf_file_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 5px black;
+    border: 1px solid black;
+    transform: translate(-50%, -130vh);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+#name_pdf_file_div p {
+    background: rgb(85, 127, 137);
+    width: fit-content;
+    color: white;
+    font-size: 2vw;
+    margin-bottom: 20px;
+    padding: 1px 5px;
+    text-align: center;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* inserted main row data coloring */
+.inserted_main_row_color_class {
+    background: rgb(207, 83, 21);
+    color: white;
+    border-top: 0.5px solid black;
+}
+
+#vid_clint_deposit_note_p_id {
+    font-size: 1.4vw;
+    width: 100%;
+    text-align: start;
+    font-weight: bold;
+    padding: 0 10px 2px;
+    background: rgb(0, 108, 133);
+    color: white;
+}
+
+
+
+
+/* Media Queries */
+/* 950px */
+@media(max-width:950px) {
+    .inserted_company_name_logo {
+        width: 25vw;
+    }
+
+
+
+
+
+
+
+
+    #package_user_code_name_for_later_import_reference_p_id {
+        font-size: 2.5vw;
+    }
+
+    #package_clint_code_number_p_id {
+        font-size: 2.5vw;
+    }
+
+
+
+
+    #clint_full_name_p {
+        font-size: 2.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+    .pdf_section_title_div_class {
+        padding: 6px;
+    }
+
+    .pdf_section_title_div_class h6 {
+        font-size: 2.7vw;
+        padding: 3px 10px;
+    }
+
+    .pdf_section_title_div_class ion-icon {
+        font-size: 5.5vw;
+    }
+
+    .pdf_section_title_div_class p {
+        font-size: 5.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .inserted_package_including_and_not_icluding_data_div_class p {
+        font-size: 2.5vw;
+    }
+
+    .activity_icon_img {
+        height: 16vw;
+    }
+
+    .activity_icon_container {
+        gap: 3px;
+        margin-top: 2px;
+    }
+
+
+
+
+
+
+
+
+
+    .Important_notes_for_each_pdf_section_div_class h5,
+    .Important_notes_for_each_pdf_section_div_class h6 {
+        font-size: 2vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .ensure_your_delete_action button {
+        font-size: 4vw;
+        padding: 4px;
+    }
+
+    #name_pdf_file_div p {
+        font-size: 3vw;
+    }
+}
+
+/* 650px */
+@media(max-width:650px) {
+
+    #package_user_code_name_for_later_import_reference_p_id {
+        font-size: 3vw;
+    }
+
+    #package_clint_code_number_p_id {
+        font-size: 3vw;
+    }
+
+    .ensure_your_delete_action {
+        padding: 10px;
+    }
+
+    .ensure_your_delete_action button {
+        font-size: 5vw;
+        padding: 3px;
+    }
+}
+
+
+/* 580px */
+@media(max-width:580px) {
+    .inserted_company_name_logo {
+        width: 30vw;
+        margin-bottom: 5px;
+    }
+
+
+
+
+
+
+
+
+
+    #clint_full_name_p {
+        font-size: 3.5vw;
+    }
+
+
+
+
+
+
+
+    .clint_data_row_class p {
+        font-size: 3.5vw;
+    }
+
+
+
+
+
+
+
+    .pdf_section_title_div_class {
+        padding: 4px;
+    }
+
+    .pdf_section_title_div_class h6 {
+        font-size: 3.5vw;
+        padding: 2px 5px;
+    }
+
+    .pdf_section_title_div_class ion-icon {
+        font-size: 6.5vw;
+    }
+
+    .pdf_section_title_div_class p {
+        font-size: 6.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .hotel_row_class h1,
+    .hotel_row_class h2,
+    .hotel_row_class h3,
+    .hotel_row_class h4,
+    .hotel_row_class h5,
+    .hotel_row_class h6,
+    .hotel_row_class p {
+        font-size: 2.6vw;
+    }
+
+    .hotel_row_class span {
+        font-size: 2vw;
+    }
+
+    .hotel_row_class h1 {
+        font-size: 2.45vw;
+    }
+
+    .smaller_main_hotel_row_text_size_class p {
+        font-size: 2.4vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .flight_row_class h1,
+    .flight_row_class h2,
+    .flight_row_class h3,
+    .flight_row_class p {
+        font-size: 2.5vw;
+    }
+
+    .smaller_main_flight_row_text_size_class p {
+        font-size: 2.4vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .clint_movements_row_class h1,
+    .clint_movements_row_class h2,
+    .clint_movements_row_class h3,
+    .clint_movements_row_class h4,
+    .clint_movements_row_class p {
+        font-size: 2.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .Important_notes_for_each_pdf_section_div_class h5,
+    .Important_notes_for_each_pdf_section_div_class h6 {
+        font-size: 2.4vw;
+    }
+
+
+
+
+    #company_by_value_p_id {
+        font-size: 2.5vw;
+        padding: 2px 0;
+    }
+
+
+
+
+
+
+
+
+
+
+    #vid_clint_deposit_note_p_id {
+        font-size: 2.1vw;
+    }
+
+
+
+
+}
+
+/* 400px */
+@media(max-width:400px) {
+    .inserted_company_name_logo {
+        width: 35vw;
+        margin-bottom: 0px;
+    }
+
+
+
+
+
+
+    #package_user_code_name_for_later_import_reference_p_id {
+        font-size: 3.5vw;
+    }
+
+    #package_clint_code_number_p_id {
+        font-size: 3.5vw;
+    }
+
+
+
+    #clint_full_name_p {
+        font-size: 4.5vw;
+    }
+
+
+
+
+
+
+
+
+    .inserted_package_including_and_not_icluding_data_div_class p {
+        font-size: 3.2vw;
+        padding: 3px 3px 3px 0;
+    }
+
+    .activity_icon_img {
+        height: 17vw;
+    }
+
+    .activity_icon_container {
+        gap: 2px;
+        margin-top: 2px;
+    }
+
+
+
+
+
+
+    .hotel_row_class span {
+        font-size: 2.4vw;
+    }
+
+    .hotel_special_room_request_p_class {
+        font-size: 1.7vw !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .Important_notes_for_each_pdf_section_div_class h5,
+    .Important_notes_for_each_pdf_section_div_class h6 {
+        font-size: 2.6vw;
+    }
+
+
+
+
+    #company_by_value_p_id {
+        font-size: 2.7vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    #package_total_price_div h6 {
+        font-size: 7vw;
+        padding: 3px 10px;
+    }
+
+    #package_total_price_div p {
+        font-size: 7vw;
+        padding: 3px 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .ensure_your_delete_action {
+        padding: 5px;
+    }
+
+    .ensure_your_delete_action button {
+        font-size: 7vw;
+        padding: 2px;
+    }
+
+
+
+
+
+    /* Name pdf file box */
+    #name_pdf_file_div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #name_pdf_file_div p {
+        font-size: 4.5vw;
+    }
+
+
+
+
+
+    #vid_clint_deposit_note_p_id {
+        font-size: 2.2vw;
+    }
+}

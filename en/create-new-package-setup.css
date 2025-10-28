@@ -1,0 +1,2187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+
+/* Change the background color and text color of highlighted text */
+::selection {
+    background-color: rgb(0, 180, 168);
+    color: white;
+}
+
+
+/* All */
+* {
+    font-family: "Noto Kufi Arabic", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    direction: rtl;
+}
+
+
+/* Body */
+body {
+    opacity: 0;
+    background: rgb(215, 232, 244);
+    color: black;
+    margin-bottom: 200px;
+    transition: all 0.5s ease-in-out;
+    color: black !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Password prompt full screen styling */
+.password-prompt {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+/* Centered prompt box styling */
+.prompt-box {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 90%;
+    width: 50vmax;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Heading styling */
+.prompt-box p {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Input field styling */
+.prompt-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Button styling */
+.prompt-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.prompt-box button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Close Sell Messga Styling */
+.modal-box {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #003049;
+    padding: 20px 3px;
+    opacity: 0;
+    /* Start invisible */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for fading */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInBox 0.4s ease;
+    /* Optional content animation */
+    width: 100vw;
+    display: flex;
+    /* Use Flexbox for centering */
+    flex-direction: column;
+    /* Arrange items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center-align text */
+    color: white;
+}
+
+.modal-box.show {
+    display: flex;
+    /* Show the box */
+    opacity: 1;
+    /* Fully visible */
+}
+
+.modal-box.hide {
+    opacity: 0;
+    /* Fading out */
+}
+
+@keyframes fadeInBox {
+    from {
+        transform: translate(-50%, -55%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.modal-box button {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Shaking effect animation (faster) */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake-border {
+    animation: shake 0.15s ease infinite;
+}
+
+input {
+    transition: border-color 0.15s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Special Effects */
+.black_overlay {
+    z-index: 999;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+
+/* TextArea for full screen mood */
+.package_details_input_class {
+    width: 85vw;
+    font-size: 2vw;
+    height: 4vw;
+    text-align: center;
+    resize: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.package_details_input_class::placeholder {
+    font-size: 2vw;
+    text-align: center;
+}
+
+#clint_movements_whole_day_actions_details_textarea_id {
+    height: 10vw;
+}
+
+
+/* Enter textArea full screen mood button */
+.textarea_open_fullscreen_icon_class {
+    background: rgb(0, 255, 0);
+    font-size: 3vw;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    border: 0.5px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+.textarea_open_fullscreen_icon_class:hover {
+    background: rgb(0, 223, 0);
+}
+
+/* Exit the full screen mood button */
+.exit_full_screen_icon {
+    z-index: 1001;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 5vw;
+    padding: 2px;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+.exit_full_screen_icon:hover {
+    background: rgb(195, 0, 0);
+}
+
+
+
+/* Clint movements tutorial */
+.clint_movements_full_page_div {
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    background: rgb(215, 232, 244);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.clint_movements_full_page_div {
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    background: rgb(215, 232, 244);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.clint_movements_full_page_div h6 {
+    background: white;
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+    border: 0.5px solid black;
+}
+
+.clint_movements_full_page_div p {
+    background: darkred;
+    color: white;
+    font-size: 2vw;
+    margin: 3px 0;
+    text-align: center;
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+
+
+
+
+/* Hotel info message box */
+#hotel_important_info_box_div {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+#hotel_important_info_box_div p {
+    font-size: 1rem;
+}
+
+#hotel_important_info_box_close_icon {
+    cursor: pointer;
+    color: red;
+    font-size: 4rem;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* Exported pdf file element */
+.inserted_package_data_section_page_image_class {
+    display: none;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header */
+#header {
+    position: fixed !important;
+    /* Makes the header stick at the top of the viewport */
+    top: 0 !important;
+    /* Position the header at the top */
+    left: 0 !important;
+    /* Aligns the header to the left edge of the viewport */
+    width: 100%;
+    /* Background color for the header, change as needed */
+    z-index: 900;
+    /* Ensures the header is on top of other elements */
+    border-bottom: 1px solid black;
+    /* Optional border for visual separation */
+}
+
+/* Navigation Links Container */
+.header_navbar_links {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevents wrapping to ensure items stay in one row */
+    justify-content: space-between;
+    /* Distributes space between items */
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    /* Add padding to ensure proper spacing */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width */
+}
+
+/* Individual Navigation Links */
+.header_navbar_links a {
+    text-decoration: none;
+    font-size: 3vw;
+    /* Adjust as needed for responsiveness */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    background: rgb(85, 127, 137);
+    color: white;
+    border-left: 0.5px solid black;
+    flex: 1;
+    /* Allows each link to take an equal share of the container's width */
+    box-sizing: border-box;
+}
+
+/* Ensure each link has the same width */
+.header_navbar_links a {
+    flex: 1 1 auto;
+    /* Allows items to grow and shrink as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#google_sheet_data_controller_div {
+    width: 100%;
+    margin-top: 7.5vw;
+    padding: 10px 0 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#google_sheet_data_controller_div form,
+#google_sheet_data_controller_div p {
+    flex: 1;
+    /* Ensure the elements take equal width */
+    margin: 0;
+    /* Reset any margin */
+}
+
+#google_sheet_data_controller_div input,
+#google_sheet_data_controller_div p {
+    background: white;
+    width: 100%;
+    /* Ensure the elements take the full width of their container */
+    font-size: 2.5vw;
+    padding: 1px 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 0.5px solid black;
+    border-left: none;
+    transition: all 0.1s ease-in-out;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+}
+
+#google_sheet_data_controller_div input:hover,
+#google_sheet_data_controller_div p:hover {
+    background: rgb(213, 213, 213);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Importing and deleting data from localStorage */
+.google_sheet_dropdown_div_class h6 {
+    background: darkred;
+    color: white;
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+    border: 0.5px solid black;
+}
+
+.google_sheet_dropdown_div_class p {
+    background: rgb(0, 87, 116);
+    color: white;
+    font-size: 2.5vw;
+    padding: 1px 5px;
+    text-align: center;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-right: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.google_sheet_dropdown_div_class ion-icon {
+    background: rgb(0, 87, 116);
+    color: white;
+    font-size: 5vw;
+    padding: 1px 5px;
+    text-align: center;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+#filter_google_sheet_packages_names_div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 equal columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 equal rows */
+    gap: 0;
+    /* No space between elements */
+    text-align: center;
+}
+
+#filter_google_sheet_packages_names_div p {
+    font-size: 2rem;
+    pointer-events: none;
+    opacity: 0.5;
+    background: rgb(255, 174, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: 0.5px solid black;
+    /* Add borders for better structure */
+    width: 100%;
+    /* Ensures it takes full grid cell width */
+    box-sizing: border-box;
+    /* Ensures border does not affect size */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Create New hotel Package Section */
+#create_new_hotel_package_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_title_text_div {
+    background: rgb(131, 0, 148);
+    width: 100%;
+    margin-top: 4px;
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section_title_text_div img {
+    width: 10vw;
+}
+
+.section_title_text {
+    color: white;
+    font-size: 3vw;
+    padding: 10px 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.dropdown_content_div_class {
+    width: 100%;
+}
+
+
+
+
+
+
+#hotel_two_room_data_input_divs_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hotel_first_room_data_input_div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hotel_second_room_data_input_div {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel_two_room_data_input_divs_container_class input,
+.hotel_two_room_data_input_divs_container_class textarea {
+    width: 86.7%;
+}
+
+
+
+/* Styling for setting the second hotel room data inputs width value */
+.second_room_data_inputs_full_width_class input,
+.second_room_data_inputs_full_width_class textarea {
+    width: 100%;
+}
+
+
+
+
+
+
+/* Package inputs styling */
+.package_info_input_div {
+    background: rgb(171, 190, 204);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.package_info_input_div input {
+    direction: rtl;
+    /* English */
+    width: 85vw;
+    font-size: 2.5vw;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    height: 70px;
+    box-sizing: border-box;
+    border: 0.5px solid black;
+}
+
+.package_info_input_div input::placeholder {
+    color: #919191;
+    font-size: 2vw;
+    text-align: center;
+}
+
+
+
+
+#all_editing_flight_row_data_inputs_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+
+.clint_package_type_div_class {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom_checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.custom_checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 2vw;
+    height: 2vw;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+    order: 1;
+}
+
+.custom_checkbox label {
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom_checkbox label::before {
+    background-color: white;
+    content: '';
+    width: 3vw;
+    height: 3vw;
+    margin-left: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom_checkbox input[type="checkbox"]:checked+label::before {
+    background-color: rgb(0, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+/* Package including data checkbox */
+.package_including_details_div_class {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.package_including_data_custom_checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 2vw;
+    height: 2vw;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+    order: 1;
+}
+
+.package_including_data_custom_checkbox {
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the top */
+    justify-content: flex-start;
+    /* Align items to the left */
+    margin: 10px;
+}
+
+.package_including_data_custom_checkbox label {
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.package_including_data_custom_checkbox label::before {
+    background-color: var(--checkbox-color, white);
+    content: '';
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.package_including_data_custom_checkbox input[type="checkbox"]:checked+label::before {
+    background-color: var(--checkbox-color, rgb(0, 255, 0));
+}
+
+.package_including_data_custom_checkbox label span {
+    display: block;
+    line-height: 1.2;
+    /* Adjust line height if necessary */
+}
+
+
+
+
+
+
+/* Show package total price check box */
+/* .show_package_total_price_checkbox_div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show_package_total_price_checkbox_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show_package_total_price_checkbox_div input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 2vw;
+    height: 2vw;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+    order: 1;
+}
+
+.show_package_total_price_checkbox_div label {
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.show_package_total_price_checkbox_div label::before {
+    background-color: var(--checkbox-color, white);
+    content: '';
+    width: 3vw;
+    height: 3vw;
+    margin-left: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.show_package_total_price_checkbox_div input[type="checkbox"]:checked+label::before {
+    background-color: var(--checkbox-color, rgb(0, 255, 0));
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Submit data icon */
+.submit_package_pdf_div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.1s ease-in-out;
+}
+
+.submit_package_pdf_div ion-icon {
+    background: rgb(0, 87, 116);
+    color: white;
+    font-size: 3vw;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0.5px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+.submit_package_pdf_div P {
+    background: rgb(0, 87, 116);
+    color: white;
+    font-size: 2vw;
+    padding: 0 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0.5px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+
+#clint_inputs_submit_icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+/* Styling for separating two insert package data to pdf icons */
+.two_icons_insert_data_package_pdf_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.edit_data_controll_icons_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit_data_controll_icons_div div {
+    margin: 10px 5px 0;
+}
+
+
+
+
+
+
+
+
+/* Filter company names div */
+.searchable_names_dropdown_class {
+    z-index: 1000;
+    background: rgb(0, 93, 163);
+    width: 100%;
+    min-height: 50vh;
+    max-height: 50vh;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+/* Visible state for the dropdown */
+.searchable_names_dropdown_class.show {
+    transform: translateY(0);
+}
+
+/* Search bar container */
+.search_bar_div_class {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Search bar input */
+.search_bar_input_class {
+    text-align: center;
+    /* Align text to the left */
+    width: 100%;
+    font-size: 2vw;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+}
+
+/* To ensure the caret is visually aligned to the right of the text */
+.search_bar_input_class::placeholder {
+    direction: ltr;
+    /* Ensure placeholder text is also aligned correctly */
+}
+
+
+/* Company name options */
+.company_names_options_dropdown_class {
+    background: rgb(0, 93, 163);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Style for the h3 elements */
+.company_names_options_dropdown_class h3 {
+    background: white;
+    width: fit-content;
+    font-size: 2.5vw;
+    margin: 5px;
+    padding: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 0.5px 0.5px black;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Create new flight package section */
+#create_new_flight_package_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Create new clint movements plane section */
+#create_new_clint_movements_paln_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#clint_movements_places_cities_options {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clint_movements_places_cities_options p {
+    background: rgb(85, 127, 137);
+    color: white;
+    font-size: 3vw;
+    margin: 2px;
+    padding: 1px 5px;
+    border: 0.5px solid black;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    flex-grow: 1;
+    /* Allow each <p> to grow equally */
+    text-align: center;
+    /* Center text inside each <p> */
+    box-sizing: border-box;
+    /* Include padding and border in width */
+}
+
+#clint_movements_places_cities_options p:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+/* Clint movements places names */
+.clint_movements_places_full_page_div {
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    background: rgb(215, 232, 244);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.clint_movements_places_full_page_div h6 {
+    background: white;
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+    border: 0.5px solid black;
+}
+
+.clint_movements_places_full_page_div p {
+    background: rgb(0, 56, 99);
+    color: white;
+    font-size: 2vw;
+    margin: 3px 0;
+    text-align: center;
+    border: 0.5px solid black;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Increase the size of the day cells and add more padding */
+.pika-single .pika-table td {
+    width: 3vw;
+    /* Adjust width for larger click area */
+    height: 3vw;
+    /* Adjust height for larger click area */
+    padding: 10px;
+    /* Add more padding */
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    /* Ensure padding is included in width/height */
+}
+
+/* Increase the clickable area for the header cells */
+.pika-single .pika-table th {
+    padding: 0px;
+    font-size: 1vw;
+    /* Increase font size for header */
+}
+
+/* Ensure the date picker container is wide enough */
+.pika-single .pika-lendar {
+    width: 100%;
+}
+
+/* Adjust the overall size of the date picker */
+.pika-single {
+    padding: 10px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Highlight the selected day */
+.pika-single .pika-table .is-selected {
+    color: white;
+    font-weight: bold;
+}
+
+/* Style for disabled days */
+.pika-single .pika-table .is-disabled {
+    background-color: #f0f0f0;
+    color: #bcbcbc;
+    cursor: not-allowed;
+}
+
+/* Style for month navigation icons */
+.pika-single .pika-prev,
+.pika-single .pika-next {
+    background-color: rgb(85, 127, 137);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Hover effect for navigation icons */
+.pika-single .pika-prev:hover,
+.pika-single .pika-next:hover {
+    background-color: rgb(85, 127, 137);
+}
+
+
+
+.pika-select-year,
+.pika-label-year {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+/* 1250px */
+@media(max-width:1250px) {
+    .package_details_input_class {
+        height: 6vw;
+    }
+}
+
+/* 1040px */
+@media(max-width:1040px) {}
+
+/* 950px */
+@media(max-width:950px) {
+    #header_div img {
+        width: 20vw;
+    }
+
+    #header_div h1 {
+        font-size: 3vw;
+    }
+
+    .header_navbar_section {
+        padding-top: 10px;
+    }
+
+    .header_navbar_header {
+        padding: 0 10px;
+    }
+
+    .header_navbar_title {
+        font-size: 3vw;
+    }
+
+    .header_navbar_header ion-icon {
+        font-size: 3vw;
+    }
+
+    .header_navbar_links a {
+        font-size: 3.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+    #filter_google_sheet_packages_names_div p {
+        font-size: 3vw;
+    }
+
+
+
+
+
+
+    .section_title_text {
+        font-size: 4vw;
+        padding: 8px 14px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* LocalStorage Elements */
+    #google_sheet_data_controller_div {
+        margin-top: 9vw;
+    }
+
+    #google_sheet_data_controller_div input,
+    #google_sheet_data_controller_div p {
+        font-size: 3vw;
+    }
+
+
+
+
+
+
+    .google_sheet_dropdown_div_class h6 {
+        font-size: 3vw;
+    }
+
+    .google_sheet_dropdown_div_class p {
+        font-size: 3vw;
+    }
+
+    .google_sheet_dropdown_div_class ion-icon {
+        font-size: 6vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #hotel_two_room_data_input_divs_container input,
+    #hotel_two_room_data_input_divs_container textarea {
+        width: 90.9%;
+    }
+
+
+
+
+
+
+    .package_info_input_div {
+        padding: 5px;
+    }
+
+    .package_info_input_div input {
+        width: 90vw;
+        font-size: 3.7vw;
+        margin: 3px 0;
+        padding: 3px;
+        height: 60px;
+    }
+
+    .package_info_input_div input::placeholder {
+        font-size: 4.2vw;
+    }
+
+    .package_details_input_class {
+        width: 90vw;
+        font-size: 3vw;
+        height: 9vw;
+    }
+
+    .package_details_input_class::placeholder {
+        font-size: 3.5vw;
+    }
+
+    .submit_package_pdf_div ion-icon {
+        font-size: 4vw;
+        padding: 10px;
+    }
+
+    .submit_package_pdf_div p {
+        font-size: 3vw;
+    }
+
+
+
+
+
+    .custom_checkbox label {
+        font-size: 3.5vw;
+    }
+
+    .custom_checkbox label::before {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .package_including_data_custom_checkbox label {
+        font-size: 2.5vw;
+    }
+
+    .package_including_data_custom_checkbox label::before {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    /*     .show_package_total_price_checkbox_div label {
+        font-size: 3vw;
+    }
+
+    .show_package_total_price_checkbox_div label::before {
+        width: 5vw;
+        height: 5vw;
+    } */
+
+
+
+
+    .textarea_open_fullscreen_icon_class {
+        font-size: 5vw;
+        padding: 3px;
+    }
+
+    .exit_full_screen_icon {
+        font-size: 6vw;
+    }
+
+    .search_bar_div_class {
+        padding: 5px;
+    }
+
+    .search_bar_div_class input {
+        font-size: 3vw;
+        padding: 5px;
+    }
+
+    .company_names_options_dropdown_class {
+        padding: 5px 0;
+    }
+
+    .company_names_options_dropdown_class h3 {
+        font-size: 3.5vw;
+    }
+
+    #clint_movements_places_cities_options p {
+        font-size: 3vw;
+    }
+
+    .clint_movements_places_full_page_div h6 {
+        font-size: 2.5vw;
+    }
+
+    .clint_movements_places_full_page_div p {
+        font-size: 2.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Increase the clickable area for the header cells */
+    .pika-single .pika-table th {
+        font-size: 2vw;
+        /* Increase font size for header */
+    }
+
+    /* Style for month navigation icons */
+    .pika-single .pika-prev,
+    .pika-single .pika-next {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+/* 850px */
+@media(max-width:850px) {}
+
+/* 760px */
+@media(max-width:760px) {
+    #package_details_input_id {
+        font-size: 14px;
+    }
+
+
+    /* Hotel info message box */
+    #hotel_important_info_box_div {
+        width: 95%;
+        padding: 30px 5px;
+    }
+
+    #hotel_important_info_box_div p {
+        font-size: 2.5vw;
+    }
+
+    #hotel_important_info_box_close_icon {
+        font-size: 8vw;
+        top: -3vw;
+        right: 15px;
+    }
+}
+
+/* 650px */
+@media(max-width:650px) {
+    #header_div {
+        padding: 5px 15px;
+    }
+
+    #header_div img {
+        width: 30vw;
+    }
+
+    #header_div h1 {
+        font-size: 4vw;
+    }
+
+    .header_navbar_title {
+        font-size: 4vw;
+    }
+
+    .header_navbar_header ion-icon {
+        font-size: 4vw;
+    }
+
+
+
+
+
+    .header_navbar_links {
+        padding: 5px 0;
+    }
+
+    .header_navbar_links a {
+        font-size: 4.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* LocalStorage Element */
+    #google_sheet_data_controller_div {
+        margin-top: 10vw;
+    }
+
+    #google_sheet_data_controller_div input,
+    #google_sheet_data_controller_div p {
+        font-size: 3.5vw;
+        padding: 1px 2px;
+    }
+
+
+
+
+
+
+    .google_sheet_dropdown_div_class h6 {
+        font-size: 4vw;
+    }
+
+    .google_sheet_dropdown_div_class p {
+        font-size: 4.5vw;
+    }
+
+    .google_sheet_dropdown_div_class ion-icon {
+        font-size: 9vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Hotel info message box */
+    #hotel_important_info_box_div p {
+        font-size: 3.5vw;
+    }
+
+    #hotel_important_info_box_close_icon {
+        font-size: 12vw;
+        top: -5vw;
+        right: 7px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section_title_text_div {
+        margin: 2px 0;
+    }
+
+    /* Title indonesia images */
+    .section_title_text_div img {
+        width: 15vw;
+    }
+
+    .section_title_text {
+        font-size: 5vw;
+        padding: 8px;
+    }
+
+
+
+
+
+    #hotel_two_room_data_input_divs_container input,
+    #hotel_two_room_data_input_divs_container textarea {
+        width: 95.9%;
+    }
+
+
+
+
+
+
+    .package_info_input_div {
+        padding: 3px;
+    }
+
+    .package_info_input_div input {
+        width: 95vw;
+        font-size: 4.2vw;
+        margin: 2px 0;
+        padding: 2px;
+        height: 50px;
+    }
+
+    .package_info_input_div input::placeholder {
+        font-size: 5.2vw;
+    }
+
+    .package_details_input_class {
+        width: 95vw;
+        font-size: 3.5vw;
+        height: 11vw;
+    }
+
+    .package_details_input_class::placeholder {
+        font-size: 4vw;
+    }
+
+    #clint_movements_whole_day_actions_details_textarea_id {
+        height: 13vw;
+    }
+
+    .submit_package_pdf_div ion-icon {
+        font-size: 7vw;
+        padding: 5px;
+    }
+
+    .submit_package_pdf_div p {
+        font-size: 5vw;
+    }
+
+
+
+
+
+
+    .custom_checkbox label {
+        font-size: 4.5vw;
+    }
+
+    .custom_checkbox label::before {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .package_including_data_custom_checkbox label {
+        font-size: 3vw;
+    }
+
+    .package_including_data_custom_checkbox label::before {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    /*     .show_package_total_price_checkbox_div label {
+        font-size: 5.5vw;
+    }
+
+    .show_package_total_price_checkbox_div label::before {
+        width: 6vw;
+        height: 6vw;
+    } */
+
+
+
+
+
+
+
+    .textarea_open_fullscreen_icon_class {
+        font-size: 7vw;
+    }
+
+    .exit_full_screen_icon {
+        font-size: 8vw;
+    }
+
+    .search_bar_div_class {
+        padding: 4px;
+    }
+
+    .search_bar_div_class input {
+        font-size: 4vw;
+        padding: 4px;
+    }
+
+    .company_names_options_dropdown_class {
+        padding: 2px 0;
+    }
+
+    .company_names_options_dropdown_class h3 {
+        font-size: 4.5vw;
+        margin: 4px;
+    }
+
+    #clint_movements_places_cities_options p {
+        font-size: 4vw;
+        padding: 1px 5px;
+    }
+
+    .clint_movements_places_full_page_div h6 {
+        font-size: 3vw;
+    }
+
+    .clint_movements_places_full_page_div p {
+        font-size: 3vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Increase the clickable area for the header cells */
+    .pika-single .pika-table th {
+        font-size: 3vw;
+        /* Increase font size for header */
+    }
+
+    /* Style for month navigation icons */
+    .pika-single .pika-prev,
+    .pika-single .pika-next {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+
+
+/* 400px */
+@media(max-width:400px) {
+    #header_div {
+        padding: 5px 10px;
+    }
+
+    #header_div img {
+        width: 35vw;
+    }
+
+    #header_div h1 {
+        font-size: 4.5vw;
+    }
+
+    .header_navbar_header {
+        padding: 0 5px;
+    }
+
+    .header_navbar_title {
+        font-size: 5vw;
+    }
+
+    .header_navbar_header ion-icon {
+        font-size: 5vw;
+    }
+
+    .header_navbar_links a {
+        font-size: 5.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #filter_google_sheet_packages_names_div p {
+        font-size: 4.5vw;
+    }
+
+
+
+
+
+
+
+    #google_sheet_data_controller_div {
+        margin-top: 11.5vw;
+    }
+
+    #google_sheet_data_controller_div input,
+    #google_sheet_data_controller_div p {
+        font-size: 5vw;
+        padding: 0;
+    }
+
+
+
+
+
+
+
+
+
+    .google_sheet_dropdown_div_class p {
+        font-size: 5vw;
+    }
+
+    .google_sheet_dropdown_div_class ion-icon {
+        font-size: 10vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section_title_text {
+        font-size: 6vw;
+        padding: 6px;
+    }
+
+    .package_info_input_div input {
+        font-size: 5.2vw;
+        padding: 1px;
+        height: 40px;
+    }
+
+    .package_info_input_div input::placeholder {
+        font-size: 6.2vw;
+    }
+
+    .package_details_input_class {
+        font-size: 4.5vw;
+    }
+
+    .package_details_input_class::placeholder {
+        font-size: 5.5vw;
+    }
+
+    #clint_movements_whole_day_actions_details_textarea_id {
+        height: 16vw;
+    }
+
+    .submit_package_pdf_div ion-icon {
+        font-size: 9.5vw;
+    }
+
+    .submit_package_pdf_div p {
+        font-size: 7w;
+    }
+
+
+
+
+
+    .custom_checkbox {
+        margin: 5px;
+    }
+
+    .custom_checkbox label {
+        font-size: 5.5vw;
+    }
+
+    .custom_checkbox label::before {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .package_including_data_custom_checkbox {
+        margin: 5px;
+    }
+
+    .package_including_data_custom_checkbox label {
+        font-size: 4.5vw;
+    }
+
+    .package_including_data_custom_checkbox label::before {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    /*     .show_package_total_price_checkbox_div label::before {
+        width: 9vw;
+        height: 9vw;
+    } */
+
+
+
+
+
+
+
+
+
+
+    .textarea_open_fullscreen_icon_class {
+        font-size: 9vw;
+    }
+
+    .exit_full_screen_icon {
+        font-size: 12vw;
+        padding: 1px;
+    }
+
+    .search_bar_div_class {
+        padding: 3px;
+    }
+
+    .search_bar_div_class input {
+        font-size: 5vw;
+        padding: 3px;
+    }
+
+    .company_names_options_dropdown_class h3 {
+        font-size: 6.5vw;
+        margin: 3px;
+        padding: 0 5px;
+    }
+
+    #clint_movements_places_cities_options {
+        flex-wrap: wrap;
+    }
+
+    #clint_movements_places_cities_options p {
+        font-size: 5.5vw;
+    }
+
+    .clint_movements_places_full_page_div h6 {
+        font-size: 5vw;
+    }
+
+    .clint_movements_places_full_page_div p {
+        font-size: 5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Increase the size of day cells and add more space between them */
+    .pika-single .pika-table td {
+        padding: 2vw;
+        /* Center the text */
+        width: auto;
+        /* Increase the width of the cells */
+        height: 0px;
+        /* Increase the height of the cells */
+        line-height: 0px;
+    }
+
+    .pika-single {
+        padding: 0px;
+    }
+
+    .pika-single .pika-table th {
+        font-size: 4vw;
+        /* Increase font size for Arabic days names */
+    }
+
+    /* Ensure the date picker container is wide enough to fit the day buttons */
+    .pika-single .pika-lendar {
+        width: 95%;
+        /* Ensure the calendar takes full width */
+    }
+
+    /* Style for month navigation icons */
+    .pika-single .pika-prev,
+    .pika-single .pika-next {
+        width: 12vw;
+        height: 12vw;
+    }
+}
+
+/* 320px */
+@media(max-width:320px) {
+    .package_info_input_div input {
+        height: 35px;
+    }
+}
