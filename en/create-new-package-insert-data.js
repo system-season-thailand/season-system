@@ -7031,7 +7031,7 @@ downloadPdfWithCustomName = async function (pdfName) {
 
         // Change to white text on blue background
         imgElements.forEach(img => {
-            img.src = 'travel-gate-middle-pdf-image.jpg'; // Google blue background
+            img.src = '../travel-gate-middle-pdf-image.jpg'; // Google blue background
         });
 
 
@@ -7099,7 +7099,7 @@ downloadPdfWithCustomName = async function (pdfName) {
 
         // Change to white text on blue background
         imgElements.forEach(img => {
-            img.src = 'middle-pdf-image.jpg'; // Google blue background
+            img.src = '../middle-pdf-image.jpg'; // Google blue background
         });
 
 
@@ -7162,7 +7162,7 @@ downloadPdfWithCustomName = async function (pdfName) {
 
         // Change to white text on blue background
         imgElements.forEach(img => {
-            img.src = 'middle-pdf-image.jpg';
+            img.src = '../middle-pdf-image.jpg';
         });
 
         document.getElementById('welcome_pdf_first_page_image_id').src = `../خلفية-الشركات/${document.getElementById('clint_company_name_input_id').value.replace(/\s+/g, '-')}.jpg`;
