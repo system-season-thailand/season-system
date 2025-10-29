@@ -643,9 +643,9 @@ const packageIncludingTranslations = {
 
     // Welcome and transfer
     'الإستقبال والتوديع والتوصيل للفنادق والجولات السياحية': 'Welcoming and transport to hotels and tourist tours',
-    'الإستقبال والتوديع والتوصيل للفنادق': 'Welcome, farewell and transfer to hotels',
+    'الإستقبال والتوديع والتوصيل للفنادق': 'Welcoming and transport to hotels and tourist tours',
     'والجولات السياحية': 'and tourist tours',
-    'الإستقبال والتوديع والتوصيل للفنادق\n                            والجولات السياحية': 'Welcome, farewell and transfer to hotels and tourist tours',
+    'الإستقبال والتوديع والتوصيل للفنادق\n                            والجولات السياحية': 'Welcoming and transport to hotels and tourist tours',
 
     // Flight tickets
     'تذاكر الطيران الداخلي': 'Domestic flight tickets',
