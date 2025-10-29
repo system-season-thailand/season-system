@@ -642,7 +642,7 @@ const packageIncludingTranslations = {
     'إقامة مريحة في فنادق ومنتجعات\n                            مختارة تشمل إفطار يومي لشخصين، وإقامة مجانية لطفل تحت 5 سنوات إن وجد': 'Comfortable accommodation in selected hotels and resorts including daily breakfast for two people, and free accommodation for a child under 5 years old if available',
 
     // Welcome and transfer
-    'الإستقبال والتوديع والتوصيل للفنادق والجولات السياحية': 'Welcome, farewell and transfer to hotels and tourist tours',
+    'الإستقبال والتوديع والتوصيل للفنادق والجولات السياحية': 'Welcoming and transport to hotels and tourist tours',
     'الإستقبال والتوديع والتوصيل للفنادق': 'Welcome, farewell and transfer to hotels',
     'والجولات السياحية': 'and tourist tours',
     'الإستقبال والتوديع والتوصيل للفنادق\n                            والجولات السياحية': 'Welcome, farewell and transfer to hotels and tourist tours',
